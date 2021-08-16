@@ -6,13 +6,16 @@ class ViewController: UIViewController, VNDocumentCameraViewControllerDelegate {
     
     @IBOutlet weak var btnScan: UIButton!
     @IBOutlet weak var btnPdf: UIButton!
-    
+    @IBOutlet weak var btnShare: UIButton!
+
     var pdfView : PDFView!
+    var pdfDocument: PDFDocument!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         btnPdf.isHidden = true
+        btnShare.isHidden = true
         addPDFView()
     }
     
@@ -26,32 +29,29 @@ class ViewController: UIViewController, VNDocumentCameraViewControllerDelegate {
         pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         pdfView.topAnchor.constraint(equalTo: btnScan.bottomAnchor).isActive = true
-        pdfView.bottomAnchor.constraint(equalTo: btnPdf.topAnchor).isActive = true
+        pdfView.bottomAnchor.constraint(equalTo: btnShare.topAnchor).isActive = true
     }
 
     @IBAction func btnViewPDF(_ sender: Any) {
-        
-        let fileManager = FileManager.default
-        let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let docURL = documentDirectory.appendingPathComponent("Scanned-Docs.pdf")
-        
-        
-        if fileManager.fileExists(atPath: docURL.path){
-            pdfView.document = PDFDocument(url: docURL)
-        }
-        else{
-            print("file does not exist..")
-        }
-        
+            pdfView.document = pdfDocument
     }
     
     @IBAction func btnScanDocument(_ sender: Any) {
-        
+
         let scannerViewController = VNDocumentCameraViewController()
         scannerViewController.delegate = self
         present(scannerViewController, animated: true)
     }
     
+    @IBAction func btnShareDocument(_ sender: Any) {
+        if let pdfData = pdfDocument.dataRepresentation() {
+            let objectsToShare = [pdfData]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.btnShare
+
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
     
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
         guard scan.pageCount >= 1 else {
@@ -59,36 +59,25 @@ class ViewController: UIViewController, VNDocumentCameraViewControllerDelegate {
             return
         }
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
 
-            let pdfDocument = PDFDocument()
+            guard let self = self else {
+                return
+            }
+            
+            self.pdfDocument = PDFDocument()
 
             for i in 0 ..< scan.pageCount {
-                if let image = scan.imageOfPage(at: i).resize(toWidth: 250){
+                 let image = scan.imageOfPage(at: i)
                     print("image size is \(image.size.width), \(image.size.height)")
-                    // Create a PDF page instance from your image
                     let pdfPage = PDFPage(image: image)
-                    // Insert the PDF page into your document
-                    pdfDocument.insert(pdfPage!, at: i)
-                }
+                self.pdfDocument.insert(pdfPage!, at: i)
             }
-            
-            
-            // Get the raw data of your PDF document
-            let data = pdfDocument.dataRepresentation()
-            
-            let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-            let docURL = documentDirectory.appendingPathComponent("Scanned-Docs.pdf")
-            do{
-            try data?.write(to: docURL)
-            }catch(let error)
-            {
-                print("error is \(error.localizedDescription)")
-            }
-            
+        
         }
         controller.dismiss(animated: true)
         btnPdf.isHidden = false
+        btnShare.isHidden = false
         
     }
     
