@@ -25,7 +25,18 @@ final class ScannedPdfViewController: UIViewController {
         super.viewDidLoad()
         
         scannedPdfView.pdfView.document = pdfDocument
-        scannedPdfView.shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
+
+        let shareItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"),
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(share))
+        
+        let settingsItem = UIBarButtonItem(image: UIImage(systemName: "gear"),
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(settings))
+        
+        navigationItem.rightBarButtonItems = [shareItem, settingsItem]
     }
     
     @objc
@@ -33,10 +44,13 @@ final class ScannedPdfViewController: UIViewController {
         if let pdfData = pdfDocument.dataRepresentation() {
             let objectsToShare = [pdfData]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = scannedPdfView.shareButton
 
             self.present(activityVC, animated: true, completion: nil)
         }
-
+    }
+    
+    @objc
+    private func settings() {
+        
     }
 }
