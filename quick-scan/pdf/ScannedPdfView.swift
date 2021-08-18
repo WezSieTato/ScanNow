@@ -3,7 +3,12 @@ import PDFKit
 
 final class ScannedPdfView: UIView {
     
-    let pdfView = PDFView()
+    let pdfView: PDFView = {
+        let view = PDFView()
+        view.autoScales = true
+        return view
+    }()
+    
     let shareButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
