@@ -14,9 +14,10 @@
 		D30FAA4126CB079900B8BF20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30FAA3F26CB079900B8BF20 /* LaunchScreen.storyboard */; };
 		D30FAA4C26CB079900B8BF20 /* quick_scanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA4B26CB079900B8BF20 /* quick_scanTests.swift */; };
 		D30FAA5726CB079900B8BF20 /* quick_scanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA5626CB079900B8BF20 /* quick_scanUITests.swift */; };
-		D30FAA6C26CBD38400B8BF20 /* ScannedPdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6A26CBD38400B8BF20 /* ScannedPdfViewController.swift */; };
-		D30FAA6D26CBD38400B8BF20 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6B26CBD38400B8BF20 /* ScanViewController.swift */; };
-		D30FAA7026CBD9AE00B8BF20 /* ScannedPdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6F26CBD9AE00B8BF20 /* ScannedPdfView.swift */; };
+		D30FAA6C26CBD38400B8BF20 /* ScannedDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */; };
+		D30FAA6D26CBD38400B8BF20 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */; };
+		D30FAA7026CBD9AE00B8BF20 /* ScannedDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */; };
+		D30FAA7A26CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA7926CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +51,10 @@
 		D30FAA5226CB079900B8BF20 /* quick-scanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-scanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30FAA5626CB079900B8BF20 /* quick_scanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_scanUITests.swift; sourceTree = "<group>"; };
 		D30FAA5826CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D30FAA6A26CBD38400B8BF20 /* ScannedPdfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedPdfViewController.swift; sourceTree = "<group>"; };
-		D30FAA6B26CBD38400B8BF20 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		D30FAA6F26CBD9AE00B8BF20 /* ScannedPdfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedPdfView.swift; sourceTree = "<group>"; };
+		D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedDocumentViewController.swift; sourceTree = "<group>"; };
+		D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedDocumentView.swift; sourceTree = "<group>"; };
+		D30FAA7926CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VNDocumentCameraScan+Pdf.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,8 @@
 		D30FAA3326CB079700B8BF20 /* quick-scan */ = {
 			isa = PBXGroup;
 			children = (
+				D30FAA7826CD538700B8BF20 /* scanner */,
 				D30FAA6E26CBD95700B8BF20 /* pdf */,
-				D30FAA6B26CBD38400B8BF20 /* ScanViewController.swift */,
 				D30FAA3426CB079700B8BF20 /* AppDelegate.swift */,
 				D30FAA3626CB079700B8BF20 /* SceneDelegate.swift */,
 				D30FAA3A26CB079700B8BF20 /* Main.storyboard */,
@@ -136,10 +138,19 @@
 		D30FAA6E26CBD95700B8BF20 /* pdf */ = {
 			isa = PBXGroup;
 			children = (
-				D30FAA6A26CBD38400B8BF20 /* ScannedPdfViewController.swift */,
-				D30FAA6F26CBD9AE00B8BF20 /* ScannedPdfView.swift */,
+				D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */,
+				D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */,
+				D30FAA7926CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift */,
 			);
 			path = pdf;
+			sourceTree = "<group>";
+		};
+		D30FAA7826CD538700B8BF20 /* scanner */ = {
+			isa = PBXGroup;
+			children = (
+				D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */,
+			);
+			path = scanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,11 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30FAA7026CBD9AE00B8BF20 /* ScannedPdfView.swift in Sources */,
+				D30FAA7026CBD9AE00B8BF20 /* ScannedDocumentView.swift in Sources */,
 				D30FAA3526CB079700B8BF20 /* AppDelegate.swift in Sources */,
-				D30FAA6D26CBD38400B8BF20 /* ScanViewController.swift in Sources */,
+				D30FAA6D26CBD38400B8BF20 /* ScannerViewController.swift in Sources */,
 				D30FAA3726CB079700B8BF20 /* SceneDelegate.swift in Sources */,
-				D30FAA6C26CBD38400B8BF20 /* ScannedPdfViewController.swift in Sources */,
+				D30FAA6C26CBD38400B8BF20 /* ScannedDocumentViewController.swift in Sources */,
+				D30FAA7A26CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,7 @@
-import Foundation
 import VisionKit
 import PDFKit
 
-final class ScanViewController: UIViewController {
+final class ScannerViewController: UIViewController {
         
     fileprivate func setupNewDocumentCameraViewController() {
         let documentCameraViewController = VNDocumentCameraViewController()
@@ -41,7 +40,7 @@ final class ScanViewController: UIViewController {
     }
 }
 
-extension ScanViewController: VNDocumentCameraViewControllerDelegate {
+extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
     
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
         guard scan.pageCount >= 1 else {
@@ -55,16 +54,7 @@ extension ScanViewController: VNDocumentCameraViewControllerDelegate {
                 return
             }
             
-            let pdfDocument = PDFDocument()
-
-            for i in 0 ..< scan.pageCount {
-                 let image = scan.imageOfPage(at: i)
-                    print("image size is \(image.size.width), \(image.size.height)")
-                    let pdfPage = PDFPage(image: image)
-                pdfDocument.insert(pdfPage!, at: i)
-            }
-        
-            let pdfVC = ScannedPdfViewController(pdfDocument: pdfDocument)
+            let pdfVC = ScannedDocumentViewController(scannedDocument: scan)
             self.navigationController?.pushViewController(pdfVC, animated: true)
         }
         

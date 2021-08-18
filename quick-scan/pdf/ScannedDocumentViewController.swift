@@ -1,15 +1,16 @@
 import UIKit
+import VisionKit
 import PDFKit
 
-final class ScannedPdfViewController: UIViewController {
-    let pdfDocument: PDFDocument
+final class ScannedDocumentViewController: UIViewController {
+    let scannedDocument: VNDocumentCameraScan
     
-    var scannedPdfView: ScannedPdfView {
-        view as! ScannedPdfView
+    var scannedPdfView: ScannedDocumentView {
+        view as! ScannedDocumentView
     }
 
-    init(pdfDocument: PDFDocument) {
-        self.pdfDocument = pdfDocument
+    init(scannedDocument: VNDocumentCameraScan) {
+        self.scannedDocument = scannedDocument
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -18,13 +19,13 @@ final class ScannedPdfViewController: UIViewController {
     }
     
     override func loadView() {
-        view = ScannedPdfView()
+        view = ScannedDocumentView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scannedPdfView.pdfView.document = pdfDocument
+        scannedPdfView.pdfView.document = scannedDocument.pdfDocument
 
         let shareItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"),
                                         style: .plain,
@@ -41,7 +42,7 @@ final class ScannedPdfViewController: UIViewController {
     
     @objc
     private func share() {
-        if let pdfData = pdfDocument.dataRepresentation() {
+        if let pdfData = scannedDocument.pdfDocument.dataRepresentation() {
             let objectsToShare = [pdfData]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
 

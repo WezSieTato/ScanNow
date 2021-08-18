@@ -1,7 +1,7 @@
 import UIKit
 import PDFKit
 
-final class ScannedPdfView: UIView {
+final class ScannedDocumentView: UIView {
     
     let pdfView: PDFView = {
         let view = PDFView()
