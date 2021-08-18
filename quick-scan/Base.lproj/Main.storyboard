@@ -1,69 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ovX-B3-WE0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="kSu-Ke-nSw">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quick_scan" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController navigationBarHidden="YES" id="ovX-B3-WE0" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3L3-M9-cIz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yXa-VJ-mSS" kind="relationship" relationship="rootViewController" id="2ID-6n-EEg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1o-5C-W3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1007" y="-21"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="0DD-qm-gGQ">
+            <objects>
+                <viewController id="yXa-VJ-mSS" customClass="ScanViewController" customModule="quick_scan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IN7-Fh-13q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmA-2d-nTQ">
-                                <rect key="frame" x="152.5" y="44" width="109" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="No0-t6-ER9"/>
-                                </constraints>
-                                <state key="normal" title="Scan Document"/>
-                                <connections>
-                                    <action selector="btnScanDocument:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzz-K8-AwK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJT-gj-xst">
-                                <rect key="frame" x="174" y="832" width="66" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5Hs-vL-j4G"/>
-                                </constraints>
-                                <state key="normal" title="View PDF"/>
-                                <connections>
-                                    <action selector="btnViewPDF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NyH-fa-Oe9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJY-wG-JWi">
-                                <rect key="frame" x="171" y="802" width="72" height="30"/>
-                                <state key="normal" title="Share PDF"/>
-                                <connections>
-                                    <action selector="btnShareDocument:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5s4-lf-ouh"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="6mG-19-2zx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="hJT-gj-xst" firstAttribute="top" secondItem="wJY-wG-JWi" secondAttribute="bottom" id="AWO-AC-eLD"/>
-                            <constraint firstItem="MmA-2d-nTQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BNc-NK-Ozt"/>
-                            <constraint firstItem="wJY-wG-JWi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8D-C0-4SZ"/>
-                            <constraint firstItem="MmA-2d-nTQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mLD-eR-5sW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hJT-gj-xst" secondAttribute="bottom" id="r2G-C1-lzQ"/>
-                            <constraint firstItem="hJT-gj-xst" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wtJ-64-ABX"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="btnPdf" destination="hJT-gj-xst" id="WBB-Dc-Kiv"/>
-                        <outlet property="btnScan" destination="MmA-2d-nTQ" id="l1H-Fz-BtN"/>
-                        <outlet property="btnShare" destination="wJY-wG-JWi" id="9kj-zs-VVT"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="lBc-61-INC"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRT-CI-Buz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="104"/>
+            <point key="canvasLocation" x="-173" y="-17"/>
         </scene>
     </scenes>
     <resources>
