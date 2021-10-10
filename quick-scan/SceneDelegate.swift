@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  quick-scan
-//
-//  Created by Marcin on 16/08/2021.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
