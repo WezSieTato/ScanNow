@@ -1,3 +1,4 @@
+--exclude vendor
 --trimwhitespace always
 --wraparguments before-first
 --enable braces

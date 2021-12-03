@@ -1,2 +1,4 @@
-quick-scan.xcodeproj/project.xcworkspace/xcuserdata
+fastlane/test_output
 .DS_Store
+quick-scan.xcodeproj/project.xcworkspace/xcuserdata
+fastlane/report.xml
