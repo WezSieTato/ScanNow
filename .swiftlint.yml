@@ -1,3 +1,6 @@
+excluded:
+  - vendor
+
 disabled_rules:
   - todo
   - trailing_comma
