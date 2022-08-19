@@ -1,0 +1,13 @@
+disabled_rules:
+  - todo
+  - trailing_comma
+
+opt_in_rules:
+  - file_header
+
+comma: error
+colon:
+  severity: error
+
+file_header:
+  required_pattern: ""

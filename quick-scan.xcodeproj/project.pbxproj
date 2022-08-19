@@ -13,7 +13,6 @@
 		D30FAA3E26CB079900B8BF20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30FAA3D26CB079900B8BF20 /* Assets.xcassets */; };
 		D30FAA4126CB079900B8BF20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30FAA3F26CB079900B8BF20 /* LaunchScreen.storyboard */; };
 		D30FAA4C26CB079900B8BF20 /* quick_scanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA4B26CB079900B8BF20 /* quick_scanTests.swift */; };
-		D30FAA5726CB079900B8BF20 /* quick_scanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA5626CB079900B8BF20 /* quick_scanUITests.swift */; };
 		D30FAA6C26CBD38400B8BF20 /* ScannedDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */; };
 		D30FAA6D26CBD38400B8BF20 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */; };
 		D30FAA7026CBD9AE00B8BF20 /* ScannedDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */; };
@@ -22,13 +21,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		D30FAA4826CB079900B8BF20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D30FAA2926CB079700B8BF20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D30FAA3026CB079700B8BF20;
-			remoteInfo = "quick-scan";
-		};
-		D30FAA5326CB079900B8BF20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D30FAA2926CB079700B8BF20 /* Project object */;
 			proxyType = 1;
@@ -48,9 +40,6 @@
 		D30FAA4726CB079900B8BF20 /* quick-scanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-scanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30FAA4B26CB079900B8BF20 /* quick_scanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_scanTests.swift; sourceTree = "<group>"; };
 		D30FAA4D26CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D30FAA5226CB079900B8BF20 /* quick-scanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-scanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D30FAA5626CB079900B8BF20 /* quick_scanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_scanUITests.swift; sourceTree = "<group>"; };
-		D30FAA5826CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedDocumentViewController.swift; sourceTree = "<group>"; };
 		D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedDocumentView.swift; sourceTree = "<group>"; };
@@ -72,13 +61,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30FAA4F26CB079900B8BF20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,7 +69,6 @@
 			children = (
 				D30FAA3326CB079700B8BF20 /* quick-scan */,
 				D30FAA4A26CB079900B8BF20 /* quick-scanTests */,
-				D30FAA5526CB079900B8BF20 /* quick-scanUITests */,
 				D30FAA3226CB079700B8BF20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +78,6 @@
 			children = (
 				D30FAA3126CB079700B8BF20 /* quick-scan.app */,
 				D30FAA4726CB079900B8BF20 /* quick-scanTests.xctest */,
-				D30FAA5226CB079900B8BF20 /* quick-scanUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,15 +106,6 @@
 			path = "quick-scanTests";
 			sourceTree = "<group>";
 		};
-		D30FAA5526CB079900B8BF20 /* quick-scanUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D30FAA5626CB079900B8BF20 /* quick_scanUITests.swift */,
-				D30FAA5826CB079900B8BF20 /* Info.plist */,
-			);
-			path = "quick-scanUITests";
-			sourceTree = "<group>";
-		};
 		D30FAA6E26CBD95700B8BF20 /* pdf */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +131,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D30FAA5B26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "quick-scan" */;
 			buildPhases = (
+				D342D7EF28AFD22B00680174 /* Swiftlint */,
 				D30FAA2D26CB079700B8BF20 /* Sources */,
 				D30FAA2E26CB079700B8BF20 /* Frameworks */,
 				D30FAA2F26CB079700B8BF20 /* Resources */,
@@ -191,24 +163,6 @@
 			productReference = D30FAA4726CB079900B8BF20 /* quick-scanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D30FAA5126CB079900B8BF20 /* quick-scanUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D30FAA6126CB079900B8BF20 /* Build configuration list for PBXNativeTarget "quick-scanUITests" */;
-			buildPhases = (
-				D30FAA4E26CB079900B8BF20 /* Sources */,
-				D30FAA4F26CB079900B8BF20 /* Frameworks */,
-				D30FAA5026CB079900B8BF20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D30FAA5426CB079900B8BF20 /* PBXTargetDependency */,
-			);
-			name = "quick-scanUITests";
-			productName = "quick-scanUITests";
-			productReference = D30FAA5226CB079900B8BF20 /* quick-scanUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,10 +176,6 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					D30FAA4626CB079900B8BF20 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = D30FAA3026CB079700B8BF20;
-					};
-					D30FAA5126CB079900B8BF20 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = D30FAA3026CB079700B8BF20;
 					};
@@ -246,7 +196,6 @@
 			targets = (
 				D30FAA3026CB079700B8BF20 /* quick-scan */,
 				D30FAA4626CB079900B8BF20 /* quick-scanTests */,
-				D30FAA5126CB079900B8BF20 /* quick-scanUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,14 +218,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30FAA5026CB079900B8BF20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D342D7EF28AFD22B00680174 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mint run swiftlint\n";
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D30FAA2D26CB079700B8BF20 /* Sources */ = {
@@ -300,14 +263,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30FAA4E26CB079900B8BF20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D30FAA5726CB079900B8BF20 /* quick_scanUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -315,11 +270,6 @@
 			isa = PBXTargetDependency;
 			target = D30FAA3026CB079700B8BF20 /* quick-scan */;
 			targetProxy = D30FAA4826CB079900B8BF20 /* PBXContainerItemProxy */;
-		};
-		D30FAA5426CB079900B8BF20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D30FAA3026CB079700B8BF20 /* quick-scan */;
-			targetProxy = D30FAA5326CB079900B8BF20 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -543,46 +493,6 @@
 			};
 			name = Release;
 		};
-		D30FAA6226CB079900B8BF20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "quick-scanUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "szwagrosoft.quick-scanUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "quick-scan";
-			};
-			name = Debug;
-		};
-		D30FAA6326CB079900B8BF20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "quick-scanUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "szwagrosoft.quick-scanUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "quick-scan";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -609,15 +519,6 @@
 			buildConfigurations = (
 				D30FAA5F26CB079900B8BF20 /* Debug */,
 				D30FAA6026CB079900B8BF20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D30FAA6126CB079900B8BF20 /* Build configuration list for PBXNativeTarget "quick-scanUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D30FAA6226CB079900B8BF20 /* Debug */,
-				D30FAA6326CB079900B8BF20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

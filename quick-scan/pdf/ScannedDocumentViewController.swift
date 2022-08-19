@@ -6,7 +6,10 @@ final class ScannedDocumentViewController: UIViewController {
     let scannedDocument: VNDocumentCameraScan
     
     var scannedPdfView: ScannedDocumentView {
-        view as! ScannedDocumentView
+        guard let view = view as? ScannedDocumentView else {
+            preconditionFailure("View must be a ScannedDocumentView instance")
+        }
+        return view
     }
 
     init(scannedDocument: VNDocumentCameraScan) {
