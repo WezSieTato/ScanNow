@@ -1,4 +1,5 @@
 import PDFKit
+import SwiftUI
 import UIKit
 import VisionKit
 
@@ -7,7 +8,7 @@ final class ScannedDocumentViewController: UIViewController {
 
     var scannedPdfView: ScannedDocumentView {
         guard let view = view as? ScannedDocumentView else {
-            preconditionFailure("View must be a ScannedDocumentView instance")
+            fatalError("View must be a ScannedDocumentView instance")
         }
         return view
     }
@@ -51,7 +52,7 @@ final class ScannedDocumentViewController: UIViewController {
     @objc
     private func share() {
         if let pdfData = scannedDocument.pdfDocument.dataRepresentation() {
-            let objectsToShare = [pdfData]
+            let objectsToShare = [pdfData] as [Any]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
 
             present(activityVC, animated: true, completion: nil)
@@ -59,5 +60,10 @@ final class ScannedDocumentViewController: UIViewController {
     }
 
     @objc
-    private func settings() {}
+    private func settings() {
+        navigationController?.pushViewController(
+            SettingsViewControllerFactory.create(),
+            animated: true
+        )
+    }
 }
