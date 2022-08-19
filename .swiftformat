@@ -1,0 +1,4 @@
+--trimwhitespace always
+--wraparguments before-first
+--enable braces
+--disable wrapMultilineStatementBraces
