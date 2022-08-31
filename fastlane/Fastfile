@@ -11,7 +11,9 @@ platform :ios do
 
   lane :test do
     swiftlint(
-      executable: mint_which(package: 'swiftlint')
+      executable: mint_which(package: 'swiftlint'),
+      strict: true,
+      raise_if_swiftlint_error: true
     )
     swiftformat(
       executable: mint_which(package: 'swiftformat'),
