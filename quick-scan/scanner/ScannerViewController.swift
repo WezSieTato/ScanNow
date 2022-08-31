@@ -19,9 +19,9 @@ final class ScannerViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
+
     // MARK: Child view configuration
-    
+
     private func makeDocumentCameraViewController() -> UIViewController {
         let documentCameraViewController = VNDocumentCameraViewController()
         documentCameraViewController.delegate = self
@@ -56,7 +56,6 @@ final class ScannerViewController: UIViewController {
             childView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
-
 }
 
 extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
