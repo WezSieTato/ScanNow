@@ -17,5 +17,6 @@ platform :ios do
       executable: mint_which(package: 'swiftformat'),
       lint: true
     )
+    scan
   end
 end

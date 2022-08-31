@@ -2,30 +2,12 @@ import PDFKit
 import VisionKit
 
 final class ScannerViewController: UIViewController {
-    fileprivate func setupNewDocumentCameraViewController() {
-        let documentCameraViewController = VNDocumentCameraViewController()
-        documentCameraViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        documentCameraViewController.willMove(toParent: self)
-        view.addSubview(documentCameraViewController.view)
-        addChild(documentCameraViewController)
-        documentCameraViewController.didMove(toParent: self)
-
-        NSLayoutConstraint.activate([
-            documentCameraViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            documentCameraViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            documentCameraViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
-            documentCameraViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
-
-        documentCameraViewController.delegate = self
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Scan"
 
-        setupNewDocumentCameraViewController()
+        setupChildViewController()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +19,44 @@ final class ScannerViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    // MARK: Child view configuration
+    
+    private func makeDocumentCameraViewController() -> UIViewController {
+        let documentCameraViewController = VNDocumentCameraViewController()
+        documentCameraViewController.delegate = self
+        return documentCameraViewController
+    }
+
+    private func makeNoCameraAccesViewController() -> UIViewController {
+        return UIViewController()
+    }
+
+    private func makeChildViewController() -> UIViewController {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            return makeDocumentCameraViewController()
+        } else {
+            return makeNoCameraAccesViewController()
+        }
+    }
+
+    private func setupChildViewController() {
+        let childVC = makeChildViewController()
+        let childView = childVC.view!
+        childView.translatesAutoresizingMaskIntoConstraints = false
+        childVC.willMove(toParent: self)
+        view.addSubview(childView)
+        addChild(childVC)
+        childVC.didMove(toParent: self)
+
+        NSLayoutConstraint.activate([
+            childView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            childView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            childView.topAnchor.constraint(equalTo: view.topAnchor),
+            childView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+    }
+
 }
 
 extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
@@ -65,6 +85,6 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
         controller.view.removeFromSuperview()
         controller.removeFromParent()
 
-        setupNewDocumentCameraViewController()
+        setupChildViewController()
     }
 }
