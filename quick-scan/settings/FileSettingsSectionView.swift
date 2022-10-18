@@ -14,7 +14,7 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
                 }
             }
 
-            Picker("Format", selection: $settings.seletedFormatEnum) {
+            Picker("Format", selection: $settings.seletedFormat) {
                 ForEach(ScanFormat.allCases) {
                     Text($0.rawValue.uppercased())
                 }
