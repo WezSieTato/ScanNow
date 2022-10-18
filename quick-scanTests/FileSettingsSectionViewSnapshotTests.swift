@@ -31,7 +31,7 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
     }
 
     func testView_whenFormatIsJpeg() {
-        fileSettings.seletedFormatEnum = .jpeg
+        fileSettings.seletedFormat = .jpeg
         testView()
     }
     
