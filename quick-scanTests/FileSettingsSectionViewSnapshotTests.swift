@@ -34,13 +34,15 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
         fileSettings.seletedFormat = .jpeg
         testView()
     }
-    
+
     private func testView(file: StaticString = #file, testName: String = #function, line: UInt = #line) {
-        assertSnapshot(matching: sut,
-                       as: .image(layout: .fixed(width: 375, height: 220)),
-                       record: false,
-                       file: file,
-                       testName: testName,
-                       line: line)
+        assertSnapshot(
+            matching: sut,
+            as: .image(layout: .fixed(width: 375, height: 220)),
+            record: false,
+            file: file,
+            testName: testName,
+            line: line
+        )
     }
 }
