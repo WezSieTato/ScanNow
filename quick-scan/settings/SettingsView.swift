@@ -4,7 +4,7 @@ struct SettingsView: View {
     @ViewBuilder
     var body: some View {
         Form {
-            FileSettingsSectionView()
+            FileSettingsSectionView(settings: AppStorageFileSettings())
             AboutSettingsSectionView()
         }
     }
