@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		D30FAA3C26CB079700B8BF20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30FAA3A26CB079700B8BF20 /* Main.storyboard */; };
 		D30FAA3E26CB079900B8BF20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30FAA3D26CB079900B8BF20 /* Assets.xcassets */; };
 		D30FAA4126CB079900B8BF20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30FAA3F26CB079900B8BF20 /* LaunchScreen.storyboard */; };
-		D30FAA4C26CB079900B8BF20 /* quick_scanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA4B26CB079900B8BF20 /* quick_scanTests.swift */; };
 		D30FAA6C26CBD38400B8BF20 /* ScannedDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */; };
 		D30FAA6D26CBD38400B8BF20 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */; };
 		D30FAA7026CBD9AE00B8BF20 /* ScannedDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */; };
@@ -23,6 +22,11 @@
 		D344DC9928C0A2A8000FD06D /* SettingsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9828C0A2A8000FD06D /* SettingsViewControllerFactory.swift */; };
 		D344DC9B28C0A415000FD06D /* ScanCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9A28C0A415000FD06D /* ScanCounter.swift */; };
 		D346DE9227F0B1EA00890528 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346DE9127F0B1EA00890528 /* SettingsView.swift */; };
+		D37296FD28FD491400939783 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D37296FC28FD491400939783 /* SnapshotTesting */; };
+		D37296FF28FD4A0300939783 /* SettingsViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */; };
+		D372970F28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D372970E28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift */; };
+		D372971128FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D372971028FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift */; };
+		D372971328FF38F500939783 /* MockFileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D372971228FF38F500939783 /* MockFileSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +48,6 @@
 		D30FAA4026CB079900B8BF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D30FAA4226CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30FAA4726CB079900B8BF20 /* quick-scanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-scanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D30FAA4B26CB079900B8BF20 /* quick_scanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_scanTests.swift; sourceTree = "<group>"; };
 		D30FAA4D26CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedDocumentViewController.swift; sourceTree = "<group>"; };
 		D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +59,10 @@
 		D344DC9828C0A2A8000FD06D /* SettingsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerFactory.swift; sourceTree = "<group>"; };
 		D344DC9A28C0A415000FD06D /* ScanCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCounter.swift; sourceTree = "<group>"; };
 		D346DE9127F0B1EA00890528 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewSnapshotTests.swift; sourceTree = "<group>"; };
+		D372970E28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettingsSectionViewSnapshotTests.swift; sourceTree = "<group>"; };
+		D372971028FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSettingsSectionViewSnapshotTests.swift; sourceTree = "<group>"; };
+		D372971228FF38F500939783 /* MockFileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D37296FD28FD491400939783 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,8 +121,11 @@
 		D30FAA4A26CB079900B8BF20 /* quick-scanTests */ = {
 			isa = PBXGroup;
 			children = (
-				D30FAA4B26CB079900B8BF20 /* quick_scanTests.swift */,
 				D30FAA4D26CB079900B8BF20 /* Info.plist */,
+				D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */,
+				D372970E28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift */,
+				D372971028FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift */,
+				D372971228FF38F500939783 /* MockFileSettings.swift */,
 			);
 			path = "quick-scanTests";
 			sourceTree = "<group>";
@@ -185,6 +196,9 @@
 				D30FAA4926CB079900B8BF20 /* PBXTargetDependency */,
 			);
 			name = "quick-scanTests";
+			packageProductDependencies = (
+				D37296FC28FD491400939783 /* SnapshotTesting */,
+			);
 			productName = "quick-scanTests";
 			productReference = D30FAA4726CB079900B8BF20 /* quick-scanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -216,6 +230,9 @@
 				Base,
 			);
 			mainGroup = D30FAA2826CB079700B8BF20;
+			packageReferences = (
+				D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = D30FAA3226CB079700B8BF20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,7 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30FAA4C26CB079900B8BF20 /* quick_scanTests.swift in Sources */,
+				D372971328FF38F500939783 /* MockFileSettings.swift in Sources */,
+				D372970F28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift in Sources */,
+				D37296FF28FD4A0300939783 /* SettingsViewSnapshotTests.swift in Sources */,
+				D372971128FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +574,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D37296FC28FD491400939783 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D30FAA2926CB079700B8BF20 /* Project object */;
 }

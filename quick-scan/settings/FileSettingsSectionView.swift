@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct FileSettingsSectionView: View {
-    @StateObject var settings = FileSettings()
+struct FileSettingsSectionView<SettingType: FileSettings>: View {
+    @StateObject var settings: SettingType
 
     @ViewBuilder
     var body: some View {
@@ -26,7 +26,7 @@ struct FileSettingsSectionView: View {
 struct FileSettingsSectionViewPreview: PreviewProvider {
     static var previews: some View {
         Form {
-            FileSettingsSectionView()
+            FileSettingsSectionView(settings: AppStorageFileSettings())
         }
     }
 }
