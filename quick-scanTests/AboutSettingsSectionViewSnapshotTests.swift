@@ -11,8 +11,10 @@ final class AboutSettingsSectionViewSnapshotTests: XCTestCase {
             AboutSettingsSectionView()
         }
 
-        assertSnapshot(matching: sut,
-                       as: .image(layout: .fixed(width: 375, height: 100)),
-                       record: false)
+        assertSnapshot(
+            matching: sut,
+            as: .image(layout: .fixed(width: 375, height: 100)),
+            record: false
+        )
     }
 }
