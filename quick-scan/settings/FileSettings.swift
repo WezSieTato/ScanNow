@@ -4,7 +4,6 @@ enum ScanFormat: String, CaseIterable, Identifiable {
     case pdf
     case jpeg
     case png
-    case heic
 
     var id: Self { self }
 }
