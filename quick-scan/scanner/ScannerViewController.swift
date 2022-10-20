@@ -2,6 +2,8 @@ import PDFKit
 import VisionKit
 
 final class ScannerViewController: UIViewController {
+    private let counter: ScanCounter = ScanCounterAppStorage()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,6 +69,8 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
             controller.dismiss(animated: true)
             return
         }
+
+        counter.increaseCounter()
 
         DispatchQueue.main.async { [weak self] in
 

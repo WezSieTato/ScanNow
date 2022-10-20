@@ -51,12 +51,12 @@ final class ScannedDocumentViewController: UIViewController {
 
     @objc
     private func share() {
-        if let pdfData = scannedDocument.pdfDocument.dataRepresentation() {
-            let objectsToShare = [pdfData] as [Any]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        let settings: any FileSettings = AppStorageFileSettings()
+        let policy = DocumentShareManager()
+        let objectsToShare = policy.objectsToShare(from: scannedDocument, fileSettings: settings)
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
 
-            present(activityVC, animated: true, completion: nil)
-        }
+        present(activityVC, animated: true, completion: nil)
     }
 
     @objc
