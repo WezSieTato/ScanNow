@@ -26,12 +26,12 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
     }
 
     func testView_whenSuffixIsCounter() {
-        fileSettings.selectedSuffix = .counter
+        fileSettings.suffix = .counter
         testView()
     }
 
     func testView_whenFormatIsJpeg() {
-        fileSettings.seletedFormat = .jpeg
+        fileSettings.format = .jpeg
         testView()
     }
 

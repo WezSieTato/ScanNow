@@ -18,8 +18,8 @@ enum FileSufix: String, CaseIterable, Identifiable {
 
 protocol FileSettings: ObservableObject {
     var filename: String { get set }
-    var seletedFormat: ScanFormat { get set }
-    var selectedSuffix: FileSufix { get set }
+    var format: ScanFormat { get set }
+    var suffix: FileSufix { get set }
 }
 
 final class AppStorageFileSettings: FileSettings {
@@ -27,8 +27,8 @@ final class AppStorageFileSettings: FileSettings {
     var filename: String = "Scan"
 
     @AppStorage("FileSettings.seletedFormat")
-    var seletedFormat: ScanFormat = .pdf
+    var format: ScanFormat = .pdf
 
     @AppStorage("FileSettings.selectedSuffix")
-    var selectedSuffix: FileSufix = .none
+    var suffix: FileSufix = .none
 }

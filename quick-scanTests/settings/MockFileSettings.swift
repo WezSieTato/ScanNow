@@ -2,6 +2,6 @@
 
 final class MockFileSettings: FileSettings {
     var filename: String = "Scan"
-    var seletedFormat: ScanFormat = .pdf
-    var selectedSuffix: FileSufix = .none
+    var format: ScanFormat = .pdf
+    var suffix: FileSufix = .none
 }
