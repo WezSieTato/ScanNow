@@ -10,20 +10,20 @@ enum FilenameStrategyFactory {
         case .none:
             return NoneFilenameStrategy()
         case .counter:
-            return CounterFilenameStrategy(counter: ScanCounterAppStorage())
+            return CounterFilenameStrategy(counter: AppStorageScanCounter())
         case .dateAndTime:
             return DateAndTimeFilenameStrategy(timeProvider: FoundationTimeProvider())
         }
     }
 }
 
-private final class NoneFilenameStrategy: FilenameStrategy {
+final class NoneFilenameStrategy: FilenameStrategy {
     func filename(prefix: String) -> String {
         prefix
     }
 }
 
-private final class CounterFilenameStrategy: FilenameStrategy {
+final class CounterFilenameStrategy: FilenameStrategy {
     private let counter: ScanCounter
 
     init(counter: ScanCounter) {
@@ -45,7 +45,7 @@ final class FoundationTimeProvider: TimeProvider {
     }
 }
 
-private final class DateAndTimeFilenameStrategy: FilenameStrategy {
+final class DateAndTimeFilenameStrategy: FilenameStrategy {
     private let timeProvider: TimeProvider
 
     init(timeProvider: TimeProvider) {

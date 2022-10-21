@@ -19,6 +19,11 @@
 		D336A6AE29016F0F00C1177B /* DocumentDataExportStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6AD29016F0F00C1177B /* DocumentDataExportStrategy.swift */; };
 		D336A6B6290197AA00C1177B /* FilenameStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6B5290197AA00C1177B /* FilenameStrategy.swift */; };
 		D336A6B829019E9100C1177B /* DocumentShareStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6B729019E9100C1177B /* DocumentShareStrategy.swift */; };
+		D336A6BD2901EBC400C1177B /* NoneFilenameStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6BC2901EBC400C1177B /* NoneFilenameStrategyTests.swift */; };
+		D336A6C02901EDD900C1177B /* MockScanCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6BF2901EDD900C1177B /* MockScanCounter.swift */; };
+		D336A6C22901EE1D00C1177B /* CounterFilenameStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6C12901EE1D00C1177B /* CounterFilenameStrategyTests.swift */; };
+		D336A6C42901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6C32901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift */; };
+		D336A6C62901EF2D00C1177B /* MockTimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6C52901EF2D00C1177B /* MockTimeProvider.swift */; };
 		D344DC9328BFE29B000FD06D /* FileSettingsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9228BFE29B000FD06D /* FileSettingsSectionView.swift */; };
 		D344DC9528BFE424000FD06D /* AboutSettingsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9428BFE424000FD06D /* AboutSettingsSectionView.swift */; };
 		D344DC9728BFEBEE000FD06D /* FileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9628BFEBEE000FD06D /* FileSettings.swift */; };
@@ -59,6 +64,11 @@
 		D336A6AD29016F0F00C1177B /* DocumentDataExportStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDataExportStrategy.swift; sourceTree = "<group>"; };
 		D336A6B5290197AA00C1177B /* FilenameStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameStrategy.swift; sourceTree = "<group>"; };
 		D336A6B729019E9100C1177B /* DocumentShareStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentShareStrategy.swift; sourceTree = "<group>"; };
+		D336A6BC2901EBC400C1177B /* NoneFilenameStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneFilenameStrategyTests.swift; sourceTree = "<group>"; };
+		D336A6BF2901EDD900C1177B /* MockScanCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScanCounter.swift; sourceTree = "<group>"; };
+		D336A6C12901EE1D00C1177B /* CounterFilenameStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFilenameStrategyTests.swift; sourceTree = "<group>"; };
+		D336A6C32901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeFilenameStrategyTests.swift; sourceTree = "<group>"; };
+		D336A6C52901EF2D00C1177B /* MockTimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimeProvider.swift; sourceTree = "<group>"; };
 		D344DC9228BFE29B000FD06D /* FileSettingsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSettingsSectionView.swift; sourceTree = "<group>"; };
 		D344DC9428BFE424000FD06D /* AboutSettingsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettingsSectionView.swift; sourceTree = "<group>"; };
 		D344DC9628BFEBEE000FD06D /* FileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSettings.swift; sourceTree = "<group>"; };
@@ -127,11 +137,10 @@
 		D30FAA4A26CB079900B8BF20 /* quick-scanTests */ = {
 			isa = PBXGroup;
 			children = (
+				D336A6BE2901EDCB00C1177B /* scanner */,
+				D336A6BB2901EB9300C1177B /* settings */,
+				D336A6B92901EB7E00C1177B /* result */,
 				D30FAA4D26CB079900B8BF20 /* Info.plist */,
-				D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */,
-				D372970E28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift */,
-				D372971028FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift */,
-				D372971228FF38F500939783 /* MockFileSettings.swift */,
 			);
 			path = "quick-scanTests";
 			sourceTree = "<group>";
@@ -164,6 +173,44 @@
 				D336A6B729019E9100C1177B /* DocumentShareStrategy.swift */,
 			);
 			path = share;
+			sourceTree = "<group>";
+		};
+		D336A6B92901EB7E00C1177B /* result */ = {
+			isa = PBXGroup;
+			children = (
+				D336A6BA2901EB8600C1177B /* share */,
+			);
+			path = result;
+			sourceTree = "<group>";
+		};
+		D336A6BA2901EB8600C1177B /* share */ = {
+			isa = PBXGroup;
+			children = (
+				D336A6BC2901EBC400C1177B /* NoneFilenameStrategyTests.swift */,
+				D336A6C12901EE1D00C1177B /* CounterFilenameStrategyTests.swift */,
+				D336A6C32901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift */,
+				D336A6C52901EF2D00C1177B /* MockTimeProvider.swift */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
+		D336A6BB2901EB9300C1177B /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */,
+				D372970E28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift */,
+				D372971028FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift */,
+				D372971228FF38F500939783 /* MockFileSettings.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		D336A6BE2901EDCB00C1177B /* scanner */ = {
+			isa = PBXGroup;
+			children = (
+				D336A6BF2901EDD900C1177B /* MockScanCounter.swift */,
+			);
+			path = scanner;
 			sourceTree = "<group>";
 		};
 		D346DE9027F0B1D900890528 /* settings */ = {
@@ -328,10 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D336A6C42901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift in Sources */,
 				D372971328FF38F500939783 /* MockFileSettings.swift in Sources */,
 				D372970F28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift in Sources */,
+				D336A6C62901EF2D00C1177B /* MockTimeProvider.swift in Sources */,
+				D336A6C22901EE1D00C1177B /* CounterFilenameStrategyTests.swift in Sources */,
 				D37296FF28FD4A0300939783 /* SettingsViewSnapshotTests.swift in Sources */,
 				D372971128FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift in Sources */,
+				D336A6BD2901EBC400C1177B /* NoneFilenameStrategyTests.swift in Sources */,
+				D336A6C02901EDD900C1177B /* MockScanCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
