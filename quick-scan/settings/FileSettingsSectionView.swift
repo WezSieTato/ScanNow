@@ -8,13 +8,13 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
         Section(header: Text("File")) {
             TextField("Filename", text: $settings.filename)
 
-            Picker("Suffix", selection: $settings.selectedSuffix) {
+            Picker("Suffix", selection: $settings.suffix) {
                 ForEach(FileSufix.allCases) {
                     Text($0.rawValue.uppercased())
                 }
             }
 
-            Picker("Format", selection: $settings.seletedFormat) {
+            Picker("Format", selection: $settings.format) {
                 ForEach(ScanFormat.allCases) {
                     Text($0.rawValue.uppercased())
                 }
