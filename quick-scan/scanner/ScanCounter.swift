@@ -5,7 +5,7 @@ protocol ScanCounter {
     func increaseCounter()
 }
 
-final class ScanCounterAppStorage: ScanCounter {
+final class AppStorageScanCounter: ScanCounter {
     @AppStorage("ScanCounterAppStorage.counter")
     private(set) var counter: Int = 0
 

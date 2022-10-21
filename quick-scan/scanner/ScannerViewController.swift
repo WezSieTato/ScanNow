@@ -2,7 +2,7 @@ import PDFKit
 import VisionKit
 
 final class ScannerViewController: UIViewController {
-    private let counter: ScanCounter = ScanCounterAppStorage()
+    private let counter: ScanCounter = AppStorageScanCounter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
