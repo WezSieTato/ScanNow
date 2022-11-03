@@ -10,7 +10,10 @@ final class SettingsViewSnapshotTests: XCTestCase {
         super.setUp()
 
         userDefaults = UserDefaults(suiteName: "SettingsViewSnapshotTests")
-        sut = SettingsViewControllerFactory.create(userDefaults: userDefaults)
+        sut = SettingsViewControllerFactory.create(
+            userDefaults: userDefaults,
+            version: MockVersioning(versionNumber: "1.0.0", buildNumber: "1")
+        )
     }
 
     override func tearDown() {
