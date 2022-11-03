@@ -1,17 +1,19 @@
 import SwiftUI
 
 struct SettingsView: View {
+    let version: Versioning
+
     @ViewBuilder
     var body: some View {
         Form {
             FileSettingsSectionView(settings: AppStorageFileSettings())
-            AboutSettingsSectionView()
+            AboutSettingsSectionView(version: version)
         }
     }
 }
 
 struct ContentViewPreview: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(version: PreviewVersion())
     }
 }

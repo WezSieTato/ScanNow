@@ -1,13 +1,15 @@
 import SwiftUI
 
 struct AboutSettingsSectionView: View {
+    let version: Versioning
+
     @ViewBuilder
     var body: some View {
         Section(header: Text("About")) {
             HStack {
                 Text("Version")
                 Spacer()
-                Text("2.2.1")
+                Text("\(version.versionNumber) (\(version.buildNumber))")
             }
         }
     }
@@ -16,7 +18,7 @@ struct AboutSettingsSectionView: View {
 struct AboutSettingsSectionViewPreview: PreviewProvider {
     static var previews: some View {
         Form {
-            AboutSettingsSectionView()
+            AboutSettingsSectionView(version: PreviewVersion())
         }
     }
 }
