@@ -1,4 +1,5 @@
 import PDFKit
+import SwiftUI
 import VisionKit
 
 final class ScannerViewController: UIViewController {
@@ -31,7 +32,7 @@ final class ScannerViewController: UIViewController {
     }
 
     private func makeNoCameraAccesViewController() -> UIViewController {
-        return UIViewController()
+        return UIHostingController(rootView: NoCameraAccessView())
     }
 
     private func makeChildViewController() -> UIViewController {
