@@ -1,4 +1,4 @@
---exclude vendor
+--exclude vendor, quick-scan/generated
 --trimwhitespace always
 --wraparguments before-first
 --enable braces

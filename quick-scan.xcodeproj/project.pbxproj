@@ -17,8 +17,8 @@
 		D30FAA7026CBD9AE00B8BF20 /* ScannedDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */; };
 		D30FAA7A26CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA7926CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift */; };
 		D317D190291D0F9D00FDFDB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D317D192291D0F9D00FDFDB4 /* Localizable.strings */; };
-		D317D194291D13A900FDFDB4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317D193291D13A900FDFDB4 /* Strings.swift */; };
-		D317D197291D2B5600FDFDB4 /* InfoPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317D196291D2B5600FDFDB4 /* InfoPlist.swift */; };
+		D317D19B291D2E4800FDFDB4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317D199291D2E4800FDFDB4 /* Strings.swift */; };
+		D317D19C291D2E4800FDFDB4 /* InfoPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317D19A291D2E4800FDFDB4 /* InfoPlist.swift */; };
 		D336A6AE29016F0F00C1177B /* DocumentDataExportStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6AD29016F0F00C1177B /* DocumentDataExportStrategy.swift */; };
 		D336A6B6290197AA00C1177B /* FilenameStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6B5290197AA00C1177B /* FilenameStrategy.swift */; };
 		D336A6B829019E9100C1177B /* DocumentShareStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6B729019E9100C1177B /* DocumentShareStrategy.swift */; };
@@ -67,8 +67,8 @@
 		D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedDocumentView.swift; sourceTree = "<group>"; };
 		D30FAA7926CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VNDocumentCameraScan+Pdf.swift"; sourceTree = "<group>"; };
 		D317D191291D0F9D00FDFDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D317D193291D13A900FDFDB4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		D317D196291D2B5600FDFDB4 /* InfoPlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPlist.swift; sourceTree = "<group>"; };
+		D317D199291D2E4800FDFDB4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		D317D19A291D2E4800FDFDB4 /* InfoPlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPlist.swift; sourceTree = "<group>"; };
 		D336A6AD29016F0F00C1177B /* DocumentDataExportStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDataExportStrategy.swift; sourceTree = "<group>"; };
 		D336A6B5290197AA00C1177B /* FilenameStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameStrategy.swift; sourceTree = "<group>"; };
 		D336A6B729019E9100C1177B /* DocumentShareStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentShareStrategy.swift; sourceTree = "<group>"; };
@@ -132,8 +132,7 @@
 		D30FAA3326CB079700B8BF20 /* quick-scan */ = {
 			isa = PBXGroup;
 			children = (
-				D317D196291D2B5600FDFDB4 /* InfoPlist.swift */,
-				D317D193291D13A900FDFDB4 /* Strings.swift */,
+				D317D198291D2E4800FDFDB4 /* generated */,
 				D346DE9027F0B1D900890528 /* settings */,
 				D30FAA7826CD538700B8BF20 /* scanner */,
 				D30FAA6E26CBD95700B8BF20 /* result */,
@@ -177,6 +176,15 @@
 				D344DC9A28C0A415000FD06D /* ScanCounter.swift */,
 			);
 			path = scanner;
+			sourceTree = "<group>";
+		};
+		D317D198291D2E4800FDFDB4 /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				D317D199291D2E4800FDFDB4 /* Strings.swift */,
+				D317D19A291D2E4800FDFDB4 /* InfoPlist.swift */,
+			);
+			path = generated;
 			sourceTree = "<group>";
 		};
 		D336A6AC29016F0300C1177B /* share */ = {
@@ -377,14 +385,14 @@
 				D336A6B6290197AA00C1177B /* FilenameStrategy.swift in Sources */,
 				D344DC9528BFE424000FD06D /* AboutSettingsSectionView.swift in Sources */,
 				D30FAA7026CBD9AE00B8BF20 /* ScannedDocumentView.swift in Sources */,
-				D317D197291D2B5600FDFDB4 /* InfoPlist.swift in Sources */,
+				D317D19C291D2E4800FDFDB4 /* InfoPlist.swift in Sources */,
 				D344DC9B28C0A415000FD06D /* ScanCounter.swift in Sources */,
 				D30FAA3526CB079700B8BF20 /* AppDelegate.swift in Sources */,
 				D30FAA6D26CBD38400B8BF20 /* ScannerViewController.swift in Sources */,
 				D336A6B829019E9100C1177B /* DocumentShareStrategy.swift in Sources */,
 				D30FAA3726CB079700B8BF20 /* SceneDelegate.swift in Sources */,
 				D30FAA6C26CBD38400B8BF20 /* ScannedDocumentViewController.swift in Sources */,
-				D317D194291D13A900FDFDB4 /* Strings.swift in Sources */,
+				D317D19B291D2E4800FDFDB4 /* Strings.swift in Sources */,
 				D30FAA7A26CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift in Sources */,
 				D344DC9928C0A2A8000FD06D /* SettingsViewControllerFactory.swift in Sources */,
 				D336A6AE29016F0F00C1177B /* DocumentDataExportStrategy.swift in Sources */,
