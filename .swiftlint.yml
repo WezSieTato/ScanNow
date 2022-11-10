@@ -1,6 +1,6 @@
 excluded:
   - vendor
-
+  - quick-scan/generated
 disabled_rules:
   - todo
   - trailing_comma

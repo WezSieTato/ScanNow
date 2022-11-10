@@ -2,13 +2,13 @@ strings:
   inputs: quick-scan
   outputs:
     - templateName: structured-swift5
-      output: quick-scan/Strings.swift
+      output: quick-scan/generated/Strings.swift
       params:
           enumName: Strings
 plist:
   inputs: quick-scan/Info.plist
   outputs:
     templateName: runtime-swift5
-    output: quick-scan/InfoPlist.swift
+    output: quick-scan/generated/InfoPlist.swift
     params:
           enumName: InfoPlist
