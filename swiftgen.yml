@@ -1,0 +1,7 @@
+strings:
+  inputs: quick-scan
+  outputs:
+    - templateName: structured-swift5
+      output: quick-scan/Strings.swift
+      params:
+          enumName: Strings

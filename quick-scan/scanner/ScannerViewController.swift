@@ -7,7 +7,7 @@ final class ScannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Scan"
+        title = Strings.Scanner.title
 
         setupChildViewController()
     }

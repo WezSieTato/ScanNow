@@ -1,0 +1,14 @@
+"settings.title" = "Settings";
+
+"settings.file.title" = "File";
+"settings.file.filename" = "Filename";
+"settings.file.suffix" = "Suffix";
+"settings.file.format" = "Format";
+"settings.file.defaultFilename" = "Scan";
+
+"settings.about.title" = "About";
+"settings.about.version" = "Version";
+
+"scanner.title" = "Scan";
+
+"scanner.share.pageSuffix" = "_page_%d";
