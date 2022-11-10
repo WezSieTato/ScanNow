@@ -10,6 +10,7 @@ platform :ios do
   end
 
   lane :test do
+    check_generated_code
     swiftlint(
       executable: mint_which(package: 'swiftlint'),
       strict: true,
@@ -20,5 +21,14 @@ platform :ios do
       lint: true
     )
     scan
+  end
+
+  lane :check_generated_code do
+    mint_run(command: "swiftgen")
+    ensure_no_changes(
+      path: "quick-scan/generated",
+      show_diff: false,
+      error_message: "Generated code is different than swiftgen output. Run `mint run swiftgen` to re-generate code."
+    )
   end
 end
