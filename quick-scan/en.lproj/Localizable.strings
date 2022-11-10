@@ -12,3 +12,7 @@
 "scanner.title" = "Scan";
 
 "scanner.share.pageSuffix" = "_page_%d";
+
+"scanner.noCamera.title" = "No camera access";
+"scanner.noCamera.description" = "Please allow access to your device's camera to use the document scanner feature.";
+"scanner.noCamera.settingsButton" = "Go to settings";

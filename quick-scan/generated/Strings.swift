@@ -13,6 +13,14 @@ internal enum Strings {
   internal enum Scanner {
     /// Scan
     internal static let title = Strings.tr("Localizable", "scanner.title", fallback: "Scan")
+    internal enum NoCamera {
+      /// Please allow access to your device's camera to use the document scanner feature.
+      internal static let description = Strings.tr("Localizable", "scanner.noCamera.description", fallback: "Please allow access to your device's camera to use the document scanner feature.")
+      /// Go to settings
+      internal static let settingsButton = Strings.tr("Localizable", "scanner.noCamera.settingsButton", fallback: "Go to settings")
+      /// No camera access
+      internal static let title = Strings.tr("Localizable", "scanner.noCamera.title", fallback: "No camera access")
+    }
     internal enum Share {
       /// _page_%d
       internal static func pageSuffix(_ p1: Int) -> String {
