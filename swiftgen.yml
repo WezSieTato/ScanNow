@@ -5,3 +5,10 @@ strings:
       output: quick-scan/Strings.swift
       params:
           enumName: Strings
+plist:
+  inputs: quick-scan/Info.plist
+  outputs:
+    templateName: runtime-swift5
+    output: quick-scan/InfoPlist.swift
+    params:
+          enumName: InfoPlist

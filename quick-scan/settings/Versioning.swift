@@ -6,20 +6,12 @@ protocol Versioning {
 }
 
 final class BundledVersion: Versioning {
-    let bundle: Bundle = .main
-
     var versionNumber: String {
-        guard let number = bundle.infoDictionary?["CFBundleShortVersionString"] as? String else {
-            fatalError("Marketing version needs to be set in Info.plist")
-        }
-        return number
+        return InfoPlist.cfBundleShortVersionString
     }
 
     var buildNumber: String {
-        guard let number = bundle.infoDictionary?["CFBundleVersion"] as? String else {
-            fatalError("Build number needs to be set in Info.plist")
-        }
-        return number
+        return InfoPlist.cfBundleVersion
     }
 }
 
