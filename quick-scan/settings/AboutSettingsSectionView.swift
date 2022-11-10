@@ -2,12 +2,13 @@ import SwiftUI
 
 struct AboutSettingsSectionView: View {
     let version: Versioning
+    private let strings = Strings.Settings.About.self
 
     @ViewBuilder
     var body: some View {
-        Section(header: Text("About")) {
+        Section(header: Text(strings.title)) {
             HStack {
-                Text("Version")
+                Text(strings.version)
                 Spacer()
                 Text("\(version.versionNumber) (\(version.buildNumber))")
             }

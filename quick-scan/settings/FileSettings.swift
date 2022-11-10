@@ -24,7 +24,7 @@ protocol FileSettings: ObservableObject {
 
 final class AppStorageFileSettings: FileSettings {
     @AppStorage("FileSettings.filename")
-    var filename: String = "Scan"
+    var filename: String = Strings.Settings.File.defaultFilename
 
     @AppStorage("FileSettings.seletedFormat")
     var format: ScanFormat = .pdf

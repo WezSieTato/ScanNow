@@ -8,7 +8,7 @@ final class SettingsViewControllerFactory {
     ) -> UIViewController {
         let view = SettingsView(version: version).defaultAppStorage(userDefaults)
         let viewController = UIHostingController(rootView: view)
-        viewController.title = "Settings"
+        viewController.title = Strings.Settings.title
         return viewController
     }
 }

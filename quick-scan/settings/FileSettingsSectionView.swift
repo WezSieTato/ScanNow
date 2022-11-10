@@ -3,18 +3,20 @@ import SwiftUI
 struct FileSettingsSectionView<SettingType: FileSettings>: View {
     @StateObject var settings: SettingType
 
+    private let strings = Strings.Settings.File.self
+
     @ViewBuilder
     var body: some View {
-        Section(header: Text("File")) {
-            TextField("Filename", text: $settings.filename)
+        Section(header: Text(strings.title)) {
+            TextField(strings.filename, text: $settings.filename)
 
-            Picker("Suffix", selection: $settings.suffix) {
+            Picker(strings.suffix, selection: $settings.suffix) {
                 ForEach(FileSufix.allCases) {
                     Text($0.rawValue.uppercased())
                 }
             }
 
-            Picker("Format", selection: $settings.format) {
+            Picker(strings.format, selection: $settings.format) {
                 ForEach(ScanFormat.allCases) {
                     Text($0.rawValue.uppercased())
                 }

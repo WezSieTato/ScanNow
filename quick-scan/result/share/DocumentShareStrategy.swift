@@ -29,7 +29,7 @@ final class DocumentShareManager: DocumentShareStrategy {
 
     private func partSuffix(index: Int, totalNumber: Int) -> String {
         if totalNumber > 1 {
-            return "_page_\(index)"
+            return Strings.Scanner.Share.pageSuffix(index)
         } else {
             return ""
         }
