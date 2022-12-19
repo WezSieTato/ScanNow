@@ -1,3 +1,4 @@
+import AVKit
 import PDFKit
 import SwiftUI
 import VisionKit
@@ -36,9 +37,14 @@ final class ScannerViewController: UIViewController {
     }
 
     private func makeChildViewController() -> UIViewController {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
             return makeDocumentCameraViewController()
-        } else {
+
+        case .notDetermined, .denied, .restricted:
+            fallthrough
+
+        @unknown default:
             return makeNoCameraAccesViewController()
         }
     }
