@@ -91,6 +91,7 @@
 		D372970E28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettingsSectionViewSnapshotTests.swift; sourceTree = "<group>"; };
 		D372971028FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSettingsSectionViewSnapshotTests.swift; sourceTree = "<group>"; };
 		D372971228FF38F500939783 /* MockFileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileSettings.swift; sourceTree = "<group>"; };
+		D3A73EB32950A415005BB595 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		D3AF33D22913CA8D00201014 /* Versioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Versioning.swift; sourceTree = "<group>"; };
 		D3AF33D42913D16600201014 /* MockVersioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVersioning.swift; sourceTree = "<group>"; };
 		D3AF33D62913D2DE00201014 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
@@ -237,6 +238,7 @@
 		D336A6BE2901EDCB00C1177B /* scanner */ = {
 			isa = PBXGroup;
 			children = (
+				D3A73EB32950A415005BB595 /* __Snapshots__ */,
 				D336A6BF2901EDD900C1177B /* MockScanCounter.swift */,
 				D308745F29436AEB00B86040 /* NoCameraAccessViewTests.swift */,
 			);

@@ -8,14 +8,19 @@ struct NoCameraAccessView: View {
         VStack(spacing: 15) {
             Image(systemName: "camera.viewfinder")
                 .font(.system(size: 70))
+
             Text(strings.title)
                 .font(.largeTitle)
-            Text(strings.description).frame(alignment: .center)
+                .multilineTextAlignment(.center)
+
+            Text(strings.description)
+                .multilineTextAlignment(.center)
+
             Button(action: {
                 UIApplication.shared.open(URL(string: "App-prefs:Camera")!)
-
             }, label: {
-                Text(strings.settingsButton).multilineTextAlignment(.center)
+                Text(strings.settingsButton)
+                    .multilineTextAlignment(.center)
             })
         }.padding([.horizontal], 50)
     }
