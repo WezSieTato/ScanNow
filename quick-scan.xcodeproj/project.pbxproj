@@ -40,6 +40,7 @@
 		D372970F28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D372970E28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift */; };
 		D372971128FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D372971028FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift */; };
 		D372971328FF38F500939783 /* MockFileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D372971228FF38F500939783 /* MockFileSettings.swift */; };
+		D3A73EB529511E0D005BB595 /* LaunchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */; };
 		D3AF33D32913CA8D00201014 /* Versioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF33D22913CA8D00201014 /* Versioning.swift */; };
 		D3AF33D52913D16600201014 /* MockVersioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF33D42913D16600201014 /* MockVersioning.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,8 @@
 		D372971028FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSettingsSectionViewSnapshotTests.swift; sourceTree = "<group>"; };
 		D372971228FF38F500939783 /* MockFileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileSettings.swift; sourceTree = "<group>"; };
 		D3A73EB32950A415005BB595 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
+		D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenTests.swift; sourceTree = "<group>"; };
+		D3A73EB629511E8A005BB595 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		D3AF33D22913CA8D00201014 /* Versioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Versioning.swift; sourceTree = "<group>"; };
 		D3AF33D42913D16600201014 /* MockVersioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVersioning.swift; sourceTree = "<group>"; };
 		D3AF33D62913D2DE00201014 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 		D30FAA4A26CB079900B8BF20 /* quick-scanTests */ = {
 			isa = PBXGroup;
 			children = (
+				D3A73EB629511E8A005BB595 /* __Snapshots__ */,
+				D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */,
 				D336A6BE2901EDCB00C1177B /* scanner */,
 				D336A6BB2901EB9300C1177B /* settings */,
 				D336A6B92901EB7E00C1177B /* result */,
@@ -417,6 +422,7 @@
 				D372971328FF38F500939783 /* MockFileSettings.swift in Sources */,
 				D372970F28FF362A00939783 /* AboutSettingsSectionViewSnapshotTests.swift in Sources */,
 				D336A6C62901EF2D00C1177B /* MockTimeProvider.swift in Sources */,
+				D3A73EB529511E0D005BB595 /* LaunchScreenTests.swift in Sources */,
 				D336A6C22901EE1D00C1177B /* CounterFilenameStrategyTests.swift in Sources */,
 				D37296FF28FD4A0300939783 /* SettingsViewSnapshotTests.swift in Sources */,
 				D372971128FF385E00939783 /* FileSettingsSectionViewSnapshotTests.swift in Sources */,
