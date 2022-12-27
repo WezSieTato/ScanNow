@@ -19,6 +19,7 @@ internal enum InfoPlist {
   internal static let cfBundlePackageType: String = _document["CFBundlePackageType"]
   internal static let cfBundleShortVersionString: String = _document["CFBundleShortVersionString"]
   internal static let cfBundleVersion: String = _document["CFBundleVersion"]
+  internal static let itsAppUsesNonExemptEncryption: Bool = _document["ITSAppUsesNonExemptEncryption"]
   internal static let lsRequiresIPhoneOS: Bool = _document["LSRequiresIPhoneOS"]
   internal static let nsCameraUsageDescription: String = _document["NSCameraUsageDescription"]
   internal static let uiApplicationSceneManifest: [String: Any] = _document["UIApplicationSceneManifest"]
