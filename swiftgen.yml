@@ -4,11 +4,19 @@ strings:
     - templateName: structured-swift5
       output: quick-scan/generated/Strings.swift
       params:
-          enumName: Strings
+        enumName: Strings
 plist:
   inputs: quick-scan/Info.plist
   outputs:
     templateName: runtime-swift5
     output: quick-scan/generated/InfoPlist.swift
     params:
-          enumName: InfoPlist
+      enumName: InfoPlist
+xcassets:
+  inputs: quick-scan
+  outputs:
+    templateName: swift5
+    output: quick-scan/generated/Assets.swift
+    params:
+      enumName: Assets
+

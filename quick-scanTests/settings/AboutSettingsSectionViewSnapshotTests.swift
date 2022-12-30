@@ -30,7 +30,7 @@ final class AboutSettingsSectionViewSnapshotTests: XCTestCase {
 
         assertSnapshot(
             matching: sut,
-            as: .image(layout: .fixed(width: 375, height: 100)),
+            as: .image(layout: .fixed(width: 375, height: 140)),
             record: false,
             file: file,
             testName: testName,
