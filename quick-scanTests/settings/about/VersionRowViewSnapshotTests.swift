@@ -3,7 +3,7 @@ import SnapshotTesting
 import SwiftUI
 import XCTest
 
-final class AboutSettingsSectionViewSnapshotTests: XCTestCase {
+final class VersionRowViewSnapshotTests: XCTestCase {
     func testView_whenVersionIs1_0_0andBuildNumber1() {
         testView(version: "1.0.0", buildNumber: "1")
     }
@@ -25,12 +25,12 @@ final class AboutSettingsSectionViewSnapshotTests: XCTestCase {
     ) {
         let versioning = MockVersioning(versionNumber: version, buildNumber: buildNumber)
         let sut = Form {
-            AboutSettingsSectionView(version: versioning)
+            VersionRowView(version: versioning)
         }
 
         assertSnapshot(
             matching: sut,
-            as: .image(layout: .fixed(width: 375, height: 140)),
+            as: .image(layout: .fixed(width: 375, height: 90)),
             record: false,
             file: file,
             testName: testName,
