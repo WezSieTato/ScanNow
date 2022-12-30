@@ -19,4 +19,11 @@ xcassets:
     output: quick-scan/generated/Assets.swift
     params:
       enumName: Assets
+ib:
+  inputs: quick-scan
+  outputs:
+    templateName: scenes-swift5
+    output: quick-scan/generated/Storyboards.swift
+    params:
+      enumName: Storyboards
 
