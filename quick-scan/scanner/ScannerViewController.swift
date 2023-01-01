@@ -1,5 +1,6 @@
 import AVKit
 import PDFKit
+import StoreKit
 import SwiftUI
 import VisionKit
 
@@ -75,7 +76,16 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
 
             let pdfVC = ScannedDocumentViewController(scannedDocument: scan)
             self.navigationController?.pushViewController(pdfVC, animated: true)
+            self.requestReviewIfNeeded()
         }
+    }
+
+    private func requestReviewIfNeeded() {
+        guard let windowScene = view.window?.windowScene,
+              counter.counter >= 3 else {
+            return
+        }
+        SKStoreReviewController.requestReview(in: windowScene)
     }
 
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
