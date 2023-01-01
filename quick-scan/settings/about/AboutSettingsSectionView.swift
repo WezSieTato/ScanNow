@@ -6,6 +6,7 @@ struct AboutSettingsSectionView: View {
     @ViewBuilder
     var body: some View {
         Section(header: Text(Strings.Settings.About.title)) {
+            WriteToUsView()
             GithubRowView()
             VersionRowView(version: version)
         }
