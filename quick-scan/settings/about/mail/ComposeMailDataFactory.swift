@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 
+// sourcery: AutoMockable
 protocol SystemVersioning {
     var systemName: String { get }
     var systemVersion: String { get }

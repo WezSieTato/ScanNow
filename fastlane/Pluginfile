@@ -1,3 +1,4 @@
 gem 'fastlane-plugin-swiftformat'
 gem 'fastlane-plugin-mint'
 gem 'fastlane-plugin-menigit'
+gem 'fastlane-plugin-sourcery'

@@ -1,5 +1,6 @@
 import Foundation
 
+// sourcery: AutoMockable
 protocol Versioning {
     var versionNumber: String { get }
     var buildNumber: String { get }
