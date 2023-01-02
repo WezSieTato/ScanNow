@@ -10,6 +10,7 @@ final class DocumentShareManager: DocumentShareStrategy {
         let exporter = DocumentDataExportStrategyFactory.create(fileFormat: fileSettings.format)
         let data = exporter.data(from: document)
         let nameCreator = FilenameStrategyFactory.create(fileSuffix: fileSettings.suffix)
+        let prefix = fileSettings.filename.isEmpty ? Strings.Settings.File.defaultFilename : fileSettings.filename
         let basename = nameCreator.filename(prefix: fileSettings.filename)
         return addName(to: data, basename: basename, fileFormat: fileSettings.format.rawValue)
     }

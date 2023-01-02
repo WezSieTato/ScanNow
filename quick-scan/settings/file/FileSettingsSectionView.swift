@@ -8,6 +8,7 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
     @ViewBuilder
     var body: some View {
         Section(header: Text(strings.title)) {
+            
             TextField(strings.filename, text: $settings.filename)
 
             Picker(strings.suffix, selection: $settings.suffix) {
