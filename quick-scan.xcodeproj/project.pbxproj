@@ -54,6 +54,7 @@
 		D3B86DE6296246D700989DCB /* ComposeMailDataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DE5296246D700989DCB /* ComposeMailDataFactoryTests.swift */; };
 		D3B86DE929624E3500989DCB /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DE829624E3500989DCB /* AutoMockable.generated.swift */; };
 		D3C48C4E2963037F0007EC14 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C48C4D2963037F0007EC14 /* TimeProvider.swift */; };
+		D3C48C5029630E500007EC14 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C48C4F29630E500007EC14 /* Date+Components.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		D3B86DE5296246D700989DCB /* ComposeMailDataFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMailDataFactoryTests.swift; sourceTree = "<group>"; };
 		D3B86DE829624E3500989DCB /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		D3C48C4D2963037F0007EC14 /* TimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
+		D3C48C4F29630E500007EC14 /* Date+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Components.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				D336A6BB2901EB9300C1177B /* settings */,
 				D336A6B92901EB7E00C1177B /* result */,
 				D30FAA4D26CB079900B8BF20 /* Info.plist */,
+				D3C48C4F29630E500007EC14 /* Date+Components.swift */,
 			);
 			path = "quick-scanTests";
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				D336A6C42901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift in Sources */,
 				D3A73EB529511E0D005BB595 /* LaunchScreenTests.swift in Sources */,
 				D3A3F728295F21F20036637F /* AboutSettingsSectionViewSnapshotTests.swift in Sources */,
+				D3C48C5029630E500007EC14 /* Date+Components.swift in Sources */,
 				D336A6C22901EE1D00C1177B /* CounterFilenameStrategyTests.swift in Sources */,
 				D37296FF28FD4A0300939783 /* SettingsViewSnapshotTests.swift in Sources */,
 				D3A3F72E295F22CE0036637F /* GithubRowViewSnapshotTests.swift in Sources */,

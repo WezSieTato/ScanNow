@@ -15,8 +15,11 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
         fileSettings.format = .pdf
         fileSettings.suffix = .none
 
+        let timeProvider = TimeProviderMock()
+        timeProvider.nowReturnValue = Date.date()
+
         sut = Form { [fileSettings] in
-            FileSettingsSectionView(settings: fileSettings!)
+            FileSettingsSectionView(settings: fileSettings!, timeProvider: timeProvider)
         }
     }
 

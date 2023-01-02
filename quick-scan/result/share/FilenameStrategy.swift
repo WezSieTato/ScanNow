@@ -5,14 +5,17 @@ protocol FilenameStrategy {
 }
 
 enum FilenameStrategyFactory {
-    static func create(fileSuffix: FileSufix) -> FilenameStrategy {
+    static func create(
+        fileSuffix: FileSufix,
+        timeProvider: TimeProvider = FoundationTimeProvider()
+    ) -> FilenameStrategy {
         switch fileSuffix {
         case .none:
             return NoneFilenameStrategy()
         case .counter:
             return CounterFilenameStrategy(counter: AppStorageScanCounter())
         case .dateAndTime:
-            return DateAndTimeFilenameStrategy(timeProvider: FoundationTimeProvider())
+            return DateAndTimeFilenameStrategy(timeProvider: timeProvider)
         }
     }
 }

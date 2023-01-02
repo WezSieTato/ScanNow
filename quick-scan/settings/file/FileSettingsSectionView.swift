@@ -2,6 +2,7 @@ import SwiftUI
 
 struct FileSettingsSectionView<SettingType: FileSettings>: View {
     @StateObject var settings: SettingType
+    let timeProvider: TimeProvider
 
     private let strings = Strings.Settings.File.self
 
@@ -25,16 +26,16 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
             HStack {
                 Text(strings.example)
                 Spacer()
-                Text(settings.exampleFileName)
+                Text(settings.exampleFileName(timeProvider: timeProvider))
             }
         }
     }
 }
 
 private extension FileSettings {
-    var exampleFileName: String {
+    func exampleFileName(timeProvider: TimeProvider) -> String {
         FilenameStrategyFactory
-            .create(fileSuffix: suffix)
+            .create(fileSuffix: suffix, timeProvider: timeProvider)
             .filename(settings: self) + "." + format.rawValue.lowercased()
     }
 }
@@ -56,7 +57,7 @@ private extension FileSufix {
 struct FileSettingsSectionViewPreview: PreviewProvider {
     static var previews: some View {
         Form {
-            FileSettingsSectionView(settings: AppStorageFileSettings())
+            FileSettingsSectionView(settings: AppStorageFileSettings(), timeProvider: FoundationTimeProvider())
         }
     }
 }
