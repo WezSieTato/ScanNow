@@ -8,6 +8,6 @@ final class AboutSettingsSectionViewSnapshotTests: XCTestCase {
         let sut = Form {
             AboutSettingsSectionView(version: PreviewVersion())
         }
-        assertSnapshot(matching: sut, as: .image(layout: .fixed(width: 375, height: 140)))
+        assertSnapshot(matching: sut, as: .image(layout: .fixed(width: 375, height: 180)))
     }
 }

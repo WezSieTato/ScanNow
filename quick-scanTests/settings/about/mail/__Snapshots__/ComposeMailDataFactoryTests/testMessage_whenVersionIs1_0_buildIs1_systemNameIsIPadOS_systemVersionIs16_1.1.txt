@@ -1,0 +1,6 @@
+
+
+-------App & Device info--------
+- system: iPadOS, 16.1
+- app: 1.0, 1
+-------End-------

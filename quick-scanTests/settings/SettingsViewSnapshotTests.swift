@@ -10,9 +10,12 @@ final class SettingsViewSnapshotTests: XCTestCase {
         super.setUp()
 
         userDefaults = UserDefaults(suiteName: "SettingsViewSnapshotTests")
+        let versioning = VersioningMock()
+        versioning.versionNumber = "1.0.0"
+        versioning.buildNumber = "1"
         sut = SettingsViewControllerFactory.create(
             userDefaults: userDefaults,
-            version: MockVersioning(versionNumber: "1.0.0", buildNumber: "1")
+            version: versioning
         )
     }
 

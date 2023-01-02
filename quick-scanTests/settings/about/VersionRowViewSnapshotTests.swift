@@ -23,7 +23,9 @@ final class VersionRowViewSnapshotTests: XCTestCase {
         testName: String = #function,
         line: UInt = #line
     ) {
-        let versioning = MockVersioning(versionNumber: version, buildNumber: buildNumber)
+        let versioning = VersioningMock()
+        versioning.versionNumber = version
+        versioning.buildNumber = buildNumber
         let sut = Form {
             VersionRowView(version: versioning)
         }

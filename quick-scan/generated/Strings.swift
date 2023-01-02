@@ -32,10 +32,33 @@ internal enum Strings {
     /// Settings
     internal static let title = Strings.tr("Localizable", "settings.title", fallback: "Settings")
     internal enum About {
+      /// Write to us
+      internal static let email = Strings.tr("Localizable", "settings.about.email", fallback: "Write to us")
       /// About
       internal static let title = Strings.tr("Localizable", "settings.about.title", fallback: "About")
       /// Version
       internal static let version = Strings.tr("Localizable", "settings.about.version", fallback: "Version")
+      internal enum EmailCompose {
+        /// - app: %@, %@
+        /// 
+        internal static func app(_ p1: Any, _ p2: Any) -> String {
+          return Strings.tr("Localizable", "settings.about.emailCompose.app", String(describing: p1), String(describing: p2), fallback: "- app: %@, %@\n")
+        }
+        /// 
+        /// 
+        /// -------App & Device info--------
+        /// 
+        internal static let appAndDeviceInfo = Strings.tr("Localizable", "settings.about.emailCompose.appAndDeviceInfo", fallback: "\n\n-------App & Device info--------\n")
+        /// -------End-------
+        internal static let end = Strings.tr("Localizable", "settings.about.emailCompose.end", fallback: "-------End-------")
+        /// Feedback for Scan Only
+        internal static let subject = Strings.tr("Localizable", "settings.about.emailCompose.subject", fallback: "Feedback for Scan Only")
+        /// - system: %@, %@
+        /// 
+        internal static func system(_ p1: Any, _ p2: Any) -> String {
+          return Strings.tr("Localizable", "settings.about.emailCompose.system", String(describing: p1), String(describing: p2), fallback: "- system: %@, %@\n")
+        }
+      }
     }
     internal enum File {
       /// Scan

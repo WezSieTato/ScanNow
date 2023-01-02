@@ -16,6 +16,7 @@ enum FileSufix: String, CaseIterable, Identifiable {
     var id: Self { self }
 }
 
+// sourcery: AutoMockable
 protocol FileSettings: ObservableObject {
     var filename: String { get set }
     var format: ScanFormat { get set }

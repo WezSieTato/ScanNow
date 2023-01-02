@@ -30,5 +30,14 @@ platform :ios do
       show_diff: false,
       error_message: "Generated code is different than swiftgen output. Run `mint run swiftgen` to re-generate code."
     )
+
+    ENV["SOURCERY_EXECUTABLE"] = mint_which(package: 'sourcery')
+    sourcery(config: "quick-scanTests/.sourcery.yml")
+
+    ensure_no_changes(
+      path: "quick-scanTests/generated",
+      show_diff: false,
+      error_message: "Generated code is different than sourcery output. Run `mint run sourcery` in `quick-scanTests` directory to re-generate code."
+    )
   end
 end

@@ -36,7 +36,6 @@
 		D36D1782295F96B10030487E /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D1781295F96B10030487E /* UIViewController+Child.swift */; };
 		D37296FD28FD491400939783 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D37296FC28FD491400939783 /* SnapshotTesting */; };
 		D37296FF28FD4A0300939783 /* SettingsViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */; };
-		D372971328FF38F500939783 /* MockFileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D372971228FF38F500939783 /* MockFileSettings.swift */; };
 		D3A3F71A295F1FF70036637F /* AboutSettingsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F714295F1FF70036637F /* AboutSettingsSectionView.swift */; };
 		D3A3F71B295F1FF70036637F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F715295F1FF70036637F /* SettingsView.swift */; };
 		D3A3F71C295F1FF70036637F /* Versioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F716295F1FF70036637F /* Versioning.swift */; };
@@ -50,7 +49,12 @@
 		D3A3F72E295F22CE0036637F /* GithubRowViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F72D295F22CE0036637F /* GithubRowViewSnapshotTests.swift */; };
 		D3A3F730295F8DB30036637F /* NavigationScannerViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F72F295F8DB30036637F /* NavigationScannerViewControllerFactory.swift */; };
 		D3A73EB529511E0D005BB595 /* LaunchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */; };
-		D3AF33D52913D16600201014 /* MockVersioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF33D42913D16600201014 /* MockVersioning.swift */; };
+		D3B86DD92962316E00989DCB /* WriteToUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DD82962316E00989DCB /* WriteToUsView.swift */; };
+		D3B86DDB2962332100989DCB /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DDA2962332100989DCB /* MailView.swift */; };
+		D3B86DDE296238F700989DCB /* ComposeMailDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DDD296238F700989DCB /* ComposeMailDataFactory.swift */; };
+		D3B86DE1296245D900989DCB /* WriteToUsViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DE0296245D900989DCB /* WriteToUsViewSnapshotTests.swift */; };
+		D3B86DE6296246D700989DCB /* ComposeMailDataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DE5296246D700989DCB /* ComposeMailDataFactoryTests.swift */; };
+		D3B86DE929624E3500989DCB /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DE829624E3500989DCB /* AutoMockable.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +100,6 @@
 		D36D177F295F962A0030487E /* AskForCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskForCameraViewController.swift; sourceTree = "<group>"; };
 		D36D1781295F96B10030487E /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewSnapshotTests.swift; sourceTree = "<group>"; };
-		D372971228FF38F500939783 /* MockFileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileSettings.swift; sourceTree = "<group>"; };
 		D3A3F714295F1FF70036637F /* AboutSettingsSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutSettingsSectionView.swift; sourceTree = "<group>"; };
 		D3A3F715295F1FF70036637F /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D3A3F716295F1FF70036637F /* Versioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Versioning.swift; sourceTree = "<group>"; };
@@ -114,8 +117,14 @@
 		D3A73EB32950A415005BB595 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenTests.swift; sourceTree = "<group>"; };
 		D3A73EB629511E8A005BB595 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
-		D3AF33D42913D16600201014 /* MockVersioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVersioning.swift; sourceTree = "<group>"; };
 		D3AF33D62913D2DE00201014 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
+		D3B86DD82962316E00989DCB /* WriteToUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteToUsView.swift; sourceTree = "<group>"; };
+		D3B86DDA2962332100989DCB /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		D3B86DDD296238F700989DCB /* ComposeMailDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMailDataFactory.swift; sourceTree = "<group>"; };
+		D3B86DE0296245D900989DCB /* WriteToUsViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteToUsViewSnapshotTests.swift; sourceTree = "<group>"; };
+		D3B86DE22962460400989DCB /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
+		D3B86DE5296246D700989DCB /* ComposeMailDataFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMailDataFactoryTests.swift; sourceTree = "<group>"; };
+		D3B86DE829624E3500989DCB /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +186,7 @@
 		D30FAA4A26CB079900B8BF20 /* quick-scanTests */ = {
 			isa = PBXGroup;
 			children = (
+				D3B86DE729624E3500989DCB /* generated */,
 				D3A73EB629511E8A005BB595 /* __Snapshots__ */,
 				D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */,
 				D336A6BE2901EDCB00C1177B /* scanner */,
@@ -256,8 +266,6 @@
 				D3A3F723295F21F20036637F /* file */,
 				D3AF33D62913D2DE00201014 /* __Snapshots__ */,
 				D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */,
-				D372971228FF38F500939783 /* MockFileSettings.swift */,
-				D3AF33D42913D16600201014 /* MockVersioning.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 				D3A3F713295F1FF70036637F /* about */,
 				D3A3F717295F1FF70036637F /* file */,
 				D344DC9828C0A2A8000FD06D /* SettingsViewControllerFactory.swift */,
+				D3A3F715295F1FF70036637F /* SettingsView.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -285,11 +294,10 @@
 		D3A3F713295F1FF70036637F /* about */ = {
 			isa = PBXGroup;
 			children = (
+				D3B86DDC2962379A00989DCB /* version */,
+				D3B86DD72962314900989DCB /* mail */,
 				D3A3F714295F1FF70036637F /* AboutSettingsSectionView.swift */,
-				D3A3F715295F1FF70036637F /* SettingsView.swift */,
-				D3A3F716295F1FF70036637F /* Versioning.swift */,
 				D3A3F71F295F20230036637F /* GithubRowView.swift */,
-				D3A3F721295F21010036637F /* VersionRowView.swift */,
 			);
 			path = about;
 			sourceTree = "<group>";
@@ -315,12 +323,50 @@
 		D3A3F725295F21F20036637F /* about */ = {
 			isa = PBXGroup;
 			children = (
+				D3B86DDF296245BD00989DCB /* mail */,
 				D3A3F729295F220C0036637F /* __Snapshots__ */,
 				D3A3F726295F21F20036637F /* AboutSettingsSectionViewSnapshotTests.swift */,
 				D3A3F72B295F22440036637F /* VersionRowViewSnapshotTests.swift */,
 				D3A3F72D295F22CE0036637F /* GithubRowViewSnapshotTests.swift */,
 			);
 			path = about;
+			sourceTree = "<group>";
+		};
+		D3B86DD72962314900989DCB /* mail */ = {
+			isa = PBXGroup;
+			children = (
+				D3B86DD82962316E00989DCB /* WriteToUsView.swift */,
+				D3B86DDA2962332100989DCB /* MailView.swift */,
+				D3B86DDD296238F700989DCB /* ComposeMailDataFactory.swift */,
+			);
+			path = mail;
+			sourceTree = "<group>";
+		};
+		D3B86DDC2962379A00989DCB /* version */ = {
+			isa = PBXGroup;
+			children = (
+				D3A3F716295F1FF70036637F /* Versioning.swift */,
+				D3A3F721295F21010036637F /* VersionRowView.swift */,
+			);
+			path = version;
+			sourceTree = "<group>";
+		};
+		D3B86DDF296245BD00989DCB /* mail */ = {
+			isa = PBXGroup;
+			children = (
+				D3B86DE22962460400989DCB /* __Snapshots__ */,
+				D3B86DE0296245D900989DCB /* WriteToUsViewSnapshotTests.swift */,
+				D3B86DE5296246D700989DCB /* ComposeMailDataFactoryTests.swift */,
+			);
+			path = mail;
+			sourceTree = "<group>";
+		};
+		D3B86DE729624E3500989DCB /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				D3B86DE829624E3500989DCB /* AutoMockable.generated.swift */,
+			);
+			path = generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,14 +513,17 @@
 				D36D1782295F96B10030487E /* UIViewController+Child.swift in Sources */,
 				D30FAA3726CB079700B8BF20 /* SceneDelegate.swift in Sources */,
 				D30FAA6C26CBD38400B8BF20 /* ScannedDocumentViewController.swift in Sources */,
+				D3B86DDB2962332100989DCB /* MailView.swift in Sources */,
 				D317D19B291D2E4800FDFDB4 /* Strings.swift in Sources */,
 				D30FAA7A26CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift in Sources */,
+				D3B86DD92962316E00989DCB /* WriteToUsView.swift in Sources */,
 				D344DC9928C0A2A8000FD06D /* SettingsViewControllerFactory.swift in Sources */,
 				D336A6AE29016F0F00C1177B /* DocumentDataExportStrategy.swift in Sources */,
 				D3A3F722295F21010036637F /* VersionRowView.swift in Sources */,
 				D3A3F71D295F1FF70036637F /* FileSettingsSectionView.swift in Sources */,
 				D3A3F720295F20230036637F /* GithubRowView.swift in Sources */,
 				D33164D8291D6773008DF02E /* NoCameraAccessView.swift in Sources */,
+				D3B86DDE296238F700989DCB /* ComposeMailDataFactory.swift in Sources */,
 				D3A3F71E295F1FF70036637F /* FileSettings.swift in Sources */,
 				D324AD08295EF38A0054E9E5 /* Assets.swift in Sources */,
 			);
@@ -485,8 +534,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A3F727295F21F20036637F /* FileSettingsSectionViewSnapshotTests.swift in Sources */,
+				D3B86DE1296245D900989DCB /* WriteToUsViewSnapshotTests.swift in Sources */,
 				D336A6C42901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift in Sources */,
-				D372971328FF38F500939783 /* MockFileSettings.swift in Sources */,
 				D336A6C62901EF2D00C1177B /* MockTimeProvider.swift in Sources */,
 				D3A73EB529511E0D005BB595 /* LaunchScreenTests.swift in Sources */,
 				D3A3F728295F21F20036637F /* AboutSettingsSectionViewSnapshotTests.swift in Sources */,
@@ -495,9 +544,10 @@
 				D3A3F72E295F22CE0036637F /* GithubRowViewSnapshotTests.swift in Sources */,
 				D3A3F72C295F22440036637F /* VersionRowViewSnapshotTests.swift in Sources */,
 				D308746029436AEB00B86040 /* NoCameraAccessViewTests.swift in Sources */,
+				D3B86DE929624E3500989DCB /* AutoMockable.generated.swift in Sources */,
 				D336A6BD2901EBC400C1177B /* NoneFilenameStrategyTests.swift in Sources */,
 				D336A6C02901EDD900C1177B /* MockScanCounter.swift in Sources */,
-				D3AF33D52913D16600201014 /* MockVersioning.swift in Sources */,
+				D3B86DE6296246D700989DCB /* ComposeMailDataFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

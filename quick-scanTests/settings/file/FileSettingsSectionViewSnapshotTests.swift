@@ -4,13 +4,17 @@ import SwiftUI
 import XCTest
 
 final class FileSettingsSectionViewSnapshotTests: XCTestCase {
-    private var sut: Form<FileSettingsSectionView<MockFileSettings>>!
-    private var fileSettings: MockFileSettings!
+    private var sut: Form<FileSettingsSectionView<FileSettingsMock>>!
+    private var fileSettings: FileSettingsMock!
 
     override func setUp() {
         super.setUp()
 
-        fileSettings = MockFileSettings()
+        fileSettings = FileSettingsMock()
+        fileSettings.filename = "Scan"
+        fileSettings.format = .pdf
+        fileSettings.suffix = .none
+
         sut = Form { [fileSettings] in
             FileSettingsSectionView(settings: fileSettings!)
         }

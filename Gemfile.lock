@@ -107,6 +107,7 @@ GEM
       xcpretty-travis-formatter (>= 0.0.3)
     fastlane-plugin-menigit (1.0.1)
     fastlane-plugin-mint (1.1.0)
+    fastlane-plugin-sourcery (1.0.0)
     fastlane-plugin-swiftformat (0.3.0)
     gh_inspector (1.1.3)
     google-apis-androidpublisher_v3 (0.31.0)
@@ -214,13 +215,15 @@ GEM
 PLATFORMS
   universal-darwin-20
   universal-darwin-21
+  universal-darwin-22
   x86_64-linux
 
 DEPENDENCIES
   fastlane
   fastlane-plugin-menigit
   fastlane-plugin-mint
+  fastlane-plugin-sourcery
   fastlane-plugin-swiftformat
 
 BUNDLED WITH
-   2.2.32
+   2.3.22
