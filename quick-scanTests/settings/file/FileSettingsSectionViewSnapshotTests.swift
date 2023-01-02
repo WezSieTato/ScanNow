@@ -34,6 +34,11 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
         testView()
     }
 
+    func testView_whenSuffixIsDateAndTime() {
+        fileSettings.suffix = .dateAndTime
+        testView()
+    }
+
     func testView_whenFormatIsJpeg() {
         fileSettings.format = .jpeg
         testView()

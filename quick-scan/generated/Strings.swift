@@ -67,10 +67,18 @@ internal enum Strings {
       internal static let filename = Strings.tr("Localizable", "settings.file.filename", fallback: "Filename")
       /// Format
       internal static let format = Strings.tr("Localizable", "settings.file.format", fallback: "Format")
-      /// Suffix
-      internal static let suffix = Strings.tr("Localizable", "settings.file.suffix", fallback: "Suffix")
+      /// File suffix
+      internal static let suffix = Strings.tr("Localizable", "settings.file.suffix", fallback: "File suffix")
       /// File
       internal static let title = Strings.tr("Localizable", "settings.file.title", fallback: "File")
+      internal enum SuffixCase {
+        /// Counter
+        internal static let counter = Strings.tr("Localizable", "settings.file.suffixCase.counter", fallback: "Counter")
+        /// Date and time
+        internal static let dateAndTime = Strings.tr("Localizable", "settings.file.suffixCase.dateAndTime", fallback: "Date and time")
+        /// None
+        internal static let `none` = Strings.tr("Localizable", "settings.file.suffixCase.none", fallback: "None")
+      }
     }
   }
 }

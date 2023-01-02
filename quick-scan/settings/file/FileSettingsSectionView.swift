@@ -8,12 +8,11 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
     @ViewBuilder
     var body: some View {
         Section(header: Text(strings.title)) {
-            
             TextField(strings.filename, text: $settings.filename)
 
             Picker(strings.suffix, selection: $settings.suffix) {
                 ForEach(FileSufix.allCases) {
-                    Text($0.rawValue.uppercased())
+                    Text($0.title)
                 }
             }
 
@@ -22,6 +21,20 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
                     Text($0.rawValue.uppercased())
                 }
             }
+        }
+    }
+}
+
+private extension FileSufix {
+    var title: String {
+        let strings = Strings.Settings.File.SuffixCase.self
+        switch self {
+        case .none:
+            return strings.none
+        case .counter:
+            return strings.counter
+        case .dateAndTime:
+            return strings.dateAndTime
         }
     }
 }
