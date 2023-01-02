@@ -1,7 +1,7 @@
 import Foundation
 
 protocol FilenameStrategy {
-    func filename(prefix: String) -> String
+    func filename(settings: any FileSettings) -> String
 }
 
 enum FilenameStrategyFactory {
@@ -17,9 +17,15 @@ enum FilenameStrategyFactory {
     }
 }
 
+private extension FileSettings {
+    var prefix: String {
+        !filename.isEmpty ? filename : Strings.Settings.File.defaultFilename
+    }
+}
+
 final class NoneFilenameStrategy: FilenameStrategy {
-    func filename(prefix: String) -> String {
-        prefix
+    func filename(settings: any FileSettings) -> String {
+        settings.prefix
     }
 }
 
@@ -30,11 +36,12 @@ final class CounterFilenameStrategy: FilenameStrategy {
         self.counter = counter
     }
 
-    func filename(prefix: String) -> String {
-        "\(prefix)_\(counter.counter)"
+    func filename(settings: any FileSettings) -> String {
+        "\(settings.prefix)_\(counter.counter)"
     }
 }
 
+// sourcery: AutoMockable
 protocol TimeProvider {
     func now() -> Date
 }
@@ -52,11 +59,11 @@ final class DateAndTimeFilenameStrategy: FilenameStrategy {
         self.timeProvider = timeProvider
     }
 
-    func filename(prefix: String) -> String {
+    func filename(settings: any FileSettings) -> String {
         let date = timeProvider.now()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy-HH:mm"
         let dateString = dateFormatter.string(from: date)
-        return "\(prefix)_\(dateString)"
+        return "\(settings.prefix)_\(dateString)"
     }
 }

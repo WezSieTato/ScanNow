@@ -1,5 +1,6 @@
 import SwiftUI
 
+// sourcery: AutoMockable
 protocol ScanCounter {
     var counter: Int { get }
     func increaseCounter()
