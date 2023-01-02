@@ -53,6 +53,7 @@
 		D3B86DE1296245D900989DCB /* WriteToUsViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DE0296245D900989DCB /* WriteToUsViewSnapshotTests.swift */; };
 		D3B86DE6296246D700989DCB /* ComposeMailDataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DE5296246D700989DCB /* ComposeMailDataFactoryTests.swift */; };
 		D3B86DE929624E3500989DCB /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DE829624E3500989DCB /* AutoMockable.generated.swift */; };
+		D3C48C4E2963037F0007EC14 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C48C4D2963037F0007EC14 /* TimeProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		D3B86DE22962460400989DCB /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		D3B86DE5296246D700989DCB /* ComposeMailDataFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMailDataFactoryTests.swift; sourceTree = "<group>"; };
 		D3B86DE829624E3500989DCB /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		D3C48C4D2963037F0007EC14 /* TimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				D336A6AD29016F0F00C1177B /* DocumentDataExportStrategy.swift */,
 				D336A6B5290197AA00C1177B /* FilenameStrategy.swift */,
 				D336A6B729019E9100C1177B /* DocumentShareStrategy.swift */,
+				D3C48C4D2963037F0007EC14 /* TimeProvider.swift */,
 			);
 			path = share;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				D30FAA7A26CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift in Sources */,
 				D3B86DD92962316E00989DCB /* WriteToUsView.swift in Sources */,
 				D344DC9928C0A2A8000FD06D /* SettingsViewControllerFactory.swift in Sources */,
+				D3C48C4E2963037F0007EC14 /* TimeProvider.swift in Sources */,
 				D336A6AE29016F0F00C1177B /* DocumentDataExportStrategy.swift in Sources */,
 				D3A3F722295F21010036637F /* VersionRowView.swift in Sources */,
 				D3A3F71D295F1FF70036637F /* FileSettingsSectionView.swift in Sources */,

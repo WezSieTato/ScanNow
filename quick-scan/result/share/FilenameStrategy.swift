@@ -41,17 +41,6 @@ final class CounterFilenameStrategy: FilenameStrategy {
     }
 }
 
-// sourcery: AutoMockable
-protocol TimeProvider {
-    func now() -> Date
-}
-
-final class FoundationTimeProvider: TimeProvider {
-    func now() -> Date {
-        Date()
-    }
-}
-
 final class DateAndTimeFilenameStrategy: FilenameStrategy {
     private let timeProvider: TimeProvider
 

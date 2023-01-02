@@ -25,9 +25,17 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
             HStack {
                 Text(strings.example)
                 Spacer()
-                Text(FilenameStrategyFactory.create(fileSuffix: settings.suffix).filename(settings: settings))
+                Text(settings.exampleFileName)
             }
         }
+    }
+}
+
+private extension FileSettings {
+    var exampleFileName: String {
+        FilenameStrategyFactory
+            .create(fileSuffix: suffix)
+            .filename(settings: self) + "." + format.rawValue.lowercased()
     }
 }
 
