@@ -63,6 +63,8 @@ internal enum Strings {
     internal enum File {
       /// Scan
       internal static let defaultFilename = Strings.tr("Localizable", "settings.file.defaultFilename", fallback: "Scan")
+      /// Example
+      internal static let example = Strings.tr("Localizable", "settings.file.example", fallback: "Example")
       /// Filename
       internal static let filename = Strings.tr("Localizable", "settings.file.filename", fallback: "Filename")
       /// Format

@@ -21,6 +21,12 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
                     Text($0.rawValue.uppercased())
                 }
             }
+
+            HStack {
+                Text(strings.example)
+                Spacer()
+                Text(FilenameStrategyFactory.create(fileSuffix: settings.suffix).filename(settings: settings))
+            }
         }
     }
 }

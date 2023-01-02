@@ -5,6 +5,7 @@
 "settings.file.suffix" = "File suffix";
 "settings.file.format" = "Format";
 "settings.file.defaultFilename" = "Scan";
+"settings.file.example" = "Example";
 
 "settings.file.suffixCase.none" = "None";
 "settings.file.suffixCase.counter" = "Counter";
