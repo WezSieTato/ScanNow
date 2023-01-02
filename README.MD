@@ -1,6 +1,8 @@
 # ScanNow
 
-![App logo](quick-scan/Assets.xcassets/AppIcon.appiconset/AppIcon.png)
+<p align="center">
+  <img src="logo.png" alt="App logo">
+</p>
 
 A fast and simple app for document scanning on iOS.
 
