@@ -2,9 +2,14 @@
 
 "settings.file.title" = "File";
 "settings.file.filename" = "Filename";
-"settings.file.suffix" = "Suffix";
+"settings.file.suffix" = "File suffix";
 "settings.file.format" = "Format";
 "settings.file.defaultFilename" = "Scan";
+"settings.file.example" = "Example";
+
+"settings.file.suffixCase.none" = "None";
+"settings.file.suffixCase.counter" = "Counter";
+"settings.file.suffixCase.dateAndTime" = "Date and time";
 
 "settings.about.title" = "About";
 "settings.about.version" = "Version";

@@ -3,31 +3,46 @@ import XCTest
 
 final class CounterFilenameStrategyTests: XCTestCase {
     private var sut: CounterFilenameStrategy!
-    private var counter: MockScanCounter!
+    private var counter: ScanCounterMock!
+    private var fileSettings: FileSettingsMock!
 
     override func setUp() {
         super.setUp()
-        counter = MockScanCounter()
+        counter = ScanCounterMock()
+        counter.counter = 0
         sut = CounterFilenameStrategy(counter: counter)
+        fileSettings = FileSettingsMock()
     }
 
     override func tearDown() {
+        fileSettings = nil
         sut = nil
         counter = nil
         super.tearDown()
     }
 
-    func testFilename_whenPrefixIsExample_andCounter0() {
-        XCTAssertEqual(sut.filename(prefix: "Example"), "Example_0")
+    func testFilename_whenSettingsFilenameIsExample_andCounter0() {
+        fileSettings.filename = "Example"
+
+        XCTAssertEqual(sut.filename(settings: fileSettings), "Example_0")
     }
 
-    func testFilename_whenPrefixIsExample_andCounter1() {
+    func testFilename_whenSettingsFilenameIsExample_andCounter1() {
+        fileSettings.filename = "Example"
         counter.counter = 1
 
-        XCTAssertEqual(sut.filename(prefix: "Example"), "Example_1")
+        XCTAssertEqual(sut.filename(settings: fileSettings), "Example_1")
     }
 
-    func testFilename_whenPrefixIsScan_andCounter0() {
-        XCTAssertEqual(sut.filename(prefix: "Scan"), "Scan_0")
+    func testFilename_whenSettingsFilenameIsScan_andCounter0() {
+        fileSettings.filename = "Scan"
+
+        XCTAssertEqual(sut.filename(settings: fileSettings), "Scan_0")
+    }
+
+    func testFilename_whenSettingsFilenameIsEmptyString_andCounter0() {
+        fileSettings.filename = ""
+
+        XCTAssertEqual(sut.filename(settings: fileSettings), "Scan_0")
     }
 }

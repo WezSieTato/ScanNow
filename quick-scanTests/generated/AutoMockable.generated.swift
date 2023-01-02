@@ -44,6 +44,27 @@ class FileSettingsMock: FileSettings {
     var underlyingSuffix: FileSufix!
 
 }
+class ScanCounterMock: ScanCounter {
+    var counter: Int {
+        get { return underlyingCounter }
+        set(value) { underlyingCounter = value }
+    }
+    var underlyingCounter: Int!
+
+    //MARK: - increaseCounter
+
+    var increaseCounterCallsCount = 0
+    var increaseCounterCalled: Bool {
+        return increaseCounterCallsCount > 0
+    }
+    var increaseCounterClosure: (() -> Void)?
+
+    func increaseCounter() {
+        increaseCounterCallsCount += 1
+        increaseCounterClosure?()
+    }
+
+}
 class SystemVersioningMock: SystemVersioning {
     var systemName: String {
         get { return underlyingSystemName }
@@ -55,6 +76,23 @@ class SystemVersioningMock: SystemVersioning {
         set(value) { underlyingSystemVersion = value }
     }
     var underlyingSystemVersion: String!
+
+}
+class TimeProviderMock: TimeProvider {
+
+    //MARK: - now
+
+    var nowCallsCount = 0
+    var nowCalled: Bool {
+        return nowCallsCount > 0
+    }
+    var nowReturnValue: Date!
+    var nowClosure: (() -> Date)?
+
+    func now() -> Date {
+        nowCallsCount += 1
+        return nowClosure.map({ $0() }) ?? nowReturnValue
+    }
 
 }
 class VersioningMock: Versioning {

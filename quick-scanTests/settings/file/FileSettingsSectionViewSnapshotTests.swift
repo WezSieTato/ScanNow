@@ -15,8 +15,11 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
         fileSettings.format = .pdf
         fileSettings.suffix = .none
 
+        let timeProvider = TimeProviderMock()
+        timeProvider.nowReturnValue = Date.date()
+
         sut = Form { [fileSettings] in
-            FileSettingsSectionView(settings: fileSettings!)
+            FileSettingsSectionView(settings: fileSettings!, timeProvider: timeProvider)
         }
     }
 
@@ -34,6 +37,11 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
         testView()
     }
 
+    func testView_whenSuffixIsDateAndTime() {
+        fileSettings.suffix = .dateAndTime
+        testView()
+    }
+
     func testView_whenFormatIsJpeg() {
         fileSettings.format = .jpeg
         testView()
@@ -42,7 +50,7 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
     private func testView(file: StaticString = #file, testName: String = #function, line: UInt = #line) {
         assertSnapshot(
             matching: sut,
-            as: .image(layout: .fixed(width: 375, height: 220)),
+            as: .image(layout: .fixed(width: 375, height: 240)),
             record: false,
             file: file,
             testName: testName,

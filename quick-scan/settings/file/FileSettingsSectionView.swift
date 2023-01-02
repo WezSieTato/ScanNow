@@ -2,6 +2,7 @@ import SwiftUI
 
 struct FileSettingsSectionView<SettingType: FileSettings>: View {
     @StateObject var settings: SettingType
+    let timeProvider: TimeProvider
 
     private let strings = Strings.Settings.File.self
 
@@ -12,7 +13,7 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
 
             Picker(strings.suffix, selection: $settings.suffix) {
                 ForEach(FileSufix.allCases) {
-                    Text($0.rawValue.uppercased())
+                    Text($0.title)
                 }
             }
 
@@ -21,6 +22,34 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
                     Text($0.rawValue.uppercased())
                 }
             }
+
+            HStack {
+                Text(strings.example)
+                Spacer()
+                Text(settings.exampleFileName(timeProvider: timeProvider))
+            }
+        }
+    }
+}
+
+private extension FileSettings {
+    func exampleFileName(timeProvider: TimeProvider) -> String {
+        FilenameStrategyFactory
+            .create(fileSuffix: suffix, timeProvider: timeProvider)
+            .filename(settings: self) + "." + format.rawValue.lowercased()
+    }
+}
+
+private extension FileSufix {
+    var title: String {
+        let strings = Strings.Settings.File.SuffixCase.self
+        switch self {
+        case .none:
+            return strings.none
+        case .counter:
+            return strings.counter
+        case .dateAndTime:
+            return strings.dateAndTime
         }
     }
 }
@@ -28,7 +57,7 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
 struct FileSettingsSectionViewPreview: PreviewProvider {
     static var previews: some View {
         Form {
-            FileSettingsSectionView(settings: AppStorageFileSettings())
+            FileSettingsSectionView(settings: AppStorageFileSettings(), timeProvider: FoundationTimeProvider())
         }
     }
 }
