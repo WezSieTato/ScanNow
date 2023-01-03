@@ -1,5 +1,5 @@
 strings:
-  inputs: quick-scan
+  inputs: quick-scan/localizable/en.lproj
   outputs:
     - templateName: structured-swift5
       output: quick-scan/generated/Strings.swift

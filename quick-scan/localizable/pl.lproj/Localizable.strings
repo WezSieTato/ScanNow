@@ -1,0 +1,30 @@
+"settings.title" = "Ustawienia";
+
+"settings.file.title" = "Plik";
+"settings.file.filename" = "Nazwa pliku";
+"settings.file.suffix" = "Sufiks pliku";
+"settings.file.format" = "Format";
+"settings.file.defaultFilename" = "Skan";
+"settings.file.example" = "Przykład";
+
+"settings.file.suffixCase.none" = "Brak";
+"settings.file.suffixCase.counter" = "Licznik";
+"settings.file.suffixCase.dateAndTime" = "Data i godzina";
+
+"settings.about.title" = "O aplikacji";
+"settings.about.version" = "Wersja";
+"settings.about.email" = "Napisz do nas";
+
+"settings.about.emailCompose.subject" = "Informacje zwrotne dla Scan Only";
+"settings.about.emailCompose.appAndDeviceInfo" = "\n\n-------Informacje o aplikacji i urządzeniu--------\n";
+"settings.about.emailCompose.system" = "- system: %@, %@\n";
+"settings.about.emailCompose.app" = "- aplikacja: %@, %@\n";
+"settings.about.emailCompose.end" = "-------Koniec-------";
+
+"scanner.title" = "Skanuj";
+
+"scanner.share.pageSuffix" = "_strona_%d";
+
+"scanner.noCamera.title" = "Brak dostępu do kamery";
+"scanner.noCamera.description" = "Proszę udzielić aplikacji dostępu do kamery w celu użycia funkcji skanowania dokumentów.";
+"scanner.noCamera.settingsButton" = "Przejdź do ustawień";

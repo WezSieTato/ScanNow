@@ -16,7 +16,6 @@
 		D30FAA6D26CBD38400B8BF20 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */; };
 		D30FAA7026CBD9AE00B8BF20 /* ScannedDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */; };
 		D30FAA7A26CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA7926CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift */; };
-		D317D190291D0F9D00FDFDB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D317D192291D0F9D00FDFDB4 /* Localizable.strings */; };
 		D317D19B291D2E4800FDFDB4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317D199291D2E4800FDFDB4 /* Strings.swift */; };
 		D317D19C291D2E4800FDFDB4 /* InfoPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317D19A291D2E4800FDFDB4 /* InfoPlist.swift */; };
 		D324AD08295EF38A0054E9E5 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324AD07295EF38A0054E9E5 /* Assets.swift */; };
@@ -29,6 +28,7 @@
 		D336A6C42901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6C32901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift */; };
 		D344DC9928C0A2A8000FD06D /* SettingsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9828C0A2A8000FD06D /* SettingsViewControllerFactory.swift */; };
 		D344DC9B28C0A415000FD06D /* ScanCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9A28C0A415000FD06D /* ScanCounter.swift */; };
+		D35C788C2964EB0900C39A60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D35C78892964EB0900C39A60 /* Localizable.strings */; };
 		D36D177E295F94BC0030487E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D177D295F94BC0030487E /* Storyboards.swift */; };
 		D36D1780295F962A0030487E /* AskForCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D177F295F962A0030487E /* AskForCameraViewController.swift */; };
 		D36D1782295F96B10030487E /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D1781295F96B10030487E /* UIViewController+Child.swift */; };
@@ -81,7 +81,6 @@
 		D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		D30FAA6F26CBD9AE00B8BF20 /* ScannedDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedDocumentView.swift; sourceTree = "<group>"; };
 		D30FAA7926CD53DE00B8BF20 /* VNDocumentCameraScan+Pdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VNDocumentCameraScan+Pdf.swift"; sourceTree = "<group>"; };
-		D317D191291D0F9D00FDFDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D317D199291D2E4800FDFDB4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		D317D19A291D2E4800FDFDB4 /* InfoPlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPlist.swift; sourceTree = "<group>"; };
 		D324AD07295EF38A0054E9E5 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -94,6 +93,8 @@
 		D336A6C32901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeFilenameStrategyTests.swift; sourceTree = "<group>"; };
 		D344DC9828C0A2A8000FD06D /* SettingsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerFactory.swift; sourceTree = "<group>"; };
 		D344DC9A28C0A415000FD06D /* ScanCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCounter.swift; sourceTree = "<group>"; };
+		D35C788A2964EB0900C39A60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D35C788B2964EB0900C39A60 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D36D177D295F94BC0030487E /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		D36D177F295F962A0030487E /* AskForCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskForCameraViewController.swift; sourceTree = "<group>"; };
 		D36D1781295F96B10030487E /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 		D30FAA3326CB079700B8BF20 /* quick-scan */ = {
 			isa = PBXGroup;
 			children = (
+				D35C78882964EB0900C39A60 /* localizable */,
 				D317D198291D2E4800FDFDB4 /* generated */,
 				D346DE9027F0B1D900890528 /* settings */,
 				D30FAA7826CD538700B8BF20 /* scanner */,
@@ -178,7 +180,6 @@
 				D30FAA3D26CB079900B8BF20 /* Assets.xcassets */,
 				D30FAA3F26CB079900B8BF20 /* LaunchScreen.storyboard */,
 				D30FAA4226CB079900B8BF20 /* Info.plist */,
-				D317D192291D0F9D00FDFDB4 /* Localizable.strings */,
 			);
 			path = "quick-scan";
 			sourceTree = "<group>";
@@ -289,6 +290,14 @@
 				D3A3F715295F1FF70036637F /* SettingsView.swift */,
 			);
 			path = settings;
+			sourceTree = "<group>";
+		};
+		D35C78882964EB0900C39A60 /* localizable */ = {
+			isa = PBXGroup;
+			children = (
+				D35C78892964EB0900C39A60 /* Localizable.strings */,
+			);
+			path = localizable;
 			sourceTree = "<group>";
 		};
 		D3A3F713295F1FF70036637F /* about */ = {
@@ -436,6 +445,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = D30FAA2826CB079700B8BF20;
 			packageReferences = (
@@ -457,7 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D30FAA4126CB079900B8BF20 /* LaunchScreen.storyboard in Resources */,
-				D317D190291D0F9D00FDFDB4 /* Localizable.strings in Resources */,
+				D35C788C2964EB0900C39A60 /* Localizable.strings in Resources */,
 				D30FAA3E26CB079900B8BF20 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,10 +580,11 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		D317D192291D0F9D00FDFDB4 /* Localizable.strings */ = {
+		D35C78892964EB0900C39A60 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D317D191291D0F9D00FDFDB4 /* en */,
+				D35C788A2964EB0900C39A60 /* en */,
+				D35C788B2964EB0900C39A60 /* pl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -585,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -646,6 +658,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
