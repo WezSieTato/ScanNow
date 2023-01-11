@@ -36,34 +36,34 @@ final class ScannedDocumentViewController: UIViewController {
             image: UIImage(systemName: "square.and.arrow.up"),
             style: .plain,
             target: self,
-            action: #selector(share)
+            action: #selector(share(sender:))
         )
 
         let settingsItem = UIBarButtonItem(
             image: UIImage(systemName: "gear"),
             style: .plain,
             target: self,
-            action: #selector(settings)
+            action: #selector(settings(sender:))
         )
 
         navigationItem.rightBarButtonItems = [shareItem, settingsItem]
     }
 
     @objc
-    private func share() {
+    private func share(sender: UIBarButtonItem) {
         let settings: any FileSettings = AppStorageFileSettings()
         let policy = DocumentShareManager()
         let objectsToShare = policy.objectsToShare(from: scannedDocument, fileSettings: settings)
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.popoverPresentationController?.barButtonItem = sender
 
         present(activityVC, animated: true, completion: nil)
     }
 
     @objc
-    private func settings() {
-        navigationController?.pushViewController(
-            SettingsViewControllerFactory.create(),
-            animated: true
-        )
+    private func settings(sender: UIBarButtonItem) {
+        let settingsVC = SettingsViewControllerFactory.create()
+        settingsVC.popoverPresentationController?.barButtonItem = sender
+        present(settingsVC, animated: true, completion: nil)
     }
 }
