@@ -63,19 +63,19 @@
 			containerPortal = D30FAA2926CB079700B8BF20 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D30FAA3026CB079700B8BF20;
-			remoteInfo = "ScanNow";
+			remoteInfo = ScanNow;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D308745F29436AEB00B86040 /* NoCameraAccessViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCameraAccessViewTests.swift; sourceTree = "<group>"; };
-		D30FAA3126CB079700B8BF20 /* ScanNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScanNow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30FAA3126CB079700B8BF20 /* ScanNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30FAA3426CB079700B8BF20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D30FAA3626CB079700B8BF20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D30FAA3D26CB079900B8BF20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D30FAA4026CB079900B8BF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D30FAA4226CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScanNowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30FAA4D26CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedDocumentViewController.swift; sourceTree = "<group>"; };
 		D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 				D30FAA3F26CB079900B8BF20 /* LaunchScreen.storyboard */,
 				D30FAA4226CB079900B8BF20 /* Info.plist */,
 			);
-			path = "ScanNow";
+			path = ScanNow;
 			sourceTree = "<group>";
 		};
 		D30FAA4A26CB079900B8BF20 /* ScanNowTests */ = {
@@ -196,7 +196,7 @@
 				D30FAA4D26CB079900B8BF20 /* Info.plist */,
 				D3C48C4F29630E500007EC14 /* Date+Components.swift */,
 			);
-			path = "ScanNowTests";
+			path = ScanNowTests;
 			sourceTree = "<group>";
 		};
 		D30FAA6E26CBD95700B8BF20 /* result */ = {
@@ -394,8 +394,8 @@
 			);
 			dependencies = (
 			);
-			name = "ScanNow";
-			productName = "ScanNow";
+			name = ScanNow;
+			productName = ScanNow;
 			productReference = D30FAA3126CB079700B8BF20 /* ScanNow.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -412,11 +412,11 @@
 			dependencies = (
 				D30FAA4926CB079900B8BF20 /* PBXTargetDependency */,
 			);
-			name = "ScanNowTests";
+			name = ScanNowTests;
 			packageProductDependencies = (
 				D37296FC28FD491400939783 /* SnapshotTesting */,
 			);
-			productName = "ScanNowTests";
+			productName = ScanNowTests;
 			productReference = D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -717,13 +717,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "ScanNow/Info.plist";
+				INFOPLIST_FILE = ScanNow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.ScanNow";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -737,13 +737,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "ScanNow/Info.plist";
+				INFOPLIST_FILE = ScanNow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.ScanNow";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -757,13 +757,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "ScanNowTests/Info.plist";
+				INFOPLIST_FILE = ScanNowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.ScanNowTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scanTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -778,13 +778,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "ScanNowTests/Info.plist";
+				INFOPLIST_FILE = ScanNowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.ScanNowTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scanTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
