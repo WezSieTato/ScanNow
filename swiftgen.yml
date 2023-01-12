@@ -1,29 +1,29 @@
 strings:
-  inputs: quick-scan/localizable/en.lproj
+  inputs: ScanNow/localizable/en.lproj
   outputs:
     - templateName: structured-swift5
-      output: quick-scan/generated/Strings.swift
+      output: ScanNow/generated/Strings.swift
       params:
         enumName: Strings
 plist:
-  inputs: quick-scan/Info.plist
+  inputs: ScanNow/Info.plist
   outputs:
     templateName: runtime-swift5
-    output: quick-scan/generated/InfoPlist.swift
+    output: ScanNow/generated/InfoPlist.swift
     params:
       enumName: InfoPlist
 xcassets:
-  inputs: quick-scan
+  inputs: ScanNow
   outputs:
     templateName: swift5
-    output: quick-scan/generated/Assets.swift
+    output: ScanNow/generated/Assets.swift
     params:
       enumName: Assets
 ib:
-  inputs: quick-scan
+  inputs: ScanNow
   outputs:
     templateName: scenes-swift5
-    output: quick-scan/generated/Storyboards.swift
+    output: ScanNow/generated/Storyboards.swift
     params:
       enumName: Storyboards
 

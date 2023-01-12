@@ -63,19 +63,19 @@
 			containerPortal = D30FAA2926CB079700B8BF20 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D30FAA3026CB079700B8BF20;
-			remoteInfo = "quick-scan";
+			remoteInfo = "ScanNow";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D308745F29436AEB00B86040 /* NoCameraAccessViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCameraAccessViewTests.swift; sourceTree = "<group>"; };
-		D30FAA3126CB079700B8BF20 /* quick-scan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-scan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30FAA3126CB079700B8BF20 /* ScanNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScanNow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30FAA3426CB079700B8BF20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D30FAA3626CB079700B8BF20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D30FAA3D26CB079900B8BF20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D30FAA4026CB079900B8BF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D30FAA4226CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D30FAA4726CB079900B8BF20 /* quick-scanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-scanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScanNowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30FAA4D26CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30FAA6A26CBD38400B8BF20 /* ScannedDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedDocumentViewController.swift; sourceTree = "<group>"; };
 		D30FAA6B26CBD38400B8BF20 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 		D30FAA2826CB079700B8BF20 = {
 			isa = PBXGroup;
 			children = (
-				D30FAA3326CB079700B8BF20 /* quick-scan */,
-				D30FAA4A26CB079900B8BF20 /* quick-scanTests */,
+				D30FAA3326CB079700B8BF20 /* ScanNow */,
+				D30FAA4A26CB079900B8BF20 /* ScanNowTests */,
 				D30FAA3226CB079700B8BF20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,13 +159,13 @@
 		D30FAA3226CB079700B8BF20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D30FAA3126CB079700B8BF20 /* quick-scan.app */,
-				D30FAA4726CB079900B8BF20 /* quick-scanTests.xctest */,
+				D30FAA3126CB079700B8BF20 /* ScanNow.app */,
+				D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D30FAA3326CB079700B8BF20 /* quick-scan */ = {
+		D30FAA3326CB079700B8BF20 /* ScanNow */ = {
 			isa = PBXGroup;
 			children = (
 				D35C78882964EB0900C39A60 /* localizable */,
@@ -181,10 +181,10 @@
 				D30FAA3F26CB079900B8BF20 /* LaunchScreen.storyboard */,
 				D30FAA4226CB079900B8BF20 /* Info.plist */,
 			);
-			path = "quick-scan";
+			path = "ScanNow";
 			sourceTree = "<group>";
 		};
-		D30FAA4A26CB079900B8BF20 /* quick-scanTests */ = {
+		D30FAA4A26CB079900B8BF20 /* ScanNowTests */ = {
 			isa = PBXGroup;
 			children = (
 				D3B86DE729624E3500989DCB /* generated */,
@@ -196,7 +196,7 @@
 				D30FAA4D26CB079900B8BF20 /* Info.plist */,
 				D3C48C4F29630E500007EC14 /* Date+Components.swift */,
 			);
-			path = "quick-scanTests";
+			path = "ScanNowTests";
 			sourceTree = "<group>";
 		};
 		D30FAA6E26CBD95700B8BF20 /* result */ = {
@@ -381,9 +381,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D30FAA3026CB079700B8BF20 /* quick-scan */ = {
+		D30FAA3026CB079700B8BF20 /* ScanNow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D30FAA5B26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "quick-scan" */;
+			buildConfigurationList = D30FAA5B26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "ScanNow" */;
 			buildPhases = (
 				D342D7EF28AFD22B00680174 /* Swiftlint */,
 				D30FAA2D26CB079700B8BF20 /* Sources */,
@@ -394,14 +394,14 @@
 			);
 			dependencies = (
 			);
-			name = "quick-scan";
-			productName = "quick-scan";
-			productReference = D30FAA3126CB079700B8BF20 /* quick-scan.app */;
+			name = "ScanNow";
+			productName = "ScanNow";
+			productReference = D30FAA3126CB079700B8BF20 /* ScanNow.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D30FAA4626CB079900B8BF20 /* quick-scanTests */ = {
+		D30FAA4626CB079900B8BF20 /* ScanNowTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D30FAA5E26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "quick-scanTests" */;
+			buildConfigurationList = D30FAA5E26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "ScanNowTests" */;
 			buildPhases = (
 				D30FAA4326CB079900B8BF20 /* Sources */,
 				D30FAA4426CB079900B8BF20 /* Frameworks */,
@@ -412,12 +412,12 @@
 			dependencies = (
 				D30FAA4926CB079900B8BF20 /* PBXTargetDependency */,
 			);
-			name = "quick-scanTests";
+			name = "ScanNowTests";
 			packageProductDependencies = (
 				D37296FC28FD491400939783 /* SnapshotTesting */,
 			);
-			productName = "quick-scanTests";
-			productReference = D30FAA4726CB079900B8BF20 /* quick-scanTests.xctest */;
+			productName = "ScanNowTests";
+			productReference = D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -438,7 +438,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D30FAA2C26CB079700B8BF20 /* Build configuration list for PBXProject "quick-scan" */;
+			buildConfigurationList = D30FAA2C26CB079700B8BF20 /* Build configuration list for PBXProject "ScanNow" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -455,8 +455,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D30FAA3026CB079700B8BF20 /* quick-scan */,
-				D30FAA4626CB079900B8BF20 /* quick-scanTests */,
+				D30FAA3026CB079700B8BF20 /* ScanNow */,
+				D30FAA4626CB079900B8BF20 /* ScanNowTests */,
 			);
 		};
 /* End PBXProject section */
@@ -566,7 +566,7 @@
 /* Begin PBXTargetDependency section */
 		D30FAA4926CB079900B8BF20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D30FAA3026CB079700B8BF20 /* quick-scan */;
+			target = D30FAA3026CB079700B8BF20 /* ScanNow */;
 			targetProxy = D30FAA4826CB079900B8BF20 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -717,13 +717,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "quick-scan/Info.plist";
+				INFOPLIST_FILE = "ScanNow/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scan";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.ScanNow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -737,13 +737,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "quick-scan/Info.plist";
+				INFOPLIST_FILE = "ScanNow/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scan";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.ScanNow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -757,17 +757,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "quick-scanTests/Info.plist";
+				INFOPLIST_FILE = "ScanNowTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scanTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.ScanNowTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quick-scan.app/quick-scan";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScanNow.app/ScanNow";
 			};
 			name = Debug;
 		};
@@ -778,24 +778,24 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = "quick-scanTests/Info.plist";
+				INFOPLIST_FILE = "ScanNowTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scanTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.ScanNowTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quick-scan.app/quick-scan";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScanNow.app/ScanNow";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D30FAA2C26CB079700B8BF20 /* Build configuration list for PBXProject "quick-scan" */ = {
+		D30FAA2C26CB079700B8BF20 /* Build configuration list for PBXProject "ScanNow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D30FAA5926CB079900B8BF20 /* Debug */,
@@ -804,7 +804,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D30FAA5B26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "quick-scan" */ = {
+		D30FAA5B26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "ScanNow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D30FAA5C26CB079900B8BF20 /* Debug */,
@@ -813,7 +813,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D30FAA5E26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "quick-scanTests" */ = {
+		D30FAA5E26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "ScanNowTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D30FAA5F26CB079900B8BF20 /* Debug */,

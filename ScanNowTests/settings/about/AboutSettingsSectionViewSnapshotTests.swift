@@ -1,4 +1,4 @@
-@testable import quick_scan
+@testable import ScanNow
 import SnapshotTesting
 import SwiftUI
 import XCTest
