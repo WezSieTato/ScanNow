@@ -1,7 +1,7 @@
 excluded:
   - vendor
-  - quick-scan/generated
-  - quick-scanTests/generated
+  - ScanNow/generated
+  - ScanNowTests/generated
 disabled_rules:
   - todo
   - trailing_comma

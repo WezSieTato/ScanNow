@@ -1,6 +1,6 @@
 fastlane/test_output
 .DS_Store
-quick-scan.xcodeproj/project.xcworkspace/xcuserdata
+ScanNow.xcodeproj/project.xcworkspace/xcuserdata
 fastlane/report.xml
 *.xcodeproj/xcuserdata
-quick-scan.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+ScanNow.xcodeproj/project.xcworkspace/xcshareddata/swiftpm

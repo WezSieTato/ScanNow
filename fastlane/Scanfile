@@ -1,2 +1,2 @@
 devices(["iPhone 14"])
-scheme("quick-scan")
+scheme("ScanNow")

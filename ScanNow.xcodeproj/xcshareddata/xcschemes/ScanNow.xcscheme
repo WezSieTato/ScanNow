@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D30FAA3026CB079700B8BF20"
-               BuildableName = "quick-scan.app"
-               BlueprintName = "quick-scan"
-               ReferencedContainer = "container:quick-scan.xcodeproj">
+               BuildableName = "ScanNow.app"
+               BlueprintName = "ScanNow"
+               ReferencedContainer = "container:ScanNow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D30FAA4626CB079900B8BF20"
-               BuildableName = "quick-scanTests.xctest"
-               BlueprintName = "quick-scanTests"
-               ReferencedContainer = "container:quick-scan.xcodeproj">
+               BuildableName = "ScanNowTests.xctest"
+               BlueprintName = "ScanNowTests"
+               ReferencedContainer = "container:ScanNow.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D30FAA3026CB079700B8BF20"
-            BuildableName = "quick-scan.app"
-            BlueprintName = "quick-scan"
-            ReferencedContainer = "container:quick-scan.xcodeproj">
+            BuildableName = "ScanNow.app"
+            BlueprintName = "ScanNow"
+            ReferencedContainer = "container:ScanNow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -73,9 +73,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D30FAA3026CB079700B8BF20"
-            BuildableName = "quick-scan.app"
-            BlueprintName = "quick-scan"
-            ReferencedContainer = "container:quick-scan.xcodeproj">
+            BuildableName = "ScanNow.app"
+            BlueprintName = "ScanNow"
+            ReferencedContainer = "container:ScanNow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,12 +1,12 @@
-@testable import quick_scan
+@testable import ScanNow
 import SnapshotTesting
 import SwiftUI
 import XCTest
 
-final class WriteToUsViewSnapshotTests: XCTestCase {
+final class GithubRowViewSnapshotTests: XCTestCase {
     func testView() {
         let sut = Form {
-            WriteToUsView()
+            GithubRowView()
         }
 
         assertSnapshot(matching: sut, as: .image(layout: .fixed(width: 375, height: 90)))

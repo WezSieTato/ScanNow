@@ -1,4 +1,4 @@
---exclude vendor, quick-scan/generated, quick-scanTests/generated
+--exclude vendor, ScanNow/generated, ScanNowTests/generated
 --trimwhitespace always
 --wraparguments before-first
 --enable braces

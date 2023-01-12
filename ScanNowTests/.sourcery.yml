@@ -1,8 +1,8 @@
 sources:
-  - ../quick-scan
+  - ../ScanNow
 templates:
   - ../sourcery/AutoMockable.stencil
 output:
   generated
 args:
-  autoMockableTestableImports: ["quick_scan"]
+  autoMockableTestableImports: ["ScanNow"]
