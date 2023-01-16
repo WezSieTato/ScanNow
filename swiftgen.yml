@@ -1,5 +1,5 @@
 strings:
-  inputs: ScanNow/localizable/en.lproj
+  inputs: ScanNow/localizable/en.lproj/Localizable.strings
   outputs:
     - templateName: structured-swift5
       output: ScanNow/generated/Strings.swift
