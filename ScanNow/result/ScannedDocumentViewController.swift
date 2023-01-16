@@ -61,9 +61,9 @@ final class ScannedDocumentViewController: UIViewController {
     }
 
     @objc
-    private func settings(sender: UIBarButtonItem) {
+    private func settings(sender _: UIBarButtonItem) {
         let settingsVC = SettingsViewControllerFactory.create()
-        settingsVC.popoverPresentationController?.barButtonItem = sender
-        present(settingsVC, animated: true, completion: nil)
+        let navigationVC = UINavigationController(rootViewController: settingsVC)
+        present(navigationVC, animated: true, completion: nil)
     }
 }
