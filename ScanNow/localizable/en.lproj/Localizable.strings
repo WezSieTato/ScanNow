@@ -1,5 +1,9 @@
 "welcome.scan" = "Scan Now!";
 "welcome.settings" = "Settings";
+"welcome.noCamera.title" = "No camera access";
+"welcome.noCamera.description" = "The application requires access to the camera to be able to scan documents.";
+"welcome.noCamera.settings" = "Go to settings";
+"welcome.noCamera.cancel" = "Cancel";
 
 "settings.title" = "Settings";
 

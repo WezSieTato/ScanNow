@@ -7,11 +7,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            if AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined {
+
+            switch AVCaptureDevice.authorizationStatus(for: .video) {
+            case .authorized:
+                window.rootViewController = NavigationScannerViewControllerFactory.make(openScanner: true)
+
+            case .notDetermined:
                 window.rootViewController = AskForCameraViewController()
-            } else {
-                window.rootViewController = NavigationScannerViewControllerFactory.make()
+
+            case .denied, .restricted:
+                fallthrough
+
+            @unknown default:
+                window.rootViewController = NavigationScannerViewControllerFactory.make(openScanner: false)
             }
+
             self.window = window
             window.makeKeyAndVisible()
         }

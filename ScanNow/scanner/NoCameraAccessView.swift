@@ -17,7 +17,10 @@ struct NoCameraAccessView: View {
                 .multilineTextAlignment(.center)
 
             Button(action: {
-                UIApplication.shared.open(URL(string: "App-prefs:Camera")!)
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                    return
+                }
+                UIApplication.shared.open(settingsUrl)
             }, label: {
                 Text(strings.settingsButton)
                     .multilineTextAlignment(.center)
