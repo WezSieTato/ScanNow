@@ -89,10 +89,6 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
     }
 
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
-        controller.willMove(toParent: nil)
-        controller.view.removeFromSuperview()
-        controller.removeFromParent()
-
-        setupChildViewController()
+        navigationController?.popViewController(animated: true)
     }
 }

@@ -88,6 +88,16 @@ internal enum Strings {
     internal static let scan = Strings.tr("Localizable", "welcome.scan", fallback: "Scan Now!")
     /// Settings
     internal static let settings = Strings.tr("Localizable", "welcome.settings", fallback: "Settings")
+    internal enum NoCamera {
+      /// Cancel
+      internal static let cancel = Strings.tr("Localizable", "welcome.noCamera.cancel", fallback: "Cancel")
+      /// Please allow access to your device's camera to use the document scanner feature.
+      internal static let description = Strings.tr("Localizable", "welcome.noCamera.description", fallback: "Please allow access to your device's camera to use the document scanner feature.")
+      /// Go to settings
+      internal static let settings = Strings.tr("Localizable", "welcome.noCamera.settings", fallback: "Go to settings")
+      /// No camera access
+      internal static let title = Strings.tr("Localizable", "welcome.noCamera.title", fallback: "No camera access")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
