@@ -4,3 +4,6 @@ ScanNow.xcodeproj/project.xcworkspace/xcuserdata
 fastlane/report.xml
 *.xcodeproj/xcuserdata
 ScanNow.xcodeproj/project.xcworkspace/xcshareddata/swiftpm
+.env.default
+*.ipa
+*.app.dSYM.zip
