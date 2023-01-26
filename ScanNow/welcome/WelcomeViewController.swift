@@ -20,7 +20,6 @@ final class WelcomeViewController: UIViewController {
     }
 
     private func openScanner() {
-
         if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
             navigationController?.pushViewController(ScannerViewController(), animated: true)
         } else {
@@ -43,6 +42,5 @@ final class WelcomeViewController: UIViewController {
             alertVC.addAction(UIAlertAction(title: strings.cancel, style: .destructive))
             present(alertVC, animated: true, completion: nil)
         }
-
     }
 }
