@@ -12,7 +12,9 @@ final class ScannerViewController: UIViewController {
 
         title = Strings.Scanner.title
 
-        setupChildViewController()
+        let documentCameraViewController = VNDocumentCameraViewController()
+        documentCameraViewController.delegate = self
+        addChildViewControllerOnFullView(documentCameraViewController)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -23,36 +25,6 @@ final class ScannerViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-
-    // MARK: Child view configuration
-
-    private func makeDocumentCameraViewController() -> UIViewController {
-        let documentCameraViewController = VNDocumentCameraViewController()
-        documentCameraViewController.delegate = self
-        return documentCameraViewController
-    }
-
-    private func makeNoCameraAccesViewController() -> UIViewController {
-        return UIHostingController(rootView: NoCameraAccessView())
-    }
-
-    private func makeChildViewController() -> UIViewController {
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .authorized:
-            return makeDocumentCameraViewController()
-
-        case .notDetermined, .denied, .restricted:
-            fallthrough
-
-        @unknown default:
-            return makeNoCameraAccesViewController()
-        }
-    }
-
-    private func setupChildViewController() {
-        let childVC = makeChildViewController()
-        addChildViewControllerOnFullView(childVC)
     }
 }
 
@@ -88,7 +60,7 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
         SKStoreReviewController.requestReview(in: windowScene)
     }
 
-    func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
+    func documentCameraViewControllerDidCancel(_: VNDocumentCameraViewController) {
         navigationController?.popViewController(animated: true)
     }
 }

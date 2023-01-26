@@ -31,7 +31,3 @@
 "scanner.title" = "Skanuj";
 
 "scanner.share.pageSuffix" = "_strona_%d";
-
-"scanner.noCamera.title" = "Brak dostępu do kamery";
-"scanner.noCamera.description" = "Proszę udzielić aplikacji dostępu do kamery w celu użycia funkcji skanowania dokumentów.";
-"scanner.noCamera.settingsButton" = "Przejdź do ustawień";
