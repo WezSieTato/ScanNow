@@ -48,6 +48,9 @@
 		D3A3F72E295F22CE0036637F /* GithubRowViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F72D295F22CE0036637F /* GithubRowViewSnapshotTests.swift */; };
 		D3A3F730295F8DB30036637F /* NavigationScannerViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F72F295F8DB30036637F /* NavigationScannerViewControllerFactory.swift */; };
 		D3A73EB529511E0D005BB595 /* LaunchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */; };
+		D3B6FF772982BD7000E81D44 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6FF762982BD7000E81D44 /* WelcomeView.swift */; };
+		D3B6FF7C2982D34500E81D44 /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6FF7B2982D34500E81D44 /* WelcomeViewControllerTests.swift */; };
+		D3B6FF7F2982D66000E81D44 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6FF7E2982D66000E81D44 /* WelcomeViewController.swift */; };
 		D3B86DD92962316E00989DCB /* WriteToUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DD82962316E00989DCB /* WriteToUsView.swift */; };
 		D3B86DDB2962332100989DCB /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DDA2962332100989DCB /* MailView.swift */; };
 		D3B86DDE296238F700989DCB /* ComposeMailDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B86DDD296238F700989DCB /* ComposeMailDataFactory.swift */; };
@@ -120,6 +123,10 @@
 		D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenTests.swift; sourceTree = "<group>"; };
 		D3A73EB629511E8A005BB595 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		D3AF33D62913D2DE00201014 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
+		D3B6FF762982BD7000E81D44 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		D3B6FF7B2982D34500E81D44 /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		D3B6FF7D2982D57800E81D44 /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
+		D3B6FF7E2982D66000E81D44 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D3B86DD82962316E00989DCB /* WriteToUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteToUsView.swift; sourceTree = "<group>"; };
 		D3B86DDA2962332100989DCB /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		D3B86DDD296238F700989DCB /* ComposeMailDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMailDataFactory.swift; sourceTree = "<group>"; };
@@ -171,6 +178,7 @@
 		D30FAA3326CB079700B8BF20 /* ScanNow */ = {
 			isa = PBXGroup;
 			children = (
+				D3B6FF752982BD6600E81D44 /* welcome */,
 				D35C78882964EB0900C39A60 /* localizable */,
 				D317D198291D2E4800FDFDB4 /* generated */,
 				D346DE9027F0B1D900890528 /* settings */,
@@ -190,6 +198,7 @@
 		D30FAA4A26CB079900B8BF20 /* ScanNowTests */ = {
 			isa = PBXGroup;
 			children = (
+				D3B6FF7A2982D33400E81D44 /* welcome */,
 				D3B86DE729624E3500989DCB /* generated */,
 				D3A73EB629511E8A005BB595 /* __Snapshots__ */,
 				D3A73EB429511E0D005BB595 /* LaunchScreenTests.swift */,
@@ -343,6 +352,24 @@
 				D3A3F72D295F22CE0036637F /* GithubRowViewSnapshotTests.swift */,
 			);
 			path = about;
+			sourceTree = "<group>";
+		};
+		D3B6FF752982BD6600E81D44 /* welcome */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6FF762982BD7000E81D44 /* WelcomeView.swift */,
+				D3B6FF7E2982D66000E81D44 /* WelcomeViewController.swift */,
+			);
+			path = welcome;
+			sourceTree = "<group>";
+		};
+		D3B6FF7A2982D33400E81D44 /* welcome */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6FF7D2982D57800E81D44 /* __Snapshots__ */,
+				D3B6FF7B2982D34500E81D44 /* WelcomeViewControllerTests.swift */,
+			);
+			path = welcome;
 			sourceTree = "<group>";
 		};
 		D3B86DD72962314900989DCB /* mail */ = {
@@ -513,10 +540,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D36D177E295F94BC0030487E /* Storyboards.swift in Sources */,
+				D3B6FF7F2982D66000E81D44 /* WelcomeViewController.swift in Sources */,
 				D336A6B6290197AA00C1177B /* FilenameStrategy.swift in Sources */,
 				D30FAA7026CBD9AE00B8BF20 /* ScannedDocumentView.swift in Sources */,
 				D36D1780295F962A0030487E /* AskForCameraViewController.swift in Sources */,
 				D317D19C291D2E4800FDFDB4 /* InfoPlist.swift in Sources */,
+				D3B6FF772982BD7000E81D44 /* WelcomeView.swift in Sources */,
 				D3A3F730295F8DB30036637F /* NavigationScannerViewControllerFactory.swift in Sources */,
 				D344DC9B28C0A415000FD06D /* ScanCounter.swift in Sources */,
 				D30FAA3526CB079700B8BF20 /* AppDelegate.swift in Sources */,
@@ -555,6 +584,7 @@
 				D3A73EB529511E0D005BB595 /* LaunchScreenTests.swift in Sources */,
 				D3A3F728295F21F20036637F /* AboutSettingsSectionViewSnapshotTests.swift in Sources */,
 				D3C48C5029630E500007EC14 /* Date+Components.swift in Sources */,
+				D3B6FF7C2982D34500E81D44 /* WelcomeViewControllerTests.swift in Sources */,
 				D336A6C22901EE1D00C1177B /* CounterFilenameStrategyTests.swift in Sources */,
 				D37296FF28FD4A0300939783 /* SettingsViewSnapshotTests.swift in Sources */,
 				D3A3F72E295F22CE0036637F /* GithubRowViewSnapshotTests.swift in Sources */,

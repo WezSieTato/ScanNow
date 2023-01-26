@@ -27,6 +27,9 @@ internal enum Assets {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let githubMark = ImageAsset(name: "GithubMark")
   internal static let launchIcon = ImageAsset(name: "LaunchIcon")
+  internal static let welcomeButtonBackground = ColorAsset(name: "welcome.button.background")
+  internal static let welcomeButtonBorder = ColorAsset(name: "welcome.button.border")
+  internal static let welcomeButtonForeground = ColorAsset(name: "welcome.button.foreground")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
