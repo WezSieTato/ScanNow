@@ -1,9 +1,5 @@
 "welcome.scan" = "Skanuj Teraz!";
 "welcome.settings" = "Ustawienia";
-"welcome.noCamera.title" = "Brak dostępu do kamery";
-"welcome.noCamera.description" = "Aplikacja wymaga dostępu do kamery aby móc skanować dokumenty. Przejść do ustawień?";
-"welcome.noCamera.settings" = "Ustawienia";
-"welcome.noCamera.cancel" = "Anuluj";
 
 "settings.title" = "Ustawienia";
 
