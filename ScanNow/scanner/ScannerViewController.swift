@@ -63,4 +63,8 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
     func documentCameraViewControllerDidCancel(_: VNDocumentCameraViewController) {
         navigationController?.popViewController(animated: true)
     }
+
+    func documentCameraViewController(_: VNDocumentCameraViewController, didFailWithError _: Error) {
+        navigationController?.popViewController(animated: true)
+    }
 }

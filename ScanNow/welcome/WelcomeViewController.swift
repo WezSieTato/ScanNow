@@ -20,27 +20,6 @@ final class WelcomeViewController: UIViewController {
     }
 
     private func openScanner() {
-        if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
-            navigationController?.pushViewController(ScannerViewController(), animated: true)
-        } else {
-            let strings = Strings.Welcome.NoCamera.self
-            let alertVC = UIAlertController(
-                title: strings.title,
-                message: strings.description,
-                preferredStyle: .alert
-            )
-            alertVC.addAction(UIAlertAction(
-                title: strings.settings,
-                style: .default,
-                handler: { _ in
-                    guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-                        return
-                    }
-                    UIApplication.shared.open(settingsUrl)
-                }
-            ))
-            alertVC.addAction(UIAlertAction(title: strings.cancel, style: .destructive))
-            present(alertVC, animated: true, completion: nil)
-        }
+        navigationController?.pushViewController(ScannerViewController(), animated: true)
     }
 }
