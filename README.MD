@@ -21,8 +21,12 @@ This app does not collect any data. It contains only 3 screens: scanner, setting
 ## Getting Started
 
 1. Clone or download the repository
-2. Open the project in Xcode
-3. Build and run the app on a simulator or device
+2. Make sure you have [Mint](https://github.com/yonaskolb/Mint) installed on your machine. If you don't, you can install it by running `brew install mint`
+3. Run `mint bootstrap` to install the tools required for the project.
+4. Open the project in Xcode
+5. Build and run the app on a simulator or device
+
+Note: Mint is used to manage tools required by the project. By installing dependencies using Mint, you can ensure that you have the correct version of tools for the project to build successfully.
 
 ## Contributing
 
