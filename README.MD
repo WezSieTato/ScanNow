@@ -8,6 +8,10 @@ A fast and simple app for document scanning on iOS.
 
 [![Tests](https://github.com/WezSieTato/ScanNow/workflows/Tests/badge.svg)](https://github.com/WezSieTato/ScanNow/actions?query=workflow%3ATests)
 
+## Download on the App Store
+
+Get the latest version of ScanNow on the [App Store](https://apps.apple.com/pl/app/scan-now/id1660940489).
+
 ## Features
 
 - Scan documents quickly and easily
