@@ -33,6 +33,7 @@
 		D36D1782295F96B10030487E /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D1781295F96B10030487E /* UIViewController+Child.swift */; };
 		D37296FD28FD491400939783 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D37296FC28FD491400939783 /* SnapshotTesting */; };
 		D37296FF28FD4A0300939783 /* SettingsViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37296FE28FD4A0300939783 /* SettingsViewSnapshotTests.swift */; };
+		D3A3744629926A0C006ADEC6 /* DataDrivenTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D3A3744529926A0C006ADEC6 /* DataDrivenTesting */; };
 		D3A3F71A295F1FF70036637F /* AboutSettingsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F714295F1FF70036637F /* AboutSettingsSectionView.swift */; };
 		D3A3F71B295F1FF70036637F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F715295F1FF70036637F /* SettingsView.swift */; };
 		D3A3F71C295F1FF70036637F /* Versioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3F716295F1FF70036637F /* Versioning.swift */; };
@@ -146,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D37296FD28FD491400939783 /* SnapshotTesting in Frameworks */,
+				D3A3744629926A0C006ADEC6 /* DataDrivenTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +432,7 @@
 			name = ScanNowTests;
 			packageProductDependencies = (
 				D37296FC28FD491400939783 /* SnapshotTesting */,
+				D3A3744529926A0C006ADEC6 /* DataDrivenTesting */,
 			);
 			productName = ScanNowTests;
 			productReference = D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */;
@@ -465,6 +468,7 @@
 			mainGroup = D30FAA2826CB079700B8BF20;
 			packageReferences = (
 				D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */,
 			);
 			productRefGroup = D30FAA3226CB079700B8BF20 /* Products */;
 			projectDirPath = "";
@@ -859,6 +863,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WezSieTato/DataDrivenTesting";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -866,6 +878,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		D3A3744529926A0C006ADEC6 /* DataDrivenTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */;
+			productName = DataDrivenTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
