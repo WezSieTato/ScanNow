@@ -20,7 +20,9 @@ platform :ios do
       executable: mint_which(package: 'swiftformat'),
       lint: true
     )
-    scan
+    scan(
+      derived_data_path: "fastlane/test_output/derived_data"
+    )
   end
 
   lane :check_generated_code do

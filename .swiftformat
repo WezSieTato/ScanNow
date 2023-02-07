@@ -1,4 +1,4 @@
---exclude vendor, ScanNow/generated, ScanNowTests/generated
+--exclude vendor, ScanNow/generated, ScanNowTests/generated, fastlane/test_output
 --trimwhitespace always
 --wraparguments before-first
 --enable braces
