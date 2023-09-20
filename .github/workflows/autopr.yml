@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - master
   issues:
     types: [labeled]
   issue_comment:
@@ -34,7 +34,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        ref: main
+        ref: master
         fetch-depth: 1
     - name: AutoPR
       uses: irgolic/AutoPR@main
@@ -42,4 +42,4 @@ jobs:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        base_branch: main
+        base_branch: master
