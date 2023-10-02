@@ -1,0 +1,14 @@
+/* 
+  fastlane/metadata/fr-FR
+  French metadata for ScanNow app
+*/
+
+{
+  "title": "ScanNow",
+  "subtitle": "Une application simple et rapide pour la numérisation de documents sur iOS",
+  "description": "ScanNow est une application de numérisation de documents qui vous permet de numériser des documents rapidement et facilement. Avec ScanNow, vous pouvez numériser, enregistrer et partager vos documents en quelques secondes.",
+  "keywords": "ScanNow, numérisation, documents, iOS, rapide, simple",
+  "release_notes": "Ajout de la prise en charge du français",
+  "privacy_url": "https://www.yourwebsite.com/privacy",
+  "support_url": "https://www.yourwebsite.com/support"
+}
