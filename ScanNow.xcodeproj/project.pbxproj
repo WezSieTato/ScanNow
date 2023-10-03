@@ -504,13 +504,8 @@
 				en,
 				Base,
 				pl,
-				fr,
 			);
 			mainGroup = D30FAA2826CB079700B8BF20;
-			packageReferences = (
-				D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
-				D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */,
-			);
 			productRefGroup = D30FAA3226CB079700B8BF20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -524,6 +519,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30FAA4126CB079900B8BF20 /* LaunchScreen.storyboard in Resources */,
+				D34DE2422976081F0048648E /* InfoPlist.strings in Resources */,
+				D35C788C2964EB0900C39A60 /* Localizable.strings in Resources */,
+				D30FAA3E26CB079900B8BF20 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
