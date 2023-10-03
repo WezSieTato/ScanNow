@@ -1,0 +1,7 @@
+Merci d'utiliser ScanNow! Dans cette version, nous avons apporté les améliorations suivantes:
+
+- Ajout de la prise en charge de la langue française
+- Améliorations de la performance et de la stabilité
+- Corrections de bugs mineurs
+
+Nous apprécions vos commentaires et suggestions, n'hésitez pas à nous contacter à support@scannow.com. Continuez à numériser!
