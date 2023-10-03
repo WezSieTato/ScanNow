@@ -480,18 +480,46 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		D30FAA2F26CB079700B8BF20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D30FAA4126CB079900B8BF20 /* LaunchScreen.storyboard in Resources */,
-				D34DE2422976081F0048648E /* InfoPlist.strings in Resources */,
-				D35C788C2964EB0900C39A60 /* Localizable.strings in Resources */,
-				D30FAA3E26CB079900B8BF20 /* Assets.xcassets in Resources */,
+/* Begin PBXProject section */
+		D30FAA2926CB079700B8BF20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					D30FAA3026CB079700B8BF20 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					D30FAA4626CB079900B8BF20 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = D30FAA3026CB079700B8BF20;
+					};
+				};
+			};
+			buildConfigurationList = D30FAA5B26CB079900B8BF20 /* Build configuration list for PBXProject "ScanNow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				pl,
+				fr,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			mainGroup = D30FAA2826CB079700B8BF20;
+			packageReferences = (
+				D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */,
+			);
+			productRefGroup = D30FAA3226CB079700B8BF20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D30FAA3026CB079700B8BF20 /* ScanNow */,
+				D30FAA4626CB079900B8BF20 /* ScanNowTests */,
+			);
 		};
+/* End PBXProject section */
 		D30FAA4526CB079900B8BF20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,15 +638,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D35C78892964EB0900C39A60 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D35C788A2964EB0900C39A60 /* en */,
-				D35C788B2964EB0900C39A60 /* pl */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
+		knownRegions = (
+		    en,
+		    Base,
+		    pl,
+		    fr,
+		);
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
