@@ -1,3 +1,5 @@
+name: Auto PR
+
 on:
   push:
     branches:
