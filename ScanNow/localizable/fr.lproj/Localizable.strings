@@ -1,0 +1,29 @@
+"welcome.scan" = "Scannez maintenant!";
+"welcome.settings" = "Paramètres";
+
+"settings.title" = "Paramètres";
+
+"settings.file.title" = "Fichier";
+"settings.file.filename" = "Nom de fichier";
+"settings.file.suffix" = "Suffixe de fichier";
+"settings.file.format" = "Format";
+"settings.file.defaultFilename" = "Scan";
+"settings.file.example" = "Exemple";
+
+"settings.file.suffixCase.none" = "Aucun";
+"settings.file.suffixCase.counter" = "Compteur";
+"settings.file.suffixCase.dateAndTime" = "Date et heure";
+
+"settings.about.title" = "À propos";
+"settings.about.version" = "Version";
+"settings.about.email" = "Écrivez-nous";
+
+"settings.about.emailCompose.subject" = "Commentaires pour Scan Only";
+"settings.about.emailCompose.appAndDeviceInfo" = "\n\n-------App & Info de l'appareil--------\n";
+"settings.about.emailCompose.system" = "- système: %@, %@\n";
+"settings.about.emailCompose.app" = "- application: %@, %@\n";
+"settings.about.emailCompose.end" = "-------Fin-------";
+
+"scanner.title" = "Scan";
+
+"scanner.share.pageSuffix" = "_page_%d";
