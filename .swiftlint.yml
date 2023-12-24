@@ -2,6 +2,8 @@ excluded:
   - vendor
   - ScanNow/generated
   - ScanNowTests/generated
+  - fastlane/test_output
+
 disabled_rules:
   - todo
   - trailing_comma
