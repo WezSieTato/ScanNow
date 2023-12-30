@@ -41,6 +41,19 @@ platform :ios do
     )
   end
 
+  lane :record_snapshots do
+    scan(
+      # xcargs: 'RECORD_SNAPSHOT=YES',
+      xcconfig: 'ScanNowTests/RecordSnapshots.xcconfig',
+      # xcodebuild_command: "env NSUnbufferedIO=YES RECORD_SNAPSHOT=YES xcodebuild",
+      fail_build: false
+    )
+    commit_and_push_if_ci(
+      message: "Record snapshot :camera:",
+      path: "ScanNowTests"
+    )
+  end
+
   lane :beta do
     build_app(project: "ScanNow.xcodeproj", scheme: "ScanNow")
     changelog_from_git_commits
@@ -48,5 +61,26 @@ platform :ios do
       groups:["TeamA"],
       distribute_external: true
     )
+  end
+
+  private_lane :commit_and_push_if_ci do |options|
+    if is_ci
+
+      if !options[:message]
+        message "No message specified!".red
+      end
+      message = options[:message]
+
+      if !options[:path]
+        path "No path specified!".red
+      end
+      path = options[:path]
+
+      git_commit(
+        message: message,
+        path: path
+      )
+      push_to_git_remote
+    end
   end
 end
