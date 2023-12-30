@@ -1,8 +1,7 @@
 name: Snapshots
 
-on:
-  push:
-  pull_request:
+on: workflow_dispatch
+
 jobs:
   record:
     name: Record snapshots for unit & ui tests
