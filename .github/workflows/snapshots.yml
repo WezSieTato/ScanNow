@@ -33,7 +33,7 @@ jobs:
         run: bundle exec fastlane record_snapshots
       - name: "Upload Tests results"
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: xcresult
           path: fastlane/test_output
