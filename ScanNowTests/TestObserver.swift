@@ -1,6 +1,6 @@
 import Foundation
-import XCTest
 import SnapshotTesting
+import XCTest
 
 @objc(TestObserver)
 final class TestObserver: NSObject, XCTestObservation {
@@ -15,7 +15,7 @@ final class TestObserver: NSObject, XCTestObservation {
 
     func testBundleWillStart(_: Bundle) {
         #if RECORD_SNAPSHOT
-        isRecording = true
+            isRecording = true
         #endif
     }
 }
