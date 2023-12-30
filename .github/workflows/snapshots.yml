@@ -1,0 +1,40 @@
+name: Snapshots
+
+on: workflow_dispatch
+
+jobs:
+  record:
+    name: Record snapshots for unit & ui tests
+    runs-on: macos-13
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+          token: ${{ secrets.WORKFLOW_ACCESS_TOKEN_GITHUB }}
+      - name: Cache bundler gems
+        uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gems-
+      - name: Cache Mint packages
+        id: mint-cache
+        uses: actions/cache@v3
+        with:
+          path: /Users/runner/.mint
+          key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
+          restore-keys: ${{ runner.os }}-mint-
+      - name: Bundler
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+      - name: Record snapshots
+        run: bundle exec fastlane record_snapshots
+      - name: "Upload Tests results"
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: xcresult
+          path: fastlane/test_output

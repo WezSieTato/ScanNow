@@ -26,6 +26,7 @@
 		D336A6C42901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336A6C32901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift */; };
 		D344DC9928C0A2A8000FD06D /* SettingsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9828C0A2A8000FD06D /* SettingsViewControllerFactory.swift */; };
 		D344DC9B28C0A415000FD06D /* ScanCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344DC9A28C0A415000FD06D /* ScanCounter.swift */; };
+		D34B84312B407C25004361E2 /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34B84302B407C25004361E2 /* TestObserver.swift */; };
 		D34DE2422976081F0048648E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D34DE2442976081F0048648E /* InfoPlist.strings */; };
 		D35C788C2964EB0900C39A60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D35C78892964EB0900C39A60 /* Localizable.strings */; };
 		D36D177E295F94BC0030487E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D177D295F94BC0030487E /* Storyboards.swift */; };
@@ -94,6 +95,8 @@
 		D336A6C32901EF1300C1177B /* DateAndTimeFilenameStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeFilenameStrategyTests.swift; sourceTree = "<group>"; };
 		D344DC9828C0A2A8000FD06D /* SettingsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerFactory.swift; sourceTree = "<group>"; };
 		D344DC9A28C0A415000FD06D /* ScanCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCounter.swift; sourceTree = "<group>"; };
+		D34B84302B407C25004361E2 /* TestObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
+		D34B84322B408749004361E2 /* RecordSnapshots.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RecordSnapshots.xcconfig; sourceTree = "<group>"; };
 		D34DE2432976081F0048648E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D34DE245297608230048648E /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D35C788A2964EB0900C39A60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				D336A6B92901EB7E00C1177B /* result */,
 				D30FAA4D26CB079900B8BF20 /* Info.plist */,
 				D3C48C4F29630E500007EC14 /* Date+Components.swift */,
+				D34B84302B407C25004361E2 /* TestObserver.swift */,
+				D34B84322B408749004361E2 /* RecordSnapshots.xcconfig */,
 			);
 			path = ScanNowTests;
 			sourceTree = "<group>";
@@ -579,6 +584,7 @@
 				D3B86DE929624E3500989DCB /* AutoMockable.generated.swift in Sources */,
 				D336A6BD2901EBC400C1177B /* NoneFilenameStrategyTests.swift in Sources */,
 				D3B86DE6296246D700989DCB /* ComposeMailDataFactoryTests.swift in Sources */,
+				D34B84312B407C25004361E2 /* TestObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
