@@ -43,9 +43,7 @@ platform :ios do
 
   lane :record_snapshots do
     scan(
-      # xcargs: 'RECORD_SNAPSHOT=YES',
       xcconfig: 'ScanNowTests/RecordSnapshots.xcconfig',
-      # xcodebuild_command: "env NSUnbufferedIO=YES RECORD_SNAPSHOT=YES xcodebuild",
       fail_build: false
     )
     commit_and_push_if_ci(
