@@ -1,2 +1,3 @@
 devices(["iPhone 14"])
+result_bundle(true)
 scheme("ScanNow")
