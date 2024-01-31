@@ -2,7 +2,7 @@ excluded:
   - vendor
   - ScanNow/generated
   - ScanNowTests/generated
-  - fastlane/test_output
+  - fastlane
 
 disabled_rules:
   - todo
