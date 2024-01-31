@@ -1,0 +1,12 @@
+
+devices([
+  "iPhone 14 Pro"
+])
+
+languages([
+  "en-US",
+  "pl-PL",
+  "fr-FR"
+])
+
+scheme("AppStoreSnapshots")
