@@ -50,6 +50,17 @@
                ReferencedContainer = "container:ScanNow.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D393F8382B6A662900F42B4F"
+               BuildableName = "AppStoreSnapshots.xctest"
+               BlueprintName = "AppStoreSnapshots"
+               ReferencedContainer = "container:ScanNow.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

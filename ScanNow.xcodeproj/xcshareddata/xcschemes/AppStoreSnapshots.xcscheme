@@ -18,9 +18,9 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D34B84382B42BE08004361E2"
-               BuildableName = "ScanNowSnapshots.xctest"
-               BlueprintName = "ScanNowSnapshots"
+               BlueprintIdentifier = "D393F8382B6A662900F42B4F"
+               BuildableName = "AppStoreSnapshots.xctest"
+               BlueprintName = "AppStoreSnapshots"
                ReferencedContainer = "container:ScanNow.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -36,6 +36,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D30FAA3026CB079700B8BF20"
+            BuildableName = "ScanNow.app"
+            BlueprintName = "ScanNow"
+            ReferencedContainer = "container:ScanNow.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -43,6 +53,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D30FAA3026CB079700B8BF20"
+            BuildableName = "ScanNow.app"
+            BlueprintName = "ScanNow"
+            ReferencedContainer = "container:ScanNow.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

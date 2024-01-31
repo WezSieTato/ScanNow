@@ -1,7 +1,7 @@
 import XCTest
 
 @MainActor
-final class ScanNowSnapshotsLaunchTests: XCTestCase {
+final class AppStoreSnapshotsLaunchTests: XCTestCase {
     func testWelcomeScreen() throws {
         let app = XCUIApplication()
         setupSnapshot(app)

@@ -7,23 +7,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-
-            switch AVCaptureDevice.authorizationStatus(for: .video) {
-            case .authorized:
-                window.rootViewController = NavigationScannerViewControllerFactory.make(openScanner: true)
-
-            case .notDetermined:
-                window.rootViewController = AskForCameraViewController()
-
-            case .denied, .restricted:
-                fallthrough
-
-            @unknown default:
-                window.rootViewController = NavigationScannerViewControllerFactory.make(openScanner: false)
-            }
-
+            window.rootViewController = makeRootViewController()
             self.window = window
             window.makeKeyAndVisible()
+        }
+    }
+
+    private func makeRootViewController() -> UIViewController {
+        if UserDefaults.standard.bool(forKey: "FASTLANE_SNAPSHOT") {
+            return NavigationScannerViewControllerFactory.make(openScanner: false)
+        }
+
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            return NavigationScannerViewControllerFactory.make(openScanner: true)
+
+        case .notDetermined:
+            return AskForCameraViewController()
+
+        case .denied, .restricted:
+            fallthrough
+
+        @unknown default:
+            return NavigationScannerViewControllerFactory.make(openScanner: false)
         }
     }
 
