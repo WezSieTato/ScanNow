@@ -106,11 +106,11 @@
 		D344DC9A28C0A415000FD06D /* ScanCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCounter.swift; sourceTree = "<group>"; };
 		D34B84302B407C25004361E2 /* TestObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
 		D34B84322B408749004361E2 /* RecordSnapshots.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RecordSnapshots.xcconfig; sourceTree = "<group>"; };
+		D34B84332B42BBEF004361E2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D34B84342B42BBFA004361E2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D34B84392B42BE08004361E2 /* ScanNowSnapshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanNowSnapshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34B843D2B42BE08004361E2 /* ScanNowSnapshotsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanNowSnapshotsLaunchTests.swift; sourceTree = "<group>"; };
 		D34B84442B42C088004361E2 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
-		D34B84332B42BBEF004361E2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D34B84342B42BBFA004361E2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D34DE2432976081F0048648E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D34DE245297608230048648E /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D35C788A2964EB0900C39A60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -915,7 +915,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scan.ScanNowSnapshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -934,7 +934,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2M98XC8S2M;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scan.ScanNowSnapshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
