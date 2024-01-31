@@ -1,0 +1,21 @@
+import os
+
+def create_error_logs_file():
+    directory = "fastlane/metadata/en-GB/"
+    file_path = os.path.join(directory, "error_logs.txt")
+
+    # Create the directory if it doesn't exist
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    # Write the error logs to the file
+    with open(file_path, "w") as file:
+        # Write the error logs here
+
+    # Set the appropriate permissions for the file
+    os.chmod(file_path, 0o644)
+
+    # Commit the changes
+    commit("feat/fix: Create error_logs.txt file")
+
+create_error_logs_file()
