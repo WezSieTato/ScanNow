@@ -7,7 +7,7 @@ on:
 jobs:
   tests:
     name: Lint & unit tests
-    runs-on: macos-13
+    runs-on: macos-15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
