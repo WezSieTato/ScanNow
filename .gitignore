@@ -7,3 +7,5 @@ ScanNow.xcodeproj/project.xcworkspace/xcshareddata/swiftpm
 .env.default
 *.ipa
 *.app.dSYM.zip
+.build
+.swiftpm/xcode/xcuserdata

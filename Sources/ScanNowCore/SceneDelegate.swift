@@ -1,6 +1,5 @@
 import AVKit
 import UIKit
-import ScanNowCore
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -24,9 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return NavigationScannerViewControllerFactory.make(openScanner: true)
 
         case .notDetermined:
-            return AskForCameraViewController(
-                launchScreenVC: Storyboards.LaunchScreen.initialScene.instantiate()
-            )
+            return AskForCameraViewController()
 
         case .denied, .restricted:
             fallthrough
