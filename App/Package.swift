@@ -16,9 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.15.4"),
-        .package(url: "https://github.com/WezSieTato/DataDrivenTesting.git", from: "1.0.0"),
-        .package(url: "https://github.com/realm/SwiftLint.git", exact: "0.52.4"),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat.git", exact: "0.53.1"),
+        .package(url: "https://github.com/WezSieTato/DataDrivenTesting.git", from: "1.0.0")
     ],
     targets: [
         .target(
@@ -32,10 +30,6 @@ let package = Package(
             swiftSettings: [
                 .define("DEBUG", .when(configuration: .debug)),
                 .define("RELEASE", .when(configuration: .release))
-            ],
-            plugins: [
-                .plugin(name: "SwiftLintPlugin", package: "SwiftLint"),
-                .plugin(name: "SwiftFormatPlugin", package: "SwiftFormat")
             ]
         ),
         .testTarget(
@@ -45,7 +39,7 @@ let package = Package(
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
                 .product(name: "DataDrivenTesting", package: "DataDrivenTesting")
             ],
-            path: "Tests/ScanNowTests",
+            path: "Tests/ScanNowCoreTests",
             exclude: ["Info.plist", "__Snapshots__"],
             resources: [
                 .copy("__Snapshots__")

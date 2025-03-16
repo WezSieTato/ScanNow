@@ -14,26 +14,7 @@
 		D34435F62D869CD800385B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34435F52D869CD800385B94 /* Assets.xcassets */; };
 		D34435FA2D86B77100385B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34435F82D86B77100385B94 /* LaunchScreen.storyboard */; };
 		D34435FD2D86BC6A00385B94 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34435FB2D86BC6A00385B94 /* Storyboards.swift */; };
-		D37296FD28FD491400939783 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D37296FC28FD491400939783 /* SnapshotTesting */; };
-		D3A3744629926A0C006ADEC6 /* DataDrivenTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D3A3744529926A0C006ADEC6 /* DataDrivenTesting */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D30FAA4826CB079900B8BF20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D30FAA2926CB079700B8BF20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D30FAA3026CB079700B8BF20;
-			remoteInfo = ScanNow;
-		};
-		D393F83F2B6A662900F42B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D30FAA2926CB079700B8BF20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D30FAA3026CB079700B8BF20;
-			remoteInfo = ScanNow;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D34435F12D86372500385B94 /* Embed Frameworks */ = {
@@ -54,11 +35,9 @@
 		D30FAA3426CB079700B8BF20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D30FAA3626CB079700B8BF20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D30FAA4226CB079900B8BF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34435F52D869CD800385B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D34435F72D86B77100385B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D34435FB2D86BC6A00385B94 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		D393F8392B6A662900F42B4F /* AppStoreSnapshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStoreSnapshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,22 +46,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D34435F02D86372500385B94 /* ScanNowCore in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D30FAA4426CB079900B8BF20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D37296FD28FD491400939783 /* SnapshotTesting in Frameworks */,
-				D3A3744629926A0C006ADEC6 /* DataDrivenTesting in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D393F8362B6A662900F42B4F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				D30FAA3126CB079700B8BF20 /* ScanNow.app */,
-				D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */,
-				D393F8392B6A662900F42B4F /* AppStoreSnapshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,46 +127,6 @@
 			productReference = D30FAA3126CB079700B8BF20 /* ScanNow.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D30FAA4626CB079900B8BF20 /* ScanNowTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D30FAA5E26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "ScanNowTests" */;
-			buildPhases = (
-				D30FAA4326CB079900B8BF20 /* Sources */,
-				D30FAA4426CB079900B8BF20 /* Frameworks */,
-				D30FAA4526CB079900B8BF20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D30FAA4926CB079900B8BF20 /* PBXTargetDependency */,
-			);
-			name = ScanNowTests;
-			packageProductDependencies = (
-				D37296FC28FD491400939783 /* SnapshotTesting */,
-				D3A3744529926A0C006ADEC6 /* DataDrivenTesting */,
-			);
-			productName = ScanNowTests;
-			productReference = D30FAA4726CB079900B8BF20 /* ScanNowTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D393F8382B6A662900F42B4F /* AppStoreSnapshots */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D393F8432B6A662900F42B4F /* Build configuration list for PBXNativeTarget "AppStoreSnapshots" */;
-			buildPhases = (
-				D393F8352B6A662900F42B4F /* Sources */,
-				D393F8362B6A662900F42B4F /* Frameworks */,
-				D393F8372B6A662900F42B4F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D393F8402B6A662900F42B4F /* PBXTargetDependency */,
-			);
-			name = AppStoreSnapshots;
-			productName = AppStoreSnapshots;
-			productReference = D393F8392B6A662900F42B4F /* AppStoreSnapshots.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,14 +138,6 @@
 				TargetAttributes = {
 					D30FAA3026CB079700B8BF20 = {
 						CreatedOnToolsVersion = 12.5.1;
-					};
-					D30FAA4626CB079900B8BF20 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = D30FAA3026CB079700B8BF20;
-					};
-					D393F8382B6A662900F42B4F = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = D30FAA3026CB079700B8BF20;
 					};
 				};
 			};
@@ -249,8 +162,6 @@
 			projectRoot = "";
 			targets = (
 				D30FAA3026CB079700B8BF20 /* ScanNow */,
-				D30FAA4626CB079900B8BF20 /* ScanNowTests */,
-				D393F8382B6A662900F42B4F /* AppStoreSnapshots */,
 			);
 		};
 /* End PBXProject section */
@@ -262,20 +173,6 @@
 			files = (
 				D34435F62D869CD800385B94 /* Assets.xcassets in Resources */,
 				D34435FA2D86B77100385B94 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D30FAA4526CB079900B8BF20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D393F8372B6A662900F42B4F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,34 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30FAA4326CB079900B8BF20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D393F8352B6A662900F42B4F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D30FAA4926CB079900B8BF20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D30FAA3026CB079700B8BF20 /* ScanNow */;
-			targetProxy = D30FAA4826CB079900B8BF20 /* PBXContainerItemProxy */;
-		};
-		D393F8402B6A662900F42B4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D30FAA3026CB079700B8BF20 /* ScanNow */;
-			targetProxy = D393F83F2B6A662900F42B4F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D34435F82D86B77100385B94 /* LaunchScreen.storyboard */ = {
@@ -512,84 +382,6 @@
 			};
 			name = Release;
 		};
-		D30FAA5F26CB079900B8BF20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = ScanNowTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scanTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScanNow.app/ScanNow";
-			};
-			name = Debug;
-		};
-		D30FAA6026CB079900B8BF20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				INFOPLIST_FILE = ScanNowTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scanTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScanNow.app/ScanNow";
-			};
-			name = Release;
-		};
-		D393F8412B6A662900F42B4F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scan.AppStoreSnapshots";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ScanNow;
-			};
-			name = Debug;
-		};
-		D393F8422B6A662900F42B4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2M98XC8S2M;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.szwagrosoft.quick-scan.AppStoreSnapshots";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ScanNow;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,24 +399,6 @@
 			buildConfigurations = (
 				D30FAA5C26CB079900B8BF20 /* Debug */,
 				D30FAA5D26CB079900B8BF20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D30FAA5E26CB079900B8BF20 /* Build configuration list for PBXNativeTarget "ScanNowTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D30FAA5F26CB079900B8BF20 /* Debug */,
-				D30FAA6026CB079900B8BF20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D393F8432B6A662900F42B4F /* Build configuration list for PBXNativeTarget "AppStoreSnapshots" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D393F8412B6A662900F42B4F /* Debug */,
-				D393F8422B6A662900F42B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -662,16 +436,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3C718532D86345A00528B01 /* XCLocalSwiftPackageReference "App" */;
 			productName = ScanNowCore;
-		};
-		D37296FC28FD491400939783 /* SnapshotTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
-			productName = SnapshotTesting;
-		};
-		D3A3744529926A0C006ADEC6 /* DataDrivenTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */;
-			productName = DataDrivenTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

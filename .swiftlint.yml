@@ -1,7 +1,8 @@
 excluded:
   - vendor
   - ScanNow/generated
-  - ScanNowTests/generated
+  - App/Sources/ScanNowCore/generated
+  - App/Tests/ScanNowCoreTests/generated
   - fastlane
 
 disabled_rules:
