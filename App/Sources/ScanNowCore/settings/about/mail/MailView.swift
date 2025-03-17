@@ -22,7 +22,7 @@ typealias MailViewCallback = ((Result<MFMailComposeResult, Error>) -> Void)?
 
 struct MailView: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentation
-    @Binding var data: ComposeMailData
+    @State var data: ComposeMailData
     let callback: MailViewCallback
 
     class Coordinator: NSObject, MFMailComposeViewControllerDelegate {

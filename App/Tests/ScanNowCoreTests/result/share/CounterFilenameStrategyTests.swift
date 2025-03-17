@@ -1,4 +1,4 @@
-@testable import ScanNow
+@testable import ScanNowCore
 import XCTest
 
 final class CounterFilenameStrategyTests: XCTestCase {

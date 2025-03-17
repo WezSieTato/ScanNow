@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ScanNow",
+    name: "ScanNowCore",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v14)
@@ -33,7 +33,7 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "ScanNowTests",
+            name: "ScanNowCoreTests",
             dependencies: [
                 "ScanNowCore",
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
@@ -41,8 +41,9 @@ let package = Package(
             ],
             path: "Tests/ScanNowCoreTests",
             exclude: ["Info.plist", "__Snapshots__"],
-            resources: [
-                .copy("__Snapshots__")
+            swiftSettings: [
+                .define("XCTest", .when(configuration: .debug)),
+                .define("DEBUG", .when(configuration: .debug))
             ]
         ),
         .testTarget(
@@ -51,8 +52,9 @@ let package = Package(
                 "ScanNowCore"
             ],
             path: "Tests/AppStoreSnapshots",
-            resources: [
-                .copy("__Snapshots__")
+            swiftSettings: [
+                .define("XCTest", .when(configuration: .debug)),
+                .define("DEBUG", .when(configuration: .debug))
             ]
         )
     ]

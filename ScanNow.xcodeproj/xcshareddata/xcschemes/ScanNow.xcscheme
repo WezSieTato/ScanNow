@@ -33,32 +33,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D30FAA4626CB079900B8BF20"
-               BuildableName = "ScanNowTests.xctest"
-               BlueprintName = "ScanNowTests"
-               ReferencedContainer = "container:ScanNow.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D34B84382B42BE08004361E2"
-               BuildableName = "ScanNowSnapshots.xctest"
-               BlueprintName = "ScanNowSnapshots"
-               ReferencedContainer = "container:ScanNow.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D393F8382B6A662900F42B4F"
-               BuildableName = "AppStoreSnapshots.xctest"
-               BlueprintName = "AppStoreSnapshots"
-               ReferencedContainer = "container:ScanNow.xcodeproj">
+               BlueprintIdentifier = "ScanNowCoreTests"
+               BuildableName = "ScanNowCoreTests"
+               BlueprintName = "ScanNowCoreTests"
+               ReferencedContainer = "container:App">
             </BuildableReference>
          </TestableReference>
       </Testables>

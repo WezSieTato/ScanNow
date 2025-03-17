@@ -11,7 +11,7 @@ import AppKit
 #endif
 
 
-@testable import ScanNow
+@testable import ScanNowCore
 
 
 

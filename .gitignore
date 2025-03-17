@@ -1,11 +1,9 @@
 fastlane/test_output
 .DS_Store
-ScanNow.xcodeproj/project.xcworkspace/xcuserdata
 fastlane/report.xml
-*.xcodeproj/xcuserdata
 ScanNow.xcodeproj/project.xcworkspace/xcshareddata/swiftpm
 .env.default
 *.ipa
 *.app.dSYM.zip
 .build
-.swiftpm/xcode/xcuserdata
+xcuserdata

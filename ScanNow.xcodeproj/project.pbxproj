@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		D30FAA3526CB079700B8BF20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA3426CB079700B8BF20 /* AppDelegate.swift */; };
 		D30FAA3726CB079700B8BF20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30FAA3626CB079700B8BF20 /* SceneDelegate.swift */; };
-		D34435F02D86372500385B94 /* ScanNowCore in Frameworks */ = {isa = PBXBuildFile; productRef = D34435EF2D86372500385B94 /* ScanNowCore */; };
-		D34435F22D86372500385B94 /* ScanNowCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D34435EF2D86372500385B94 /* ScanNowCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D34435F62D869CD800385B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34435F52D869CD800385B94 /* Assets.xcassets */; };
 		D34435FA2D86B77100385B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34435F82D86B77100385B94 /* LaunchScreen.storyboard */; };
 		D34435FD2D86BC6A00385B94 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34435FB2D86BC6A00385B94 /* Storyboards.swift */; };
+		D3DB8C012D88594A0025665E /* ScanNowCore in Frameworks */ = {isa = PBXBuildFile; productRef = D3DB8C002D88594A0025665E /* ScanNowCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D34435F22D86372500385B94 /* ScanNowCore in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34435F02D86372500385B94 /* ScanNowCore in Frameworks */,
+				D3DB8C012D88594A0025665E /* ScanNowCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +153,7 @@
 			packageReferences = (
 				D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 				D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */,
-				D3C718532D86345A00528B01 /* XCLocalSwiftPackageReference "App" */,
+				D3E565BB2D86D0630068C631 /* XCLocalSwiftPackageReference "App" */,
 			);
 			productRefGroup = D30FAA3226CB079700B8BF20 /* Products */;
 			projectDirPath = "";
@@ -406,7 +404,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		D3C718532D86345A00528B01 /* XCLocalSwiftPackageReference "App" */ = {
+		D3E565BB2D86D0630068C631 /* XCLocalSwiftPackageReference "App" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = App;
 		};
@@ -432,9 +430,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D34435EF2D86372500385B94 /* ScanNowCore */ = {
+		D3DB8C002D88594A0025665E /* ScanNowCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D3C718532D86345A00528B01 /* XCLocalSwiftPackageReference "App" */;
+			package = D3E565BB2D86D0630068C631 /* XCLocalSwiftPackageReference "App" */;
 			productName = ScanNowCore;
 		};
 /* End XCSwiftPackageProductDependency section */

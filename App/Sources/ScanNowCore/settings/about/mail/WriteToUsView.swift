@@ -3,7 +3,7 @@ import SwiftUI
 struct WriteToUsView: View {
     @State private var showMailView = false
 
-    @State private var mailData = ComposeMailDataFactory().make()
+    let composeMailDataFactory: ComposeMailDataFactory
 
     @ViewBuilder var body: some View {
         HStack {
@@ -16,7 +16,7 @@ struct WriteToUsView: View {
             showMailView = true
         }
         .sheet(isPresented: $showMailView) {
-            MailView(data: $mailData) { _ in
+            MailView(data: composeMailDataFactory.make()) { _ in
                 showMailView = true
             }
         }
@@ -26,7 +26,7 @@ struct WriteToUsView: View {
 struct WriteToUsViewPreview: PreviewProvider {
     static var previews: some View {
         Form {
-            WriteToUsView()
+            WriteToUsView(composeMailDataFactory: ComposeMailDataFactory())
         }
     }
 }
