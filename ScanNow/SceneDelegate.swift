@@ -1,6 +1,6 @@
 import AVKit
-import UIKit
 import ScanNowCore
+import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?

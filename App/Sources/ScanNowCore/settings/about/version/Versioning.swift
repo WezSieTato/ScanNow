@@ -8,11 +8,11 @@ protocol Versioning {
 
 final class BundledVersion: Versioning {
     var versionNumber: String {
-        return InfoPlist.cfBundleShortVersionString
+        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
     }
 
     var buildNumber: String {
-        return InfoPlist.cfBundleVersion
+        return Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
     }
 }
 

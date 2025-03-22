@@ -39,6 +39,28 @@
                ReferencedContainer = "container:App">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D3DB8C062D8C5C570025665E"
+               BuildableName = "ScanNowTests.xctest"
+               BlueprintName = "ScanNowTests"
+               ReferencedContainer = "container:ScanNow.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D3DB8C232D8C5E390025665E"
+               BuildableName = "AppStoreSnapshots.xctest"
+               BlueprintName = "AppStoreSnapshots"
+               ReferencedContainer = "container:ScanNow.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -32,10 +32,10 @@ platform :ios do
     )
 
     ENV["SOURCERY_EXECUTABLE"] = mint_which(package: 'sourcery')
-    sourcery(config: "ScanNowTests/.sourcery.yml")
+    sourcery(config: "App/Tests/ScanNowCoreTests/.sourcery.yml")
 
     ensure_no_changes(
-      path: "ScanNowTests/generated",
+      path: "App/Tests/ScanNowCoreTests/generated",
       show_diff: false,
       error_message: "Generated code is different than sourcery output. Run `mint run sourcery` in `ScanNowTests` directory to re-generate code."
     )
