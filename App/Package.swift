@@ -36,7 +36,7 @@ let package = Package(
                 .product(name: "DataDrivenTesting", package: "DataDrivenTesting"),
             ],
             path: "Tests/ScanNowCoreTests",
-            exclude: ["Info.plist", "__Snapshots__"]
+            exclude: ["Info.plist"]
         ),
     ]
 )

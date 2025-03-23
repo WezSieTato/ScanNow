@@ -42,8 +42,10 @@ platform :ios do
   end
 
   lane :record_snapshots do
+    desc "Removes all snapshot files from __Snapshots__ directories"
+    sh("find .. -name '__Snapshots__' -type d -exec rm -rf {} \\; 2>/dev/null || true")
+    UI.success("All snapshot files have been removed")
     scan(
-      xcconfig: 'ScanNowTests/RecordSnapshots.xcconfig',
       fail_build: false
     )
     commit_and_push_if_ci(
