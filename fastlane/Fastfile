@@ -50,7 +50,7 @@ platform :ios do
     )
     commit_and_push_if_ci(
       message: "Record snapshot :camera:",
-      path: "ScanNowTests"
+      path: ["ScanNowTests", "App/Tests"]
     )
   end
 
