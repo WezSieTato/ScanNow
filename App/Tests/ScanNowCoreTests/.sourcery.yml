@@ -1,0 +1,9 @@
+sources:
+  - ../../Sources/ScanNowCore
+templates:
+  - ../../../sourcery/AutoMockable.stencil
+output:
+  generated
+args:
+  autoMockableTestableImports: ["ScanNowCore"]
+  

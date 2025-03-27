@@ -1,4 +1,4 @@
---exclude vendor, ScanNow/generated, ScanNowTests/generated, fastlane
+--exclude vendor, ScanNow/generated, App/Sources/ScanNowCore/generated, App/Tests/ScanNowCoreTests/generated, AppStoreSnapshots/SnapshotHelper.swift, fastlane
 --trimwhitespace always
 --wraparguments before-first
 --enable braces

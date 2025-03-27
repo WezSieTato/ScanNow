@@ -32,23 +32,25 @@ platform :ios do
     )
 
     ENV["SOURCERY_EXECUTABLE"] = mint_which(package: 'sourcery')
-    sourcery(config: "ScanNowTests/.sourcery.yml")
+    sourcery(config: "App/Tests/ScanNowCoreTests/.sourcery.yml")
 
     ensure_no_changes(
-      path: "ScanNowTests/generated",
+      path: "App/Tests/ScanNowCoreTests/generated",
       show_diff: false,
       error_message: "Generated code is different than sourcery output. Run `mint run sourcery` in `ScanNowTests` directory to re-generate code."
     )
   end
 
   lane :record_snapshots do
+    desc "Removes all snapshot files from __Snapshots__ directories"
+    sh("find .. -name '__Snapshots__' -type d -exec rm -rf {} \\; 2>/dev/null || true")
+    UI.success("All snapshot files have been removed")
     scan(
-      xcconfig: 'ScanNowTests/RecordSnapshots.xcconfig',
       fail_build: false
     )
     commit_and_push_if_ci(
       message: "Record snapshot :camera:",
-      path: "ScanNowTests"
+      path: ["ScanNowTests", "App/Tests"]
     )
   end
 

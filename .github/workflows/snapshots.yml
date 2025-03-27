@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   record:
     name: Record snapshots for unit & ui tests
-    runs-on: macos-13
+    runs-on: macos-15
 
     steps:
       - name: Checkout

@@ -1,22 +1,15 @@
 strings:
-  inputs: ScanNow/localizable/en.lproj/Localizable.strings
+  inputs: App/Sources/ScanNowCore/localizable/en.lproj/Localizable.strings
   outputs:
     - templateName: structured-swift5
-      output: ScanNow/generated/Strings.swift
+      output: App/Sources/ScanNowCore/generated/Strings.swift
       params:
         enumName: Strings
-plist:
-  inputs: ScanNow/Info.plist
-  outputs:
-    templateName: runtime-swift5
-    output: ScanNow/generated/InfoPlist.swift
-    params:
-      enumName: InfoPlist
 xcassets:
-  inputs: ScanNow
+  inputs: App/Sources/ScanNowCore
   outputs:
     templateName: swift5
-    output: ScanNow/generated/Assets.swift
+    output: App/Sources/ScanNowCore/generated/Assets.swift
     params:
       enumName: Assets
 ib:
