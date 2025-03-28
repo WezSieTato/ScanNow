@@ -235,8 +235,9 @@
 		D30FAA2926CB079700B8BF20 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					D30FAA3026CB079700B8BF20 = {
 						CreatedOnToolsVersion = 12.5.1;
