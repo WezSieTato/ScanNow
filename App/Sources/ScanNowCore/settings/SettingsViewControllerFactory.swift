@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-final class SettingsViewControllerFactory {
+enum SettingsViewControllerFactory {
     static func create(
         userDefaults: UserDefaults = UserDefaults.standard,
         version: Versioning = BundledVersion(),
