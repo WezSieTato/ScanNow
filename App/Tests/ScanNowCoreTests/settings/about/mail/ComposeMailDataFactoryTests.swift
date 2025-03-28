@@ -66,6 +66,6 @@ final class ComposeMailDataFactoryTests: XCTestCase {
     ) {
         let result = sut.make()
 
-        assertSnapshot(matching: result.message, as: .description, file: file, testName: testName, line: line)
+        assertSnapshot(of: result.message, as: .description, file: file, testName: testName, line: line)
     }
 }

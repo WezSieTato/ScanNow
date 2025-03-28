@@ -9,6 +9,6 @@ final class GithubRowViewSnapshotTests: XCTestCase {
             GithubRowView()
         }
 
-        assertSnapshot(matching: sut, as: .image(layout: .fixed(width: 375, height: 90)))
+        assertSnapshot(of: sut, as: .image(layout: .fixed(width: 375, height: 90)))
     }
 }

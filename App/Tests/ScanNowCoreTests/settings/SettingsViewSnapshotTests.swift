@@ -27,12 +27,12 @@ final class SettingsViewSnapshotTests: XCTestCase {
     }
 
     func testView_whenSettingsAreDefault() {
-        assertSnapshot(matching: sut, as: .image(on: .iPhone13Mini))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Mini))
     }
 
     func testView_whenAppearanceIsDark() {
         sut.overrideUserInterfaceStyle = .dark
 
-        assertSnapshot(matching: sut, as: .image(on: .iPhone13Mini))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Mini))
     }
 }

@@ -17,6 +17,3 @@ opt_in_rules:
 comma: error
 colon:
   severity: error
-
-file_header:
-  required_pattern: ""

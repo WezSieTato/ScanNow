@@ -49,7 +49,7 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
 
     private func testView(file: StaticString = #file, testName: String = #function, line: UInt = #line) {
         assertSnapshot(
-            matching: sut,
+            of: sut,
             as: .image(layout: .fixed(width: 375, height: 240)),
             record: false,
             file: file,

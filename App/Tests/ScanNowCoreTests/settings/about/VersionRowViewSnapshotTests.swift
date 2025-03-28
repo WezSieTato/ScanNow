@@ -20,7 +20,7 @@ final class VersionRowViewSnapshotTests: XCTestCase {
             }
 
             assertSnapshot(
-                matching: sut,
+                of: sut,
                 as: .image(layout: .fixed(width: 375, height: 90)),
                 record: false,
                 file: testData.file,
