@@ -23,7 +23,7 @@ final class LaunchScreenSnapshotTests: XCTestCase {
         testName: String = #function,
         line: UInt = #line
     ) {
-        assertSnapshot(matching: sut, as: .image(on: config), file: file, testName: testName, line: line)
+        assertSnapshot(of: sut, as: .image(on: config), file: file, testName: testName, line: line)
     }
 
     func testViewOnSmallIPhone() {
