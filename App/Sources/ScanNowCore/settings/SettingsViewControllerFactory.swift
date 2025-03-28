@@ -2,7 +2,7 @@ import SwiftUI
 import UIKit
 
 final class SettingsViewControllerFactory {
-    class func create(
+    static func create(
         userDefaults: UserDefaults = UserDefaults.standard,
         version: Versioning = BundledVersion(),
         timeProvider: TimeProvider = FoundationTimeProvider()
