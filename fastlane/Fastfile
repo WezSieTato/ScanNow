@@ -41,6 +41,12 @@ platform :ios do
     )
   end
 
+  lane :generate_code do
+    mint_run(command: "swiftgen")
+    ENV["SOURCERY_EXECUTABLE"] = mint_which(package: 'sourcery')
+    sourcery(config: "App/Tests/ScanNowCoreTests/.sourcery.yml")
+  end
+
   lane :record_snapshots do
     desc "Removes all snapshot files from __Snapshots__ directories"
     sh("find .. -name '__Snapshots__' -type d -exec rm -rf {} \\; 2>/dev/null || true")
