@@ -12,6 +12,7 @@
 		D34435F62D869CD800385B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34435F52D869CD800385B94 /* Assets.xcassets */; };
 		D34435FA2D86B77100385B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34435F82D86B77100385B94 /* LaunchScreen.storyboard */; };
 		D34435FD2D86BC6A00385B94 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34435FB2D86BC6A00385B94 /* Storyboards.swift */; };
+		D38366042D9C5C1900E9814D /* ScanNowCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D3DB8C002D88594A0025665E /* ScanNowCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D3DB8C012D88594A0025665E /* ScanNowCore in Frameworks */ = {isa = PBXBuildFile; productRef = D3DB8C002D88594A0025665E /* ScanNowCore */; };
 		D3DB8C112D8C5C740025665E /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D3DB8C102D8C5C740025665E /* SnapshotTesting */; };
 		D3DB8C3A2D8EB7370025665E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3DB8C382D8EB7370025665E /* InfoPlist.strings */; };
@@ -41,6 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D38366042D9C5C1900E9814D /* ScanNowCore in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
