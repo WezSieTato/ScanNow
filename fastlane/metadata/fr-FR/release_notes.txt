@@ -1,1 +1,1 @@
-
+Ajout du support pour la langue française ! Vous pouvez désormais utiliser l'application en français.

@@ -1,1 +1,1 @@
-
+Added support for the French language! You can now use the app in French.
