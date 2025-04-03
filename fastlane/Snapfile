@@ -1,6 +1,5 @@
-
 devices([
-  "iPhone 14 Pro"
+  "iPhone 16 Pro Max"
 ])
 
 languages([
