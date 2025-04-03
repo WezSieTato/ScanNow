@@ -61,7 +61,7 @@ platform :ios do
   end
 
   lane :beta do
-    build_app(project: "ScanNow.xcodeproj", scheme: "ScanNow")
+    build_app(workspace: "ScanNow.xcworkspace", scheme: "ScanNow")
     changelog_from_git_commits
     upload_to_testflight(
       groups:["TeamA"],
