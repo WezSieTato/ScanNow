@@ -82,6 +82,7 @@ platform :ios do
       end
       path = options[:path]
 
+      git_add(path: path)
       git_commit(
         message: message,
         path: path
