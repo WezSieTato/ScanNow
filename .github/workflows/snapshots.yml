@@ -38,6 +38,11 @@ jobs:
           bundle install --jobs 4 --retry 3
       - name: Record snapshots
         run: bundle exec fastlane record_snapshots
+      - name: Trigger tests workflow
+        if: success()
+        run: gh workflow run tests.yml --ref ${{ github.ref_name }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Upload Tests results"
         if: always()
         uses: actions/upload-artifact@v4
