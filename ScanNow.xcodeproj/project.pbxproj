@@ -267,7 +267,6 @@
 			mainGroup = D30FAA2826CB079700B8BF20;
 			packageReferences = (
 				D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
-				D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */,
 				D3E565BB2D86D0630068C631 /* XCLocalSwiftPackageReference "App" */,
 			);
 			productRefGroup = D30FAA3226CB079700B8BF20 /* Products */;
@@ -704,14 +703,6 @@
 		D37296FB28FD491400939783 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		D3A3744429926A0C006ADEC6 /* XCRemoteSwiftPackageReference "DataDrivenTesting" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/WezSieTato/DataDrivenTesting";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;

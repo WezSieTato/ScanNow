@@ -1,10 +1,10 @@
 @testable import ScanNowCore
 import SnapshotTesting
 import SwiftUI
-import XCTest
+import Testing
 
-final class WriteToUsViewSnapshotTests: XCTestCase {
-    func testView() {
+@Suite @MainActor struct WriteToUsViewSnapshotTests {
+    @Test func testView() {
         let appVersioning = VersioningMock()
         appVersioning.versionNumber = "1.0"
         appVersioning.buildNumber = "1"

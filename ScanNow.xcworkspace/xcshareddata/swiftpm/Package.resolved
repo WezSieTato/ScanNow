@@ -2,15 +2,6 @@
   "originHash" : "9f9c46b7ed82988101c9e1fd4ebb13f049ebacc5ca42926a67f461a2bfcfea42",
   "pins" : [
     {
-      "identity" : "datadriventesting",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/WezSieTato/DataDrivenTesting",
-      "state" : {
-        "revision" : "5fae0076987fd1c55e3ee9c923bbec7f2b2f87ea",
-        "version" : "1.0.0"
-      }
-    },
-    {
       "identity" : "swift-custom-dump",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-custom-dump",

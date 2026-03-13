@@ -1,10 +1,10 @@
 @testable import ScanNowCore
 import SnapshotTesting
 import SwiftUI
-import XCTest
+import Testing
 
-final class GithubRowViewSnapshotTests: XCTestCase {
-    func testView() {
+@Suite @MainActor struct GithubRowViewSnapshotTests {
+    @Test func testView() {
         let sut = Form {
             GithubRowView()
         }

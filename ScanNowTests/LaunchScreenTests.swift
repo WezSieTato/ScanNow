@@ -1,45 +1,30 @@
 @testable import ScanNow
 import SnapshotTesting
-import XCTest
+import Testing
 
-final class LaunchScreenSnapshotTests: XCTestCase {
-    var sut: UIViewController!
+@Suite @MainActor struct LaunchScreenSnapshotTests {
+    private let sut: UIViewController
 
-    override func setUp() {
-        super.setUp()
+    init() {
         let bundle = Bundle(for: AppDelegate.self)
         let storyboard = UIStoryboard(name: "LaunchScreen", bundle: bundle)
-        sut = storyboard.instantiateInitialViewController()
+        sut = storyboard.instantiateInitialViewController()!
     }
 
-    override func tearDown() {
-        sut = nil
-        super.tearDown()
+    @Test func testViewOnSmallIPhone() {
+        assertSnapshot(of: sut, as: .image(on: .iPhoneSe))
     }
 
-    func testView(
-        on config: ViewImageConfig,
-        file: StaticString = #file,
-        testName: String = #function,
-        line: UInt = #line
-    ) {
-        assertSnapshot(of: sut, as: .image(on: config), file: file, testName: testName, line: line)
+    @Test func testViewOnIPhone8() {
+        assertSnapshot(of: sut, as: .image(on: .iPhone8))
     }
 
-    func testViewOnSmallIPhone() {
-        testView(on: .iPhoneSe)
+    @Test func testViewOnLargeIPhone() {
+        assertSnapshot(of: sut, as: .image(on: .iPhone13ProMax))
     }
 
-    func testViewOnIPhone8() {
-        testView(on: .iPhone8)
-    }
-
-    func testViewOnLargeIPhone() {
-        testView(on: .iPhone13ProMax)
-    }
-
-    func testViewOnIPhoneWithDarkAppearance() {
+    @Test func testViewOnIPhoneWithDarkAppearance() {
         sut.overrideUserInterfaceStyle = .dark
-        testView(on: .iPhone8)
+        assertSnapshot(of: sut, as: .image(on: .iPhone8))
     }
 }
