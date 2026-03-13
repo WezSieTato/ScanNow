@@ -17,7 +17,7 @@ import Testing
         timeProvider.nowReturnValue = Date.date()
 
         sut = Form { [fileSettings] in
-            FileSettingsSectionView(settings: fileSettings!, timeProvider: timeProvider)
+            FileSettingsSectionView(settings: fileSettings, timeProvider: timeProvider)
         }
     }
 
