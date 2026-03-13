@@ -3,7 +3,8 @@ import SnapshotTesting
 import SwiftUI
 import Testing
 
-@Suite(.snapshots(record: .missing)) struct VersionRowViewSnapshotTests {
+@Suite(.snapshots(record: .missing))
+struct VersionRowViewSnapshotTests {
     @Test(arguments: [
         ("1.0.0", "1"),
         ("1.0.0", "2"),

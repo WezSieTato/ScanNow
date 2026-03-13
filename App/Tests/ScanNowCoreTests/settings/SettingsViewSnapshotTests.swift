@@ -3,7 +3,9 @@ import SnapshotTesting
 import Testing
 import UIKit
 
-@Suite(.snapshots(record: .missing)) @MainActor struct SettingsViewSnapshotTests {
+@Suite(.snapshots(record: .missing))
+@MainActor
+struct SettingsViewSnapshotTests {
     private let userDefaults: UserDefaults
     private let sut: UIViewController
 

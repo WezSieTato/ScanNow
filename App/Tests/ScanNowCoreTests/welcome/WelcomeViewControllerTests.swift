@@ -3,7 +3,9 @@ import SnapshotTesting
 import SwiftUI
 import Testing
 
-@Suite(.snapshots(record: .missing)) @MainActor struct WelcomeViewControllerTests {
+@Suite(.snapshots(record: .missing))
+@MainActor
+struct WelcomeViewControllerTests {
     @Test func view() {
         let sut = WelcomeViewController()
 

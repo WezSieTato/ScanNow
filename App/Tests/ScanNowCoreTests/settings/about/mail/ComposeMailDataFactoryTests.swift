@@ -2,7 +2,8 @@
 import SnapshotTesting
 import Testing
 
-@Suite(.snapshots(record: .missing)) struct ComposeMailDataFactoryTests {
+@Suite(.snapshots(record: .missing))
+struct ComposeMailDataFactoryTests {
     private let sut: ComposeMailDataFactory
     private let appVersioning: VersioningMock
     private let systemVersioning: SystemVersioningMock

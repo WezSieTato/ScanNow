@@ -2,7 +2,8 @@ import Foundation
 @testable import ScanNowCore
 import Testing
 
-@Suite struct DateAndTimeFilenameStrategyTests {
+@Suite
+struct DateAndTimeFilenameStrategyTests {
     private let sut: DateAndTimeFilenameStrategy
     private let timeProvider: TimeProviderMock
     private let fileSettings: FileSettingsMock

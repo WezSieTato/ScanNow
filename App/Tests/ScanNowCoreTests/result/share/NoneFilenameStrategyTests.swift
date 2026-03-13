@@ -1,7 +1,8 @@
 @testable import ScanNowCore
 import Testing
 
-@Suite struct NoneFilenameStrategyTests {
+@Suite
+struct NoneFilenameStrategyTests {
     @Test(arguments: [
         ("Example", "Example"),
         ("Scan", "Scan"),
