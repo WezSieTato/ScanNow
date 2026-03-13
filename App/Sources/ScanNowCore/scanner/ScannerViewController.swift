@@ -41,7 +41,6 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
         counter.increaseCounter()
 
         DispatchQueue.main.async { [weak self] in
-
             guard let self = self else {
                 return
             }

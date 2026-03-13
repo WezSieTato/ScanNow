@@ -9,7 +9,6 @@ final class NoneFilenameStrategyTests: XCTestCase {
             TestData((settingsFileName: "Scan", expected: "Scan")),
             TestData((settingsFileName: "", expected: "Scan"), name: "When settingsFileName is empty"),
         ]) { testData, _ in
-
             let sut = NoneFilenameStrategy()
             let fileSettings = FileSettingsMock()
             fileSettings.filename = testData.data.settingsFileName

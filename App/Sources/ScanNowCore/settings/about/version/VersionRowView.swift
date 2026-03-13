@@ -3,7 +3,6 @@ import SwiftUI
 struct VersionRowView: View {
     let version: Versioning
 
-    @ViewBuilder
     var body: some View {
         HStack {
             Text(Strings.Settings.About.version)
