@@ -3,7 +3,7 @@ import SnapshotTesting
 import Testing
 import UIKit
 
-@Suite @MainActor struct LaunchScreenSnapshotTests {
+@Suite(.snapshots(record: .missing)) @MainActor struct LaunchScreenSnapshotTests {
     private let sut: UIViewController
 
     init() {
@@ -12,19 +12,19 @@ import UIKit
         sut = storyboard.instantiateInitialViewController()!
     }
 
-    @Test func testViewOnSmallIPhone() {
+    @Test func viewOnSmallIPhone() {
         assertSnapshot(of: sut, as: .image(on: .iPhoneSe))
     }
 
-    @Test func testViewOnIPhone8() {
+    @Test func viewOnIPhone8() {
         assertSnapshot(of: sut, as: .image(on: .iPhone8))
     }
 
-    @Test func testViewOnLargeIPhone() {
+    @Test func viewOnLargeIPhone() {
         assertSnapshot(of: sut, as: .image(on: .iPhone13ProMax))
     }
 
-    @Test func testViewOnIPhoneWithDarkAppearance() {
+    @Test func viewOnIPhoneWithDarkAppearance() {
         sut.overrideUserInterfaceStyle = .dark
         assertSnapshot(of: sut, as: .image(on: .iPhone8))
     }
