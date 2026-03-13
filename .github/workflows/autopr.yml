@@ -39,7 +39,7 @@ jobs:
           exit 78
         fi
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         ref: master
         fetch-depth: 1
