@@ -1,6 +1,7 @@
 @testable import ScanNowCore
 import SnapshotTesting
 import Testing
+import UIKit
 
 @Suite @MainActor struct SettingsViewSnapshotTests {
     private let userDefaults: UserDefaults

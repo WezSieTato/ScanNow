@@ -1,6 +1,7 @@
 @testable import ScanNow
 import SnapshotTesting
 import Testing
+import UIKit
 
 @Suite @MainActor struct LaunchScreenSnapshotTests {
     private let sut: UIViewController
