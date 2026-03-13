@@ -1,7 +1,6 @@
 @testable import ScanNowCore
 import Testing
 
-@Suite
 struct CounterFilenameStrategyTests {
     private let sut: CounterFilenameStrategy
     private let counter: ScanCounterMock
