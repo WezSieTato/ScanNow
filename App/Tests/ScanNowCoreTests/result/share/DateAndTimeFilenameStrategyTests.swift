@@ -1,5 +1,5 @@
-@testable import ScanNowCore
 import Foundation
+@testable import ScanNowCore
 import Testing
 
 @Suite struct DateAndTimeFilenameStrategyTests {
