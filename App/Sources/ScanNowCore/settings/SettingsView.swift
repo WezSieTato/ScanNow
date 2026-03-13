@@ -4,7 +4,6 @@ struct SettingsView: View {
     let version: Versioning
     let timeProvider: TimeProvider
 
-    @ViewBuilder
     var body: some View {
         Form {
             FileSettingsSectionView(settings: AppStorageFileSettings(), timeProvider: timeProvider)

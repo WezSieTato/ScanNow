@@ -5,7 +5,7 @@ struct GithubRowView: View {
 
     private let repositoryName = "WezSieTato/ScanNow"
 
-    @ViewBuilder var body: some View {
+    var body: some View {
         HStack {
             Assets.githubMark.swiftUIImage
             Spacer()

@@ -5,7 +5,7 @@ struct WriteToUsView: View {
 
     let composeMailDataFactory: ComposeMailDataFactory
 
-    @ViewBuilder var body: some View {
+    var body: some View {
         HStack {
             Text(Strings.Settings.About.email)
             Spacer()

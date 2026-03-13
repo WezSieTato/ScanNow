@@ -5,7 +5,9 @@ enum ScanFormat: String, CaseIterable, Identifiable {
     case jpeg
     case png
 
-    var id: Self { self }
+    var id: Self {
+        self
+    }
 }
 
 enum FileSufix: String, CaseIterable, Identifiable {
@@ -13,7 +15,9 @@ enum FileSufix: String, CaseIterable, Identifiable {
     case counter
     case dateAndTime
 
-    var id: Self { self }
+    var id: Self {
+        self
+    }
 }
 
 // sourcery: AutoMockable
