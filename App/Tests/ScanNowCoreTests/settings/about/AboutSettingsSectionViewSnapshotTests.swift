@@ -1,10 +1,12 @@
 @testable import ScanNowCore
 import SnapshotTesting
 import SwiftUI
-import XCTest
+import Testing
 
-final class AboutSettingsSectionViewSnapshotTests: XCTestCase {
-    func testView() {
+@Suite(.snapshots(record: .missing))
+@MainActor
+struct AboutSettingsSectionViewSnapshotTests {
+    @Test func view() {
         let sut = Form {
             AboutSettingsSectionView(version: PreviewVersion())
         }

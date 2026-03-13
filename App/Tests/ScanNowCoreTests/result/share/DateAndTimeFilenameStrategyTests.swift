@@ -1,43 +1,37 @@
+import Foundation
 @testable import ScanNowCore
-import XCTest
+import Testing
 
-final class DateAndTimeFilenameStrategyTests: XCTestCase {
-    private var sut: DateAndTimeFilenameStrategy!
-    private var timeProvider: TimeProviderMock!
-    private var fileSettings: FileSettingsMock!
+@Suite
+struct DateAndTimeFilenameStrategyTests {
+    private let sut: DateAndTimeFilenameStrategy
+    private let timeProvider: TimeProviderMock
+    private let fileSettings: FileSettingsMock
 
-    override func setUp() {
-        super.setUp()
+    init() {
         timeProvider = TimeProviderMock()
         timeProvider.nowReturnValue = Date.date()
         sut = DateAndTimeFilenameStrategy(timeProvider: timeProvider)
         fileSettings = FileSettingsMock()
     }
 
-    override func tearDown() {
-        fileSettings = nil
-        sut = nil
-        timeProvider = nil
-        super.tearDown()
-    }
-
-    func testFilename_whenSettingsFilenameIsExample() {
+    @Test func filename_whenSettingsFilenameIsExample() {
         fileSettings.filename = "Example"
 
-        XCTAssertEqual(sut.filename(settings: fileSettings), "Example_16-08-1991-00:00")
+        #expect(sut.filename(settings: fileSettings) == "Example_16-08-1991-00:00")
     }
 
-    func testFilename_whenSettingsFilenameIsExample_andDifferentDate() {
+    @Test func filename_whenSettingsFilenameIsExample_andDifferentDate() {
         fileSettings.filename = "Example"
 
         timeProvider.nowReturnValue = Date.date(year: 2005, month: 4, day: 2, hour: 21, minute: 37)
 
-        XCTAssertEqual(sut.filename(settings: fileSettings), "Example_02-04-2005-21:37")
+        #expect(sut.filename(settings: fileSettings) == "Example_02-04-2005-21:37")
     }
 
-    func testFilename_whenSettingsFilenameIsScan() {
+    @Test func filename_whenSettingsFilenameIsScan() {
         fileSettings.filename = "Scan"
 
-        XCTAssertEqual(sut.filename(settings: fileSettings), "Scan_16-08-1991-00:00")
+        #expect(sut.filename(settings: fileSettings) == "Scan_16-08-1991-00:00")
     }
 }

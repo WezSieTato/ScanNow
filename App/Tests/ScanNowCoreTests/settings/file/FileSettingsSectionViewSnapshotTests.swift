@@ -1,15 +1,15 @@
 @testable import ScanNowCore
 import SnapshotTesting
 import SwiftUI
-import XCTest
+import Testing
 
-final class FileSettingsSectionViewSnapshotTests: XCTestCase {
-    private var sut: Form<FileSettingsSectionView<FileSettingsMock>>!
-    private var fileSettings: FileSettingsMock!
+@Suite(.snapshots(record: .missing))
+@MainActor
+struct FileSettingsSectionViewSnapshotTests {
+    private let sut: Form<FileSettingsSectionView<FileSettingsMock>>
+    private let fileSettings: FileSettingsMock
 
-    override func setUp() {
-        super.setUp()
-
+    init() {
         fileSettings = FileSettingsMock()
         fileSettings.filename = "Scan"
         fileSettings.format = .pdf
@@ -19,42 +19,46 @@ final class FileSettingsSectionViewSnapshotTests: XCTestCase {
         timeProvider.nowReturnValue = Date.date()
 
         sut = Form { [fileSettings] in
-            FileSettingsSectionView(settings: fileSettings!, timeProvider: timeProvider)
+            FileSettingsSectionView(settings: fileSettings, timeProvider: timeProvider)
         }
     }
 
-    func testView_whenSettingsAreDefault() {
-        testView()
-    }
-
-    func testView_whenFileNameIsEmpty() {
-        fileSettings.filename = ""
-        testView()
-    }
-
-    func testView_whenSuffixIsCounter() {
-        fileSettings.suffix = .counter
-        testView()
-    }
-
-    func testView_whenSuffixIsDateAndTime() {
-        fileSettings.suffix = .dateAndTime
-        testView()
-    }
-
-    func testView_whenFormatIsJpeg() {
-        fileSettings.format = .jpeg
-        testView()
-    }
-
-    private func testView(file: StaticString = #file, testName: String = #function, line: UInt = #line) {
+    @Test func view_whenSettingsAreDefault() {
         assertSnapshot(
             of: sut,
-            as: .image(layout: .fixed(width: 375, height: 240)),
-            record: false,
-            file: file,
-            testName: testName,
-            line: line
+            as: .image(layout: .fixed(width: 375, height: 240))
+        )
+    }
+
+    @Test func view_whenFileNameIsEmpty() {
+        fileSettings.filename = ""
+        assertSnapshot(
+            of: sut,
+            as: .image(layout: .fixed(width: 375, height: 240))
+        )
+    }
+
+    @Test func view_whenSuffixIsCounter() {
+        fileSettings.suffix = .counter
+        assertSnapshot(
+            of: sut,
+            as: .image(layout: .fixed(width: 375, height: 240))
+        )
+    }
+
+    @Test func view_whenSuffixIsDateAndTime() {
+        fileSettings.suffix = .dateAndTime
+        assertSnapshot(
+            of: sut,
+            as: .image(layout: .fixed(width: 375, height: 240))
+        )
+    }
+
+    @Test func view_whenFormatIsJpeg() {
+        fileSettings.format = .jpeg
+        assertSnapshot(
+            of: sut,
+            as: .image(layout: .fixed(width: 375, height: 240))
         )
     }
 }

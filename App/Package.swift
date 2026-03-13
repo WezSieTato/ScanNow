@@ -16,7 +16,6 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.18.9"),
-        .package(url: "https://github.com/WezSieTato/DataDrivenTesting.git", from: "1.0.0"),
     ],
     targets: [
         .target(
@@ -33,7 +32,6 @@ let package = Package(
             dependencies: [
                 "ScanNowCore",
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
-                .product(name: "DataDrivenTesting", package: "DataDrivenTesting"),
             ],
             path: "Tests/ScanNowCoreTests",
             exclude: ["Info.plist"]

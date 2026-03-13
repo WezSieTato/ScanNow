@@ -1,15 +1,16 @@
 @testable import ScanNowCore
 import SnapshotTesting
-import XCTest
+import Testing
+import UIKit
 
-final class SettingsViewSnapshotTests: XCTestCase {
-    private var userDefaults: UserDefaults!
-    private var sut: UIViewController!
+@Suite(.snapshots(record: .missing))
+@MainActor
+struct SettingsViewSnapshotTests {
+    private let userDefaults: UserDefaults
+    private let sut: UIViewController
 
-    override func setUp() {
-        super.setUp()
-
-        userDefaults = UserDefaults(suiteName: "SettingsViewSnapshotTests")
+    init() {
+        userDefaults = UserDefaults(suiteName: "SettingsViewSnapshotTests")!
         let versioning = VersioningMock()
         versioning.versionNumber = "1.0.0"
         versioning.buildNumber = "1"
@@ -19,18 +20,11 @@ final class SettingsViewSnapshotTests: XCTestCase {
         )
     }
 
-    override func tearDown() {
-        super.tearDown()
-
-        sut = nil
-        userDefaults = nil
-    }
-
-    func testView_whenSettingsAreDefault() {
+    @Test func view_whenSettingsAreDefault() {
         assertSnapshot(of: sut, as: .image(on: .iPhone13Mini))
     }
 
-    func testView_whenAppearanceIsDark() {
+    @Test func view_whenAppearanceIsDark() {
         sut.overrideUserInterfaceStyle = .dark
 
         assertSnapshot(of: sut, as: .image(on: .iPhone13Mini))

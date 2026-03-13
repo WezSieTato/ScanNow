@@ -1,15 +1,14 @@
 @testable import ScanNowCore
 import SnapshotTesting
-import XCTest
+import Testing
 
-final class ComposeMailDataFactoryTests: XCTestCase {
-    private var sut: ComposeMailDataFactory!
-    private var appVersioning: VersioningMock!
-    private var systemVersioning: SystemVersioningMock!
+@Suite(.snapshots(record: .missing))
+struct ComposeMailDataFactoryTests {
+    private let sut: ComposeMailDataFactory
+    private let appVersioning: VersioningMock
+    private let systemVersioning: SystemVersioningMock
 
-    override func setUp() {
-        super.setUp()
-
+    init() {
         appVersioning = VersioningMock()
         appVersioning.versionNumber = "1.0"
         appVersioning.buildNumber = "1"
@@ -19,53 +18,43 @@ final class ComposeMailDataFactoryTests: XCTestCase {
         sut = ComposeMailDataFactory(appVersioning: appVersioning, systemVersioning: systemVersioning)
     }
 
-    func testSubject() {
+    @Test func subject() {
         let result = sut.make()
 
-        XCTAssertEqual(result.subject, "Feedback for Scan Only")
+        #expect(result.subject == "Feedback for Scan Only")
     }
 
-    func testRecipients() {
+    @Test func recipients() {
         let result = sut.make()
 
-        XCTAssertEqual(result.recipients, ["marcin.stepnowski@gmail.com"])
+        #expect(result.recipients == ["marcin.stepnowski@gmail.com"])
     }
 
-    func testMessage_whenVersionIs1_0_buildIs1_systemNameIsIOS_systemVersionIs16_1() {
-        testMessage()
+    @Test func message_whenVersionIs1_0_buildIs1_systemNameIsIOS_systemVersionIs16_1() {
+        assertSnapshot(of: sut.make().message, as: .description)
     }
 
-    func testMessage_whenVersionIs1_9_buildIs1_systemNameIsIOS_systemVersionIs16_1() {
+    @Test func message_whenVersionIs1_9_buildIs1_systemNameIsIOS_systemVersionIs16_1() {
         appVersioning.versionNumber = "1.9"
 
-        testMessage()
+        assertSnapshot(of: sut.make().message, as: .description)
     }
 
-    func testMessage_whenVersionIs1_0_buildIs1410_systemNameIsIOS_systemVersionIs16_1() {
+    @Test func message_whenVersionIs1_0_buildIs1410_systemNameIsIOS_systemVersionIs16_1() {
         appVersioning.buildNumber = "1410"
 
-        testMessage()
+        assertSnapshot(of: sut.make().message, as: .description)
     }
 
-    func testMessage_whenVersionIs1_0_buildIs1_systemNameIsIPadOS_systemVersionIs16_1() {
+    @Test func message_whenVersionIs1_0_buildIs1_systemNameIsIPadOS_systemVersionIs16_1() {
         systemVersioning.systemName = "iPadOS"
 
-        testMessage()
+        assertSnapshot(of: sut.make().message, as: .description)
     }
 
-    func testMessage_whenVersionIs1_0_buildIs1_systemNameIsIOS_systemVersionIs13_1() {
+    @Test func message_whenVersionIs1_0_buildIs1_systemNameIsIOS_systemVersionIs13_1() {
         systemVersioning.systemVersion = "13.1"
 
-        testMessage()
-    }
-
-    private func testMessage(
-        file: StaticString = #file,
-        testName: String = #function,
-        line: UInt = #line
-    ) {
-        let result = sut.make()
-
-        assertSnapshot(of: result.message, as: .description, file: file, testName: testName, line: line)
+        assertSnapshot(of: sut.make().message, as: .description)
     }
 }
