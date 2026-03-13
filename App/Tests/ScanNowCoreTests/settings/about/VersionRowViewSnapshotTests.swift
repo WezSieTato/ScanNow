@@ -3,13 +3,13 @@ import SnapshotTesting
 import SwiftUI
 import Testing
 
-@Suite @MainActor struct VersionRowViewSnapshotTests {
+@Suite(.snapshots(record: .missing)) @MainActor struct VersionRowViewSnapshotTests {
     @Test(arguments: [
         ("1.0.0", "1"),
         ("1.0.0", "2"),
         ("2.1.3", "7"),
     ])
-    func testView(version: String, buildNumber: String) {
+    func view(version: String, buildNumber: String) {
         let versioning = VersioningMock()
         versioning.versionNumber = version
         versioning.buildNumber = buildNumber
@@ -21,7 +21,6 @@ import Testing
         assertSnapshot(
             of: sut,
             as: .image(layout: .fixed(width: 375, height: 90)),
-            record: false,
             testName: "When-data-is-version-\(sanitizedVersion)-buildNumber-\(buildNumber)"
         )
     }

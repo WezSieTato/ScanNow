@@ -3,14 +3,14 @@ import SnapshotTesting
 import SwiftUI
 import Testing
 
-@Suite @MainActor struct WelcomeViewControllerTests {
-    @Test func testView() {
+@Suite(.snapshots(record: .missing)) @MainActor struct WelcomeViewControllerTests {
+    @Test func view() {
         let sut = WelcomeViewController()
 
         assertSnapshot(of: sut, as: .image(on: .iPhone13Mini))
     }
 
-    @Test func testView_whenAppearenceIsDark() {
+    @Test func view_whenAppearenceIsDark() {
         let sut = WelcomeViewController()
         sut.overrideUserInterfaceStyle = .dark
 

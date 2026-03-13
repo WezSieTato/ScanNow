@@ -3,8 +3,8 @@ import SnapshotTesting
 import SwiftUI
 import Testing
 
-@Suite @MainActor struct AboutSettingsSectionViewSnapshotTests {
-    @Test func testView() {
+@Suite(.snapshots(record: .missing)) @MainActor struct AboutSettingsSectionViewSnapshotTests {
+    @Test func view() {
         let sut = Form {
             AboutSettingsSectionView(version: PreviewVersion())
         }

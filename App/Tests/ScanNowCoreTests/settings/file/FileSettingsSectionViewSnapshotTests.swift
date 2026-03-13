@@ -3,7 +3,7 @@ import SnapshotTesting
 import SwiftUI
 import Testing
 
-@Suite @MainActor struct FileSettingsSectionViewSnapshotTests {
+@Suite(.snapshots(record: .missing)) @MainActor struct FileSettingsSectionViewSnapshotTests {
     private let sut: Form<FileSettingsSectionView<FileSettingsMock>>
     private let fileSettings: FileSettingsMock
 
@@ -21,47 +21,42 @@ import Testing
         }
     }
 
-    @Test func testView_whenSettingsAreDefault() {
+    @Test func view_whenSettingsAreDefault() {
         assertSnapshot(
             of: sut,
-            as: .image(layout: .fixed(width: 375, height: 240)),
-            record: false
+            as: .image(layout: .fixed(width: 375, height: 240))
         )
     }
 
-    @Test func testView_whenFileNameIsEmpty() {
+    @Test func view_whenFileNameIsEmpty() {
         fileSettings.filename = ""
         assertSnapshot(
             of: sut,
-            as: .image(layout: .fixed(width: 375, height: 240)),
-            record: false
+            as: .image(layout: .fixed(width: 375, height: 240))
         )
     }
 
-    @Test func testView_whenSuffixIsCounter() {
+    @Test func view_whenSuffixIsCounter() {
         fileSettings.suffix = .counter
         assertSnapshot(
             of: sut,
-            as: .image(layout: .fixed(width: 375, height: 240)),
-            record: false
+            as: .image(layout: .fixed(width: 375, height: 240))
         )
     }
 
-    @Test func testView_whenSuffixIsDateAndTime() {
+    @Test func view_whenSuffixIsDateAndTime() {
         fileSettings.suffix = .dateAndTime
         assertSnapshot(
             of: sut,
-            as: .image(layout: .fixed(width: 375, height: 240)),
-            record: false
+            as: .image(layout: .fixed(width: 375, height: 240))
         )
     }
 
-    @Test func testView_whenFormatIsJpeg() {
+    @Test func view_whenFormatIsJpeg() {
         fileSettings.format = .jpeg
         assertSnapshot(
             of: sut,
-            as: .image(layout: .fixed(width: 375, height: 240)),
-            record: false
+            as: .image(layout: .fixed(width: 375, height: 240))
         )
     }
 }

@@ -3,7 +3,7 @@ import SnapshotTesting
 import Testing
 import UIKit
 
-@Suite @MainActor struct SettingsViewSnapshotTests {
+@Suite(.snapshots(record: .missing)) @MainActor struct SettingsViewSnapshotTests {
     private let userDefaults: UserDefaults
     private let sut: UIViewController
 
@@ -18,11 +18,11 @@ import UIKit
         )
     }
 
-    @Test func testView_whenSettingsAreDefault() {
+    @Test func view_whenSettingsAreDefault() {
         assertSnapshot(of: sut, as: .image(on: .iPhone13Mini))
     }
 
-    @Test func testView_whenAppearanceIsDark() {
+    @Test func view_whenAppearanceIsDark() {
         sut.overrideUserInterfaceStyle = .dark
 
         assertSnapshot(of: sut, as: .image(on: .iPhone13Mini))

@@ -3,8 +3,8 @@ import SnapshotTesting
 import SwiftUI
 import Testing
 
-@Suite @MainActor struct GithubRowViewSnapshotTests {
-    @Test func testView() {
+@Suite(.snapshots(record: .missing)) @MainActor struct GithubRowViewSnapshotTests {
+    @Test func view() {
         let sut = Form {
             GithubRowView()
         }

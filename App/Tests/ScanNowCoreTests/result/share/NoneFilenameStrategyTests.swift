@@ -7,7 +7,7 @@ import Testing
         ("Scan", "Scan"),
         ("", "Scan"),
     ])
-    func testFilename(settingsFilename: String, expected: String) {
+    func filename(settingsFilename: String, expected: String) {
         let sut = NoneFilenameStrategy()
         let fileSettings = FileSettingsMock()
         fileSettings.filename = settingsFilename

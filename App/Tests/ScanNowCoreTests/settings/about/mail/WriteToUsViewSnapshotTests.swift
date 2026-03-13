@@ -3,8 +3,8 @@ import SnapshotTesting
 import SwiftUI
 import Testing
 
-@Suite @MainActor struct WriteToUsViewSnapshotTests {
-    @Test func testView() {
+@Suite(.snapshots(record: .missing)) @MainActor struct WriteToUsViewSnapshotTests {
+    @Test func view() {
         let appVersioning = VersioningMock()
         appVersioning.versionNumber = "1.0"
         appVersioning.buildNumber = "1"
