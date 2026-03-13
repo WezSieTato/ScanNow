@@ -4,6 +4,7 @@ import SwiftUI
 import Testing
 
 @Suite(.snapshots(record: .missing))
+@MainActor
 struct FileSettingsSectionViewSnapshotTests {
     private let sut: Form<FileSettingsSectionView<FileSettingsMock>>
     private let fileSettings: FileSettingsMock

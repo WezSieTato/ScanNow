@@ -4,6 +4,7 @@ import SwiftUI
 import Testing
 
 @Suite(.snapshots(record: .missing))
+@MainActor
 struct VersionRowViewSnapshotTests {
     @Test(arguments: [
         ("1.0.0", "1"),

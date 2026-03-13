@@ -4,6 +4,7 @@ import SwiftUI
 import Testing
 
 @Suite(.snapshots(record: .missing))
+@MainActor
 struct WriteToUsViewSnapshotTests {
     @Test func view() {
         let appVersioning = VersioningMock()

@@ -4,6 +4,7 @@ import SwiftUI
 import Testing
 
 @Suite(.snapshots(record: .missing))
+@MainActor
 struct AboutSettingsSectionViewSnapshotTests {
     @Test func view() {
         let sut = Form {
