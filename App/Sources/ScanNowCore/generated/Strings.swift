@@ -43,8 +43,8 @@ internal enum Strings {
         internal static let appAndDeviceInfo = Strings.tr("Localizable", "settings.about.emailCompose.appAndDeviceInfo", fallback: "\n\n-------App & Device info--------\n")
         /// -------End-------
         internal static let end = Strings.tr("Localizable", "settings.about.emailCompose.end", fallback: "-------End-------")
-        /// Feedback for Scan Only
-        internal static let subject = Strings.tr("Localizable", "settings.about.emailCompose.subject", fallback: "Feedback for Scan Only")
+        /// Feedback for ScanNow
+        internal static let subject = Strings.tr("Localizable", "settings.about.emailCompose.subject", fallback: "Feedback for ScanNow")
         /// - system: %@, %@
         /// 
         internal static func system(_ p1: Any, _ p2: Any) -> String {
