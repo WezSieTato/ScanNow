@@ -11,7 +11,6 @@ extension Date {
         dateComponents.hour = hour
         dateComponents.minute = minute
 
-        let date = gregorianCalendar.date(from: dateComponents)!
-        return date
+        return gregorianCalendar.date(from: dateComponents)!
     }
 }

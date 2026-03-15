@@ -6,7 +6,6 @@ struct WelcomeView: View {
     let scanAction: () -> Void
     let settingsAction: () -> Void
 
-    @ViewBuilder
     var body: some View {
         VStack {
             Assets.launchIcon.swiftUIImage

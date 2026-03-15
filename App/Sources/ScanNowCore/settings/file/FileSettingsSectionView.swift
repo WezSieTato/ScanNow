@@ -6,7 +6,6 @@ struct FileSettingsSectionView<SettingType: FileSettings>: View {
 
     private let strings = Strings.Settings.File.self
 
-    @ViewBuilder
     var body: some View {
         Section(header: Text(strings.title)) {
             TextField(strings.filename, text: $settings.filename)

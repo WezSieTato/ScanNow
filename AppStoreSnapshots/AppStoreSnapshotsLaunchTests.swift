@@ -2,7 +2,7 @@ import XCTest
 
 @MainActor
 final class AppStoreSnapshotsLaunchTests: XCTestCase {
-    func testWelcomeScreen() throws {
+    func testWelcomeScreen() {
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
