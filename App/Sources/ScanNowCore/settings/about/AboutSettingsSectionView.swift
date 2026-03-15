@@ -3,7 +3,6 @@ import SwiftUI
 struct AboutSettingsSectionView: View {
     let version: Versioning
 
-    @ViewBuilder
     var body: some View {
         Section(header: Text(Strings.Settings.About.title)) {
             WriteToUsView(composeMailDataFactory: ComposeMailDataFactory(appVersioning: version))
