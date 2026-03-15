@@ -1,0 +1,29 @@
+"welcome.scan" = "Scanează Acum!";
+"welcome.settings" = "Setări";
+
+"settings.title" = "Setări";
+
+"settings.file.title" = "Fișier";
+"settings.file.filename" = "Nume fișier";
+"settings.file.suffix" = "Sufix fișier";
+"settings.file.format" = "Format";
+"settings.file.defaultFilename" = "Scan";
+"settings.file.example" = "Exemplu";
+
+"settings.file.suffixCase.none" = "Niciunul";
+"settings.file.suffixCase.counter" = "Contor";
+"settings.file.suffixCase.dateAndTime" = "Dată și oră";
+
+"settings.about.title" = "Despre";
+"settings.about.version" = "Versiune";
+"settings.about.email" = "Scrie-ne";
+
+"settings.about.emailCompose.subject" = "Feedback pentru ScanNow";
+"settings.about.emailCompose.appAndDeviceInfo" = "\n\n-------Informații aplicație și dispozitiv--------\n";
+"settings.about.emailCompose.system" = "- sistem: %@, %@\n";
+"settings.about.emailCompose.app" = "- aplicație: %@, %@\n";
+"settings.about.emailCompose.end" = "-------Sfârșit-------";
+
+"scanner.title" = "Scanare";
+
+"scanner.share.pageSuffix" = "_pagina_%d";
