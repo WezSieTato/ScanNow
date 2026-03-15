@@ -18,7 +18,7 @@
 "settings.about.version" = "Version";
 "settings.about.email" = "Write to us";
 
-"settings.about.emailCompose.subject" = "Feedback for Scan Only";
+"settings.about.emailCompose.subject" = "Feedback for ScanNow";
 "settings.about.emailCompose.appAndDeviceInfo" = "\n\n-------App & Device info--------\n";
 "settings.about.emailCompose.system" = "- system: %@, %@\n";
 "settings.about.emailCompose.app" = "- app: %@, %@\n";

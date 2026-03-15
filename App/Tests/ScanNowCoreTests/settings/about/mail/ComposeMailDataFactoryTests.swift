@@ -21,7 +21,7 @@ struct ComposeMailDataFactoryTests {
     @Test func subject() {
         let result = sut.make()
 
-        #expect(result.subject == "Feedback for Scan Only")
+        #expect(result.subject == "Feedback for ScanNow")
     }
 
     @Test func recipients() {
