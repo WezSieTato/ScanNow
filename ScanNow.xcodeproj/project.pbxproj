@@ -62,6 +62,7 @@
 		D3DB8C352D8EB7370025665E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3DB8C362D8EB7370025665E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3DB8C372D8EB7370025665E /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D3DB8C3B2D8EB7370025665E /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -263,6 +264,7 @@
 				Base,
 				pl,
 				fr,
+				ro,
 			);
 			mainGroup = D30FAA2826CB079700B8BF20;
 			packageReferences = (
@@ -383,6 +385,7 @@
 				D3DB8C352D8EB7370025665E /* en */,
 				D3DB8C362D8EB7370025665E /* fr */,
 				D3DB8C372D8EB7370025665E /* pl */,
+				D3DB8C3B2D8EB7370025665E /* ro */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
