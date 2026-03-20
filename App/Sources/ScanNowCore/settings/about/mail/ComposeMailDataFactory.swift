@@ -1,7 +1,8 @@
 import Foundation
+import Mocking
 import UIKit
 
-// sourcery: AutoMockable
+@Mocked(compilationCondition: .debug)
 protocol SystemVersioning {
     var systemName: String { get }
     var systemVersion: String { get }

@@ -1,6 +1,7 @@
+import Mocking
 import SwiftUI
 
-// sourcery: AutoMockable
+@Mocked(compilationCondition: .debug)
 protocol ScanCounter {
     var counter: Int { get }
     func increaseCounter()

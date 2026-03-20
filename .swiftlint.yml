@@ -2,7 +2,6 @@ excluded:
   - vendor
   - ScanNow/generated
   - App/Sources/ScanNowCore/generated
-  - App/Tests/ScanNowCoreTests/generated
   - AppStoreSnapshots/SnapshotHelper.swift
   - fastlane
   - App/.build

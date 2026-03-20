@@ -1,3 +1,4 @@
+import Mocking
 @testable import ScanNowCore
 import SnapshotTesting
 import SwiftUI
@@ -8,11 +9,11 @@ import Testing
 struct WriteToUsViewSnapshotTests {
     @Test func view() {
         let appVersioning = VersioningMock()
-        appVersioning.versionNumber = "1.0"
-        appVersioning.buildNumber = "1"
+        appVersioning._versionNumber.getter.implementation = .returns("1.0")
+        appVersioning._buildNumber.getter.implementation = .returns("1")
         let systemVersioning = SystemVersioningMock()
-        systemVersioning.systemName = "iOS"
-        systemVersioning.systemVersion = "16.1"
+        systemVersioning._systemName.getter.implementation = .returns("iOS")
+        systemVersioning._systemVersion.getter.implementation = .returns("16.1")
         let mailComposer = ComposeMailDataFactory(appVersioning: appVersioning, systemVersioning: systemVersioning)
 
         let sut = Form {

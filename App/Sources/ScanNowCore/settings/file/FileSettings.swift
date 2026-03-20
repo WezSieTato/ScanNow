@@ -1,3 +1,4 @@
+import Mocking
 import SwiftUI
 
 enum ScanFormat: String, CaseIterable, Identifiable {
@@ -20,7 +21,7 @@ enum FileSufix: String, CaseIterable, Identifiable {
     }
 }
 
-// sourcery: AutoMockable
+@Mocked(compilationCondition: .debug)
 protocol FileSettings: ObservableObject {
     var filename: String { get set }
     var format: ScanFormat { get set }
