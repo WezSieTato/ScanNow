@@ -1,3 +1,4 @@
+import Mocking
 @testable import ScanNowCore
 import SnapshotTesting
 import Testing
@@ -10,11 +11,11 @@ struct ComposeMailDataFactoryTests {
 
     init() {
         appVersioning = VersioningMock()
-        appVersioning.versionNumber = "1.0"
-        appVersioning.buildNumber = "1"
+        appVersioning._versionNumber.getter.implementation = .returns("1.0")
+        appVersioning._buildNumber.getter.implementation = .returns("1")
         systemVersioning = SystemVersioningMock()
-        systemVersioning.systemName = "iOS"
-        systemVersioning.systemVersion = "16.1"
+        systemVersioning._systemName.getter.implementation = .returns("iOS")
+        systemVersioning._systemVersion.getter.implementation = .returns("16.1")
         sut = ComposeMailDataFactory(appVersioning: appVersioning, systemVersioning: systemVersioning)
     }
 
@@ -35,25 +36,25 @@ struct ComposeMailDataFactoryTests {
     }
 
     @Test func message_whenVersionIs1_9_buildIs1_systemNameIsIOS_systemVersionIs16_1() {
-        appVersioning.versionNumber = "1.9"
+        appVersioning._versionNumber.getter.implementation = .returns("1.9")
 
         assertSnapshot(of: sut.make().message, as: .description)
     }
 
     @Test func message_whenVersionIs1_0_buildIs1410_systemNameIsIOS_systemVersionIs16_1() {
-        appVersioning.buildNumber = "1410"
+        appVersioning._buildNumber.getter.implementation = .returns("1410")
 
         assertSnapshot(of: sut.make().message, as: .description)
     }
 
     @Test func message_whenVersionIs1_0_buildIs1_systemNameIsIPadOS_systemVersionIs16_1() {
-        systemVersioning.systemName = "iPadOS"
+        systemVersioning._systemName.getter.implementation = .returns("iPadOS")
 
         assertSnapshot(of: sut.make().message, as: .description)
     }
 
     @Test func message_whenVersionIs1_0_buildIs1_systemNameIsIOS_systemVersionIs13_1() {
-        systemVersioning.systemVersion = "13.1"
+        systemVersioning._systemVersion.getter.implementation = .returns("13.1")
 
         assertSnapshot(of: sut.make().message, as: .description)
     }

@@ -1,6 +1,7 @@
 import Foundation
+import Mocking
 
-// sourcery: AutoMockable
+@Mocked(compilationCondition: .debug)
 protocol TimeProvider {
     func now() -> Date
 }

@@ -1,3 +1,4 @@
+import Mocking
 @testable import ScanNowCore
 import SnapshotTesting
 import SwiftUI
@@ -13,8 +14,8 @@ struct VersionRowViewSnapshotTests {
     ])
     func view(version: String, buildNumber: String) {
         let versioning = VersioningMock()
-        versioning.versionNumber = version
-        versioning.buildNumber = buildNumber
+        versioning._versionNumber.getter.implementation = .returns(version)
+        versioning._buildNumber.getter.implementation = .returns(buildNumber)
         let sut = Form {
             VersionRowView(version: versioning)
         }

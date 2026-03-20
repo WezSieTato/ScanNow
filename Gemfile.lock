@@ -124,7 +124,6 @@ GEM
       xcpretty-travis-formatter (>= 0.0.3, < 2.0.0)
     fastlane-plugin-menigit (1.0.1)
     fastlane-plugin-mint (1.1.0)
-    fastlane-plugin-sourcery (1.1.0)
     fastlane-plugin-swiftformat (0.3.0)
     fastlane-sirp (1.0.0)
       sysrandom (~> 1.0)
@@ -243,7 +242,6 @@ DEPENDENCIES
   fastlane
   fastlane-plugin-menigit
   fastlane-plugin-mint
-  fastlane-plugin-sourcery
   fastlane-plugin-swiftformat
 
 BUNDLED WITH

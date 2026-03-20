@@ -1,6 +1,7 @@
 import Foundation
+import Mocking
 
-// sourcery: AutoMockable
+@Mocked(compilationCondition: .debug)
 protocol Versioning {
     var versionNumber: String { get }
     var buildNumber: String { get }

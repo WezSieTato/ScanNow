@@ -1,3 +1,4 @@
+import Mocking
 @testable import ScanNowCore
 import SnapshotTesting
 import SwiftUI
@@ -11,12 +12,12 @@ struct FileSettingsSectionViewSnapshotTests {
 
     init() {
         fileSettings = FileSettingsMock()
-        fileSettings.filename = "Scan"
-        fileSettings.format = .pdf
-        fileSettings.suffix = .none
+        fileSettings._filename.getter.implementation = .returns("Scan")
+        fileSettings._format.getter.implementation = .returns(.pdf)
+        fileSettings._suffix.getter.implementation = .returns(.none)
 
         let timeProvider = TimeProviderMock()
-        timeProvider.nowReturnValue = Date.date()
+        timeProvider._now.implementation = .returns(Date.date())
 
         sut = Form { [fileSettings] in
             FileSettingsSectionView(settings: fileSettings, timeProvider: timeProvider)
@@ -31,7 +32,7 @@ struct FileSettingsSectionViewSnapshotTests {
     }
 
     @Test func view_whenFileNameIsEmpty() {
-        fileSettings.filename = ""
+        fileSettings._filename.getter.implementation = .returns("")
         assertSnapshot(
             of: sut,
             as: .image(layout: .fixed(width: 375, height: 240))
@@ -39,7 +40,7 @@ struct FileSettingsSectionViewSnapshotTests {
     }
 
     @Test func view_whenSuffixIsCounter() {
-        fileSettings.suffix = .counter
+        fileSettings._suffix.getter.implementation = .returns(.counter)
         assertSnapshot(
             of: sut,
             as: .image(layout: .fixed(width: 375, height: 240))
@@ -47,7 +48,7 @@ struct FileSettingsSectionViewSnapshotTests {
     }
 
     @Test func view_whenSuffixIsDateAndTime() {
-        fileSettings.suffix = .dateAndTime
+        fileSettings._suffix.getter.implementation = .returns(.dateAndTime)
         assertSnapshot(
             of: sut,
             as: .image(layout: .fixed(width: 375, height: 240))
@@ -55,7 +56,7 @@ struct FileSettingsSectionViewSnapshotTests {
     }
 
     @Test func view_whenFormatIsJpeg() {
-        fileSettings.format = .jpeg
+        fileSettings._format.getter.implementation = .returns(.jpeg)
         assertSnapshot(
             of: sut,
             as: .image(layout: .fixed(width: 375, height: 240))

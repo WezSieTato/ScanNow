@@ -5,7 +5,7 @@ let package = Package(
     name: "ScanNowCore",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v14),
+        .iOS(.v16),
     ],
     products: [
         .library(
@@ -16,11 +16,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.19.1"),
+        .package(url: "https://github.com/fetch-rewards/swift-mocking.git", from: "0.2.2"),
     ],
     targets: [
         .target(
             name: "ScanNowCore",
-            dependencies: [],
+            dependencies: [
+                .product(name: "Mocking", package: "swift-mocking"),
+            ],
             path: "Sources/ScanNowCore",
             resources: [
                 .process("Assets.xcassets"),
@@ -32,6 +35,7 @@ let package = Package(
             dependencies: [
                 "ScanNowCore",
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
+                .product(name: "Mocking", package: "swift-mocking"),
             ],
             path: "Tests/ScanNowCoreTests",
             exclude: ["Info.plist"]

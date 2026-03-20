@@ -1,3 +1,4 @@
+import Mocking
 @testable import ScanNowCore
 import SnapshotTesting
 import Testing
@@ -12,8 +13,8 @@ struct SettingsViewSnapshotTests {
     init() {
         userDefaults = UserDefaults(suiteName: "SettingsViewSnapshotTests")!
         let versioning = VersioningMock()
-        versioning.versionNumber = "1.0.0"
-        versioning.buildNumber = "1"
+        versioning._versionNumber.getter.implementation = .returns("1.0.0")
+        versioning._buildNumber.getter.implementation = .returns("1")
         sut = SettingsViewControllerFactory.create(
             userDefaults: userDefaults,
             version: versioning
