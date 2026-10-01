@@ -8,7 +8,7 @@ permissions:
 jobs:
   record:
     name: Record snapshots for unit & ui tests
-    runs-on: macos-15
+    runs-on: macos-26
 
     steps:
       - name: Checkout
